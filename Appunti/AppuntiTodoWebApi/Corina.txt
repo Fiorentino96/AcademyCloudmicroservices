@@ -1,0 +1,53 @@
+Lezione 02/02/2022  tema: WEB API 
+
+INTRODUZIONE:
+Una delle modalità più diffuse per la commercializzazione di prodotti software è il
+SaaS (Software as a Service) 
+
+SaaS : consente una completa fruibilità via web e
+l’installazione in ambiente cloud.
+
+La fruibilità via web è resa possibile dalle Web API 
+
+WEB API : (Application Programming Interface) ovvero interfacce esposte sul web che permettono di scambiare dati tra un
+qualsiasi client e un’applicazione remota.
+
+fonte: https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-6.0&tabs=visual-studio-code
+
+Il modello architetturale comunemente usato nelle Web API è il modello RESTful.
+I principi fondamentali su cui si basa sono i seguenti:
+• lo stato dell'applicazione e le funzionalità sono divisi in Risorse WEB;
+• ogni risorsa è unica e indirizzabile usando sintassi universale per i link ipertestuali;
+• tutte le risorse sono condivise come interfaccia uniforme per il trasferimento di
+stato tra client e risorse. Ciò consiste in:
+• un insieme vincolato di operazioni ben definite;
+• un insieme vincolato di contenuti, opzionalmente supportato da codice on
+demand;
+• un protocollo che è Client-Server, Stateless, Cachable e a livelli.
+
+Creare Web API con Instant Developer è molto semplice. Per ogni risorsa che si
+desidera esporre è  necessario attivare il servizio WebAPI. Si ottengono automaticamente le seguenti funzionalità:
+1-lettura, inserimento, eliminazione e aggiornamento di una risorsa dato il suo
+identificativo;
+2-ricerca di una collezione di risorse dati i criteri di filtro sulle proprietà.
+
+Tutorial come creare WEB API : https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-6.0&tabs=visual-studio-code
+
+Il formato predefinito dei dati scambiati è JSON, ma è possibile esplicitare il formato
+desiderato (JSON o XML) indicandolo nell’URL.
+
+L’URL delle chiamate a Web API è composto dalle parti descritte di seguito:
+• percorso dell’applicazione (ad esempio http://miodominio/miaapp);
+• nome della classe (Tag) comprensivo dell’eventuale namespace o package del
+componente. 
+• eventuale formato desiderato; per esplicitare il formato occorre aggiungere al nome
+della classe la stringa .json o .xml;
+• valori della chiave primaria (PK) separati da barre per le richieste di lettura o
+eliminazione 
+• criteri di ricerca per le richieste di ricerca o valori delle proprietà per le richieste di
+aggiornamento  le proprietà sono
+identificate dal corrispondente valore di Tag;
+• valori dei parametri per richieste di metodi custom.
+
+
+Fonte principale : https://doc.instantdeveloper.com/inde-webapi-guide.pdf

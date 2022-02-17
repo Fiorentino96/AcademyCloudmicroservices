@@ -1,0 +1,85 @@
+tutorials su HTML, XML e JSON:
+https://www.w3schools.com/xml/default.asp
+
+
+XML
+
+Tag (marcatore)
+
+    Il tag viene utilizzato per creare un elemento e per definirlo. IL tag è posizionato in apertura e chiusura dell'elemento. 
+
+    <prezzo></prezzo>
+
+    Fonti: https://www.w3schools.com/TAGS/default.ASP
+
+Elemento 
+
+    Un elemento XML è qualsiasi cosa contenuta tra il tag di inizio e quello di fine (entrambi inclusi). 
+
+    <prezzo>29,99</prezzo>
+    oppure
+
+    <Anagrafica attr1="..." attr2="..." />  <!--  tutto quanto è necessario è già espresso nel tag di apertura che funge anche da chiusura vedi: />    -->
+
+    Un elemento può contenere: 
+    - testo
+    - (ha degli:) attributi 
+    - altri elementi 
+    - un insieme delle precedenti voci 
+
+    Gli elementi XML devono seguire queste regole per la loro denominazione: 
+    - sono Case sensitive; 
+    - i nomi degli elementi devono iniziare o con una lettera o con un numero; 
+    - i nomi degli elementi non possono iniziare con le lettere xml (o XML, o Xml, ecc.);
+    - i nomi degli elementi possono contenere lettere, cifre, trattini, underscores e punti. 
+
+    In generale, sarebbe meglio evigtare notazioni, all'interno del nome dell'elemento, che possano creare confusione. Se si nomina qualcosa "first.name", alcuni software potrebbero pensare che "name" sia una proprietà dell'oggetto "first".
+
+    Fonti: https://www.w3schools.com/xml/xml_elements.asp
+
+    HTML
+
+    Un elemento HTMl è definito da un tag d'inizio, del contenuto e un tag di fine. 
+    Quindi un elemento in HTML è tutto cio compreso tra un tag d'inizio e uno di fine: 
+
+    Es. <tagname>Content goes here...</tagname>
+            <h1>My First Heading</h1>
+
+            eccezioni per browser vecchi <br> a capo: brak line
+            notazione corretta: <br />
+		
+
+    Fonti:https://www.w3schools.com/html/html_elements.asp
+
+Inline and Block: 
+
+    Un elemento *Block* inizia sempre in una linea nuova ( a capo) .
+
+    Prende tutta la grandezza disponibile (si allarga a destra e a sinistra il più possibile).
+
+    Un elemento Block level ha un margine superiore e uno inferio
+
+    Fonti: https://www.w3schools.com/html/html_blocks.asp
+
+
+Attributi 
+
+    Gli elementi XML possono avere attributi, proprio come HTML. 
+    Gli attributi sono progettati per contenere dati relativi a un elemento specifico.
+    I valori degli attributi devono essere sempre espressi. È possibile per il valore utilizzare apici singole o doppi.
+
+    Per il sesso di una persona, l'elemento <person> può essere scritto in questo modo:
+    <person gender="female">
+
+    Posso esprimere una grandezza (dato) sia come Attributo, se si rierisce ad un elemento, sia come elemento se è una entità a se stante
+    
+    <person gender="female">
+    
+    <gender>female</gender>
+    <gender>male</gender>
+    <gender>fluid</gender>
+etc...
+
+    Fonti: https://www.w3schools.com/xml/xml_attributes.asp
+
+

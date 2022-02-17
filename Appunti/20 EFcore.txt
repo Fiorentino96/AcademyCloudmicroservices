@@ -1,0 +1,58 @@
+Entity Framework è uno dei framework (Hibenate, etc) che possiamo usare per astrarre le basi dati (CRUD). 
+
+vedi:
+https://docs.microsoft.com/it-it/ef/core/
+
+fornisce il supporto per tutti i tipi di database RELAZIONALI (SQL) esistenti sul mercato tra cui:
+Oracle, MySql (il più usato nei server web), SqlServer, Sqlite (più diffuso al mondo, perchè leggerissimo)  ed InMemory, MSacces
+
+useremo SqlServer per i nostri esempi.
+
+Un Database richiede che sia installato il relativo servizio di database.
+posso avere una autenticazione integrata(utente SO) oppure 
+una autenticazione SQL ()
+che comprende user e password
+per accedere posso usare vari tool noi useremo VSCode
+un database è organizzato in tabelle che hanno una struttura di colonne fissa, appartengono ad uno schema (namespace) e che sono RELAZIONATE tra loro.
+Esempio:
+
+dbo.TbStates
+(tabella che contiene gli stati) 
+
+ID  Nome
+------------
+0   Todo
+1   InProgress
+2   Testing
+3   Done
+
+dbo.TbPofile
+
+ID      Name ....
+----------------
+0       Daniele
+1       AltraPersona
+
+dbo.TbTodo
+
+ID  Title                   Descrizione         IdProfile   IdState.....
+----------------------------------------------------------------------
+0   Spiegare I DB           propedeutico ad EF      0       1
+1   Completare la webapi    siamo quasi alla fine   1       1
+
+
+Relazionale, perchè se mi accordo che un dato si ripete molte volte uin una tabella, posso Normalizzare spostano quel dato in una tabella (di lookup) apposita, esempio classico di normalizzazione è il preblema della georeferenziazione, ciè provincie, comuni, CAP, che vengono riusati per inserire gli indirizzi geografici
+
+vanno scelte delle Regole di confronto: COLLATION, per consentire di dare ordinamento e siìomiglianza fonetica a vari caratteri a seconda dell'alfabeto scelto
+
+
+
+posso usare una tecnica DB first, cioè partire da un DataBase esistente e fare scaffolding di tutti i modelli (generazione automatica del context e dei modelli)
+
+vedi : 
+https://docs.microsoft.com/it-it/ef/core/managing-schemas/scaffolding?tabs=vs
+
+La tecnica consigliata per nuovi progetti è CODE FIRST: prima scrivo i modelli e lo scaffolder genera per me le tabelle nel database.
+
+innanzi ytutto abbiamo bisogno di installare alcuni pacchetti NuGet nel nostro progetto :
+Microsoft.EntityFrameworkCore.Tools

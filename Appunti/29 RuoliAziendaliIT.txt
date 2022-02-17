@@ -1,0 +1,174 @@
+competenze nel team Devops
+
+le mansioni di competenze sono:
+
+CEO amministratore delegato. 
+
+OP
+
+technical chief/ chief technoloy officer ->Resposabile dello sviluppo all'interno dell'azienda per TUTTI i progetti sw  
+
+capo progetto / technical leader : responsabile del singolo progetto e disegna le specifiche e l'analisi (Business Logic)  -> team leader
+
+marketing (a contatto con capo progetto): operazioni commerciali e di accogliere le richieste del cliente e sottoporle al capo progetto.
+
+GOVERNANCE
+
+DEV
+
+copy: scrivono tutti i testi, eventualmente i manuali e le brochure.
+
+traduttori: tengono aggiornate le risorse multilingua del software
+designer -> partendo dalle specifiche si occupa di costruire le visualizzazioni da sottoporre al cliente e le immagni da usare nel progetto
+
+sviluppatore di software -> 
+    scrivere il codice procedure su db - SQL, 
+    componenti server -c c++ php c# vb.net java (Business Logic, Back end), 
+    client javascript (e gli altri altri linguaggi), 
+    front end ((Graphic) User Interface) Html css javascript, 
+    
+DEV + OP    
+    DBA database admin: scrivere validare ed installare il software lato db , 
+    sistemista di rete / help desk: si occupa di installare tutti i programmi necessari al team ed ai suoi componenti.
+
+    bug testers - ticketing
+
+
+
+Ruoli IT in lingua originale :-)
+----------------------------------------------------------------
+
+
+software testers
+software developers
+IT team leader
+IT manager : più teams.
+IT director: gestisce tutti i manager
+Chief IT officer : 
+Help Desk:
+Ticketing management
+Cyber security architect: progettista di sicurezza dall'esterno e internamente
+Identity Access management.
+
+Licencing Manager: gestione delle licenze prodotto.
+Project engineer: pianifica ed organizza le attività tecniche
+EDP (todo) manager: responsabile del sistema informativo 
+
+
+Quality assurance engineer
+CRM project manager
+Software integration engineer
+Security engineer
+Front-end engineer
+Full-stack engineer
+3D Graphics Developer
+Data architect
+Data scientist
+Mobile developer
+DevOps engineer
+Back-end engineer
+Chief Technology Officer
+SCRUM Master
+Director of Software Engineering
+Software tester
+Web Developer
+Technical lead
+Software tester
+User acceptance tester
+
+
+L'Infrastructure Manager è responsabile della progettazione, dell’implementazione, della manutenzione e del rinnovo di ciascuno degli elementi che costituiscono l’Infrastruttura IT e che possono essere riassunti come segue:
+
+Il Digital Media Manager è responsabile della comunicazione digitale in azienda e dell’implementazione di piani e strategie per il raggiungimento di precisi obiettivi di marketing. Il Digital Media Manager si occupa inoltre della gestione dei clienti, attraverso i canali di comunicazione prescelti e del monitoraggio del mercato di riferimento.
+
+***Il Chief Technology Officer è un manager di primo livello che unisce conoscenze tecnologiche a doti manageriali. Esperto di tecnologia e digitale, monitora, valuta e suggerisce al consiglio direttivo le tecnologie che, se inserite in azienda, possono migliorare la produzione e la commercializzazione dei prodotti e dei servizi.
+
+Il Chief Information Officer è la figura aziendale responsabile della funzione ICT1. Il suo compito consiste nell’assumere la direzione strategica dei sistemi informativi aziendali con l’obiettivo di mantenere e migliorare i processi tecnologici interni, massimizzare la produttività aziendale e rendere semplici le attività complesse attraverso l'implementazione di sistemi automatizzati.
+
+PRODUCT OWNER - BUSINESS OWNER
+Questa è una figura centrale del processo. 
+
+Il PO deve conoscere DevOps, deve conoscere il prodotto che sta costruendo e il sistema in cui è calato. Deve lavorare sull’analisi e sulla progettazione: la comprensione del metodo e del workflow gli permette di sapere come scalare o anche di individuare cosa potrebbe non funzionare. 
+
+In concreto, il PO non deve necessariamente avere competenze tecniche: ciò che conta è che abbia una visione d’insieme e che sia quindi in grado di agevolare il team e collaborare con lui per raggiungere l’obiettivo.
+
+DEVELOPER
+Questo professionista è il cuore del processo DevOps. Ha tre grandi macro-responsabilità.
+
+-Il prodotto che sviluppa deve poter essere riproducibile su più contesti, su piattaforme diverse.
+-Deve scrivere del codice che rimanga modificabile anche in futuro: a tal proposito, versionerà il codice attraverso Git e implementando un buona pratica di Continuous Integration.
+-Il suo codice non deve avere difetti. Per questo avrà un approccio TDD, sarà guidato nel suo lavoro dai test automatici.
+Come vedi, il developer deve avere alcune conoscenze teoriche e concrete, ma soprattutto avrà un mindset, un metodo di lavoro che si rifà a principi centrali nel DevOps.
+
+SISTEMISTA
+Spesso si associa la qualifica DevOps al sistemista. Sbagliando!
+Questa figura è quella che si occupa del sistema, del server per intenderci. Ed è fondamentale il suo apporto, perché è lui che mantiene stabile il tutto.
+Il suo ruolo nel processo DevOps è uno: è responsabile del buon funzionamento del software su sistema.
+
+QA - QUALITY ASSURANCE
+In 20tab abbiamo introdotto ormai da qualche mese questa figura, importantissima per l’approccio DevOps: Quality Assurance, il tester che ha il compito di verificare che il prodotto superi i test di accettazione. Non si tratta di test “tecnici” ma di test che verificano se i requisiti previsti inizialmente sono stati implementati e se quel prodotto digitale è pronto per arrivare nelle mani degli utenti finali. Attenzione, il QA tester non dà giudizi soggettivi ma si basa sulle caratteristiche tecniche e sull’assenza di bug o problemi nell’usabilità.
+
+Immagina questo iter:
+
+il cliente lavora con il Product Owner, che analizza e progetta il prodotto;
+sistemisti e Dev mettono in piedi il software;
+il QA verifica che tutto ciò che era stato previsto nel primo step sia stato rispettato.
+È il passaggio di ritorno verso il cliente, il tassello finale che permette di restituire un prodotto digitale in linea con le sue richieste e con le aspettative degli utilizzatori
+_________________________________________________________
+
+Il DevOps Evangelist
+Questa figura si occupa di promuovere i vantaggi che DevOps porta, identificando e quantificando i benefici aziendali derivanti dalla maggiore agilità che tale metodologia offre. In qualità di “leader del cambiamento", il DevOps Evangelist garantisce il coinvolgimento dei team di sviluppo e operations, identifica i ruoli chiave per supportare i metodi di implementazione delle pratiche e garantisce che i professionisti IT siano qualificati e autorizzati a effettuare tali modifiche. Questo leader del cambiamento DevOps deve inoltre rimuovere la paura del fallimento dall'organizzazione: in azienda deve attecchire una cultura dell'apprendimento in cui il fallimento è sicuro, ma ha come conseguenze l’apprendimento e un miglioramento.
+
+Il Release Manager
+Che questa figura si chiami release manager, release engineer, o product stability manager, il focus è lo stesso: i release manager lavorano per indirizzare la gestione e il coordinamento del prodotto, dallo sviluppo alla produzione. In genere lavorano su più dettagli tecnici e problematiche in cui un project manager tradizionale non sarebbe coinvolto. I release manager supervisionano il coordinamento, l'integrazione e il flusso di sviluppo, test e implementazione per supportare il rilascio continuo. Si concentrano sulla creazione e sul mantenimento della catena di strumenti di distribuzione delle applicazioni end-to-end.
+
+L’Automation Architect
+Poiché una delle basi DevOps è l’automation, questo ruolo è fondamentale. A volte chiamati specialisti dell'integrazione, gli Automation Architect analizzano, progettano e implementano strategie per il continuous deployment, garantendo al contempo un'elevata disponibilità sui sistemi di produzione e di pre-produzione.
+
+Gli Automation Architect hanno un ruolo di automazione completo che coinvolge le soluzioni DevOps e le piattaforme cloud. Questo ruolo spesso comprende anche il lean thinking nei principali processi DevOps.
+
+Tale ruolo diventa fondamentale, in quanto le organizzazioni DevOps devono fornire un ambiente estremamente affidabile che sia completamente automatizzato e privo di ostacoli.
+
+***Il Software Developer/Tester
+All’interno di un’organizzazione DevOps il nuovo ruolo di Software Developer/Tester è al centro del processo e aumenta drasticamente la portata delle relative responsabilità. Gli sviluppatori in ambito DevOps sono infatti responsabili non solo di trasformare nuovi requisiti in codice, ma anche di eseguire attività di testing, di distribuzione e monitoraggio continuo. Spesso questo passaggio include l’esecuzione di più test automatizzati, in modo tale che la qualità del codice non ne risenta.
+
+Oggi molti team pensano ancora di poter fare test manuali e di mantenere al contempo un certo livello di agilità. Questo non è possibile, in quanto, se vi è la necessità di testare nuove build ogni giorno e si continuano a fare test manuali della durata di più settimane, la situazione risulterà ingestibile. La qualità del prodotto in questi casi diminuirà fino a quando l'organizzazione e i processi non cambieranno.
+
+L’Experience Assurance (XA) Professional
+Essendo la funzione di Quality Assurance (QA) spesso parte del processo di sviluppo del software, diventa necessario un nuovo tipo di controllo quando le organizzazioni adottano la metodologia DevOps. La necessità dei un tester QA viene quindi sostituita dalla necessità di esperti XA incaricati di garantire che tutte le nuove funzionalità e caratteristiche vengano rilasciate tenendo conto dell'esperienza dell'utente finale.
+
+Il Security Engineer
+Nello sviluppo tradizionale a cascata, la sicurezza del sistema è molto spesso un “di più”. È un "requisito non funzionale" che, come la QA, viene spesso applicato alla fine dello sviluppo del sistema. Le organizzazioni DevOps devono invece avere dei security engineer che lavorino a fianco degli sviluppatori, esprimendo le loro raccomandazioni in fasi iniziali all’interno del processo. Si parla in questo caso di “security by design”, per dire che la sicurezza dev’essere insita all’interno dell’applicativo realizzato.
+
+L’utility technology player o DevOps Engineer
+L'ambiente DevOps, con il suo ritmo incalzante, richiede un nuovo genere di IT Operations o System Administrator, che siano coinvolti nel processo di sviluppo del software. Oggi, non sarebbe insolito per questi esperti di operations - a volte chiamati anche DevOps Engineer - essere coinvolti in uno sprint planning per garantire che la qualità del servizio, la gestione delle risorse o la sicurezza siano messe in priorità rispetto a quanto definito dal business.
+
+Non importa se il loro background tradizionale è lo sviluppo o se sono le IT operations, le organizzazioni DevOps richiedono utility technology player (o DevOps Engineer) che possano operare efficacemente su più fronti come piattaforme di sviluppo, strumenti, reti, server e database, e che siano cross-funzionali ai reparti di sviluppo e di supporto.
+
+__________________________________________
+Professionisti di operations IT 
+DevOps si basa sull’integrazione tra development e operation, quindi è evidente che le risorse coinvolte nel realizzazione, configurazione e manutenzione delle tue applicazioni ed infrastruttura avranno bisogno di capire cos’è DevOps.
+
+Professionisti QA/testing 
+Il team di testing ha un ruolo essenziale in continuous integration e continuous delivery, e avere questo gruppo allineato è fondamentale per il successo dell’adozione di DevOps.
+
+Project manager
+Il passaggio dal modello di sviluppo a cascata (waterfall) a processi agile richiede ai project manager di ripensare radicalmente il modo in cui stabiliscono i loro programmi e l’effettiva pianificazione del lavoro.
+
+IT manager 
+L’implementazione DevOps non può avere successo senza il supporto dei manager, che devono attivamente promuovere l’approccio e incoraggiare lo staff ad utilizzare i principi DevOps quotidianamente.
+
+IT executive 
+Alcuni dei team DevOps di maggior successo sono quelli in cui CIO, CTO e direttori IT sostengono e promuovono l’adozione dell’approccio.
+
+Business stakeholder 
+DevOps coinvolge i professionisti lato business che lavorano regolarmente con l’IT tanto quanto gli stessi professionisti IT. Se tutti possono parlare lo stesso linguaggio, l’intera organizzazione sarà più produttiva.
+
+Professionisti di IT security 
+Molte aziende non stanno “solo” adottando DevOps, ma adottano anche DevSecOps, che integra la parte di security e richiede che tutti all’interno dell’organizzazione IT siano responsabili della security.
+
+Consulenti
+Se i tuoi clienti vogliono adottare gli approcci DevOps, devi capire come questo cambi la loro cultura, tecnologia e processi — anche se la tua pratica di consulenza non riguarda direttamente DevOps, lean, Agile o l’IT service management.
+
+IT vendor
+Idem per i fornitori di tecnologia. Se vuoi che le organizzazioni scelgano i tuoi strumenti e soluzioni, devi dimostrare che quei prodotti e servizi sono progettati per funzionare in ambienti DevOps.

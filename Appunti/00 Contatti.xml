@@ -1,0 +1,59 @@
+<Rubrica>
+<Anagrafica 
+    Nome = "Andrea"
+	Cognome = "De Matteis"
+	Residenza = "Ancona"
+	Mail = "andrea.dematteis1996@gmail.com">
+    <!-- Questo elemento non contiene testo, nè sottoelementi quindi può essere reso su una sola linea -->
+</Anagrafica>
+
+<Anagrafica Nome= "Luca "
+            Cognome= "Marafioti"
+            Residenza= "Genova"
+            Mail= "luca.marafioti@fastwebnet.it" /> 
+
+<Anagrafica 
+    Nome = "Fiorentino"
+	Cognome = "Federico"
+	Residenza = "Pompei"
+	Mail = "fiorenzofederico96@gmail.com" />
+
+
+<Anagrafica 
+			Nome = "Mohammed"
+			Cognome = "Ismaiel"
+			Residenza = "Milano"
+		 	Mail = "Mohammed.Ismaiel@hotmail.com"/>
+
+<Anagrafica 
+	Nome = "Chiara" 
+	Cognome = "Petrocelli" 
+	Residenza = "Cesano Boscone" 
+	Mail = "petrocelli.chiara@gmail.com" />
+
+<Anagrafica 
+    Nome= "Claudio"
+    Cognome= "Truglia"
+    Residenza= "Palermiti"
+    Mail= "cla-io@hotmail.it" />
+
+ <Anagrafica 
+     Nome = "Rocco"
+	 Cognome = "Reo"
+	 Residenza = "San Marzano di San Giuseppe"
+	 Mail = "roccoreo6@gmail.com">
+ </Anagrafica>
+
+ <Anagrafica 
+        Nome = "Andrea"
+	Cognome = "Palermo"
+	Residenza = "Caserta"
+	Mail = "and.pal3@gmail.com" />
+
+<Anagrafica 
+    Nome = "Corina"
+    Cognome = "Bubulici"
+    Residenza = "Vigevano"
+    Mail = "verdescorina58@gmail.com" />			 
+
+</Rubrica>

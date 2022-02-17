@@ -1,0 +1,25 @@
+fonte:
+https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-6.0&tabs=visual-studio-code
+
+
+Costruito l'endpoint, provato in locale con postman, siamo pronti a pubblicarlo cioè:
+
+Compilazione in release e salvataggio degli artefatti (compilati) nella cartella Publish per uso futuro di distribuzione.
+
+https://docs.microsoft.com/it-it/dotnet/core/tools/dotnet-publish
+
+Politica di distribuzione tramite XCopy: basta copiare la cartella degli artefatti presso il cliente/ambiente designato:
+
+Esiste anche la politica di lanciare un file di setup.
+
+Infine esiste il Continous Delivery.
+
+Noi useremo la politica Xcopy tramite i menu integrati di VSCode.
+
+0- mi assicuro che la cartella che scelgo per il publish (./Publish) sia vuota o inesistente.
+
+1- dotnet publish -o ./Publish -c Release
+
+2- faccio deploy verso app Azure con menu o comando.
+
+- verifico che le api funzionino.

@@ -1,0 +1,17 @@
+prereq
+https://docs.microsoft.com/en-us/powershell/azure/install-az-ps?view=azps-7.2.0&viewFallbackFrom=azps-2.8.0
+Install-Module -Name Az -AllowClobber -Scope CurrentUser
+
+
+Reti virtuali su azure: tutorial
+https://docs.microsoft.com/it-it/azure/virtual-network/virtual-networks-overview
+
+Creare una rete virtuale usando il portale di Azure:
+https://docs.microsoft.com/it-it/azure/virtual-network/quick-create-portal
+nel momento della comunicazione tra le due macchine virtuali, al comando 'ping myvm2' non si riceverà l'output giusto.
+Al link https://docs.microsoft.com/it-it/azure/virtual-network/quick-create-powershell nella sezione "Comunicare tra le macchine virtuali" nella powershell della myvm1 viene dato il comando 'New-NetFirewallRule –DisplayName "Allow ICMPv4-In" –Protocol ICMPv4'.
+Questo comando va svolto sulla powershell di entrambe le macchine virtuali.
+A questo punto, eseguendo nelle powershell di entrambe le macchine virtuali il comando 'ping myvm1' o 'ping myvm2' si dovrebbe ottenere il giusto output.
+
+Load balancer
+https://docs.microsoft.com/it-it/azure/load-balancer/quickstart-load-balancer-standard-public-portal?tabs=option-1-create-load-balancer-standard#test-the-load-balancer

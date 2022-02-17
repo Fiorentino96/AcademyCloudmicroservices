@@ -1,0 +1,65 @@
+CLOUD DESIGN PATTERNS:
+https://docs.microsoft.com/en-us/azure/architecture/patterns/
+
+
+Priority Queue: Un Design Pattern appartenente alla categoria di Messaging, creato per classificare e svolgere le operazioni richieste in base alla loro priorità/importanza. Un  esempio concreto è lo spostamento di alcune operazioni in background. Quindi, a differenza di un normale pattern di messaging l'ordine di arrivo non è importante, la sua importanza è quella di far arrivare i messaggi in base all'esigenza del cliente. 
+
+Publisher-Subscriber: è un modello di messaggistica in cui i PUBLISHER (emittente) non inviano direttamente ai SUBSCRIBER (Abbonati) ma classificano invece i messaggi pubblicati in classi. In questo modo i SUBSCRIBER (abbonati) esprimono interesse per una o più classi e ricevono solo i messaggi che i PUBLISHER (emittente) hanno inviato nelle classi specifiche.
+
+Anti-corruption Layer
+Definizione:
+Implementa uno strato(Layer) per rendere più sicura e veloce lo scambio di risorse(di qualsiasi tipo) tra di essi,
+è stato descritto per la prima volta da Eric Evans in Domain-Driven Design 
+Come viene Applicato:
+Si creano dei canali appositi ,durante la progettazione, per inserire il nuovo livello 
+Svantaggi:
+questo nuovo livello porta nuove risorse da gestire ed aumenta il carico di computazione;
+la latenza tra i 2 processi aumenta essendoci un nuovo strato da "attraversare";
+potrebbe esserci una diminuizione della scalabilità del sistema generale dovuto all'inserimento di un nuovo livello
+Quando si usa:
+-2 processi che trattano aree diverse devono comunicare ;
+-migrazione di risorse da un processo all'altro
+
+
+Federated Identity:
+Delegare la gestione dei dati personali e l'autenticazione di un utente ad un provider esterno 
+per alleggerire lo sviluppo e migliorare l'amministrazione e l'esperienza con un servizio degli utenti
+      è il mezzo di collegamento di una persona d'identità elettronica e gli attributi, memorizzati su distinti sistemi di gestione delle identità.
+
+
+Gli utenti di solito usano più applicazioni messe a disposizione e ospitate da diverse organizzazioni con cui hanno relazioni commerciali. 
+Ogni organizzazione potrebbe richiedere l'uso di credenziali specifiche (e diverse). Ciò potrebbe causare dei problemi:
+
+     Un'esperienza utente frammentaria. Gli utenti dimenticano spesso le credenziali di accesso quando ne usano molte.
+     
+     Esposizione di vulnerabilità della sicurezza. Quando un utente lascia l'azienda, il suo account deve essere immediatamente sottoposto a deprovisioning. (Togliere le credenziali)
+     È facile trascurare questa esigenza nelle aziende di grandi dimensioni.
+
+     Gestione complicata degli utenti. Gli amministratori devono gestire le credenziali per tutti gli utenti ed eseguire attività aggiuntive, ad esempio inviare promemoria per le password.
+     Gli utenti in genere preferiscono usare le stesse credenziali per tutte le applicazioni.
+
+Soluzione
+Implementare un meccanismo di autenticazione in grado di usare la federated identity. 
+Separare l'autenticazione utente dal codice dell'applicazione e delegare l'autenticazione a un provider di identità attendibile. 
+In questo modo si semplifica lo sviluppo e si consente agli utenti di eseguire l'autenticazione usando un'ampia gamma di provider di identità (IdP),
+riducendo al minimo il carico amministrativo. 
+
+La federated identity offre una soluzione basata su standard per il problema dell'attendibilità delle identità tra domini diversi ed è in grado di supportare l'accesso Single Sign-On. (Autenticazione unica)
+Viene usata sempre più di frequente in tutti i tipi di applicazioni, soprattutto in quelle ospitate nel cloud, poiché appunto supporta tale autenticazione senza richiedere una connessione 
+di rete diretta ai provider di identità. L'utente non deve immettere le credenziali per ogni applicazione. Ciò aumenta la sicurezza perché impedisce la creazione di credenziali necessarie 
+per accedere a molte applicazioni diverse e nasconde anche le credenziali dell'utente a tutti i provider di identità, ad esempio il provider di identità originale. 
+Le applicazioni vedono solo le informazioni dell'identità autenticata contenute all'interno del token.
+
+Il vantaggio principale offerto dalla federated identity è il fatto che la gestione delle identità e delle credenziali è responsabilità del provider di identità. 
+L'applicazione o il servizio non richiede l'uso di funzionalità di gestione di identità. Inoltre, negli scenari aziendali, la directory aziendale non richiede informazioni sull'utente 
+se considera attendibile il provider di identità. In questo modo si elimina tutto il carico amministrativo dovuto alla gestione delle identità degli utenti nella directory.
+
+
+Bulckhead (modello a scomparti): con questo tipo di pattern gli elementi di un'applicazione sono isolati in pool in modo che, in caso di errore, gli altri continuino a funzionare. Suddivide le istanze del servizio in diversi gruppi, in base ai requisiti di carico e disponibilità dei consumer. Questo schema progettuale agevola l'isolamento degli errori e consente di mantenere le funzionalità del servizio per alcuni consumer anche in caso di errore.
+
+Decorator: pattern utile come rimedio all'ereditarietà, ossia l'implementazione per sottoclassi. Il Decorator può operare(*) su qualsiasi implementazione di una determinata interfaccia, eliminando la necessità di creare sottoclassi di un’intera gerarchia di classi. (I servizi creati con l’ereditarietà non possono essere testati separatamente dalla sua classe padre perché non esiste un meccanismo per sostituire una classe padre con uno stub).
+
+(*)operare:: sta per: ha una relazione cliente con la classe che non voglio ereditare
+
+CQRS pattern: consente i disaccoppiare in due componenti o processi separati le letture (Query) dalle disposizioni (Command) verso una base dati (Data Store).
+questo porta alla soluzione dei diversi carichi richiesti, in modo separato, e alla sicurezza di non incapsulare proprietà 'sensibili' del nostro dominio applicativo, all'interno degli oggetti che trasportano i dati (DTO, data transfer objects).

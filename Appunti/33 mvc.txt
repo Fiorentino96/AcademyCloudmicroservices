@@ -1,0 +1,37 @@
+mvc è l'acronimo del pattern web (service/site)
+
+Model:
+Rappresenta l'insieme delle entità che contengono i dati: sono le classi che contengono tutto quanto proviene / destinato al database
+Todo, Profile.
+
+View:
+cosa è?
+    Come ciascun modello viene visualizzato quando ritornato dal controller:
+        nella get visualizzo una lista, 
+        nella get/id visualizzo un singolo elemento, 
+        nella put vedo la scheda in edit.
+che sintassi:
+    in .net la sintassi è  @razor e implementa active server page.
+
+    html puro lato client <-> @razor, un mix tra markup lato client e codice lato server in c#
+Struttura delle cartelle nel progetto:
+nella cartella Views abbiamo tutto il materiale relativo, in particolare per ogni controller troverò la cartella con lo stesso nome e sotto quella cartella troverò tante View.cshtml quanti sono i metodi del controller che restituiscono una View
+
+(ViewModel)
+
+Controller:
+cosa è?
+    un vero e proprio indirizzo da mettere nel browser, 
+    risponde con un'insieme di dati se api controller (usiamo postman o similari per json), 
+in mvc 
+    ciascun metodo che risponde con una view fornisce a tale view un modello da gestire.
+
+
+Asset:
+tutti i file statici lato client :
+css : framework come bootstrap
+js : Angular, jquery, 
+ico.
+jpeg
+
+li trovo nella cartella wwwroot

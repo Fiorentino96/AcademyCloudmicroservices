@@ -1,0 +1,50 @@
+ La containerizzazione : 
+    è un approccio allo sviluppo del software in cui un'applicazione o un servizio, le relative dipendenze e la corrispondente configurazione (astratti come file manifesto della distribuzione) sono inclusi in uno stesso pacchetto sotto forma di immagine del contenitore. L'applicazione inclusa nel contenitore può essere testata come unità e distribuita come istanza dell'immagine del contenitore al sistema operativo host.
+
+Docker:
+    Docker è un progetto open source per automatizzare la distribuzione di app come contenitori portabili e autosufficienti che possono essere eseguiti nel cloud o in locale.
+
+Images: 
+    Pacchetto con tutte le dipendenze e le informazioni necessarie per creare un contenitore. Un'immagine include tutte le dipendenze, ad esempio i framework, oltre alla configurazione della distribuzione e dell'esecuzione che deve essere usata dal runtime del contenitore. L'immagine è Read only (non modificabile). 
+
+Containers: 
+    Un contenitore rappresenta l'esecuzione di una singola applicazione o di un singolo processo o servizio. È costituito dal contenuto di un'immagine Docker, da un ambiente di esecuzione e da un set di istruzioni standard. Quando si ridimensiona un servizio, si creano più istanze di un contenitore dalla stessa immagine oppure in un processo batch può creare più contenitori dalla stessa immagine, passando parametri diversi a ogni istanza.
+
+
+
+Volumes:
+    Poiché le immagini sono di sola lettura, ma la maggior parte dei programmi deve poter scrivere nel file system, i volumi aggiungono un livello scrivibile, superiore a quello dell'immagine del contenitore, in modo che i programmi abbiano accesso a un file system scrivibile.
+
+Repository: 
+    E' una raccolta di immagini di Docker correlate. Un esempio più grande di Repository è Docker-Hub
+
+Registro: 
+    Un servizio che fornisce l'accesso ai repository. Il registro predefinito per la maggior parte delle immagini pubbliche è l'Hub Docker.
+
+Compose: 
+    Strumento da riga di comando e formato di file YAML con i metadati per definire ed eseguire applicazioni multicontenitore. Dopo aver creato le definizioni, è possibile distribuire l'intera applicazione con più contenitori con un singolo comando (a partire da docker-compose) che crea un contenitore per immagine nell'host Docker. L'operazione che facciamo in Visual Studio Code è Compose-Up.
+
+I vantaggi di Docker: 
+
+    - Isolamento; significa che non bisogna preoccuparsi di conflitti di dipendenze o risorse contese, perchè ogni applicazione ha dei limiti definiti di utilizzo delle risorse. Inoltre, grazie all’isolamento, il livello di protezione è maggiore.
+
+    - Leggerezza; intesa come uso di spazio riferito al disco, di processore e di Ram.
+
+    - Scalabilià orizzontale; consente di aumentare la scalabilità di nuovi contenitori per attività a breve termine. A patto che non viene utilizzata una scalabilità orizzontale sulla stessa macchina. 
+
+    - Interoperabilità; indipendenza dal sistema Host (Sistema su cui viene eseguita l'immagine).
+
+Fonte: 
+https://docs.microsoft.com/it-it/dotnet/architecture/microservices/container-docker-introduction/docker-terminology 
+
+Fonte (Registri):
+https://docs.microsoft.com/en-us/dotnet/architecture/microservices/container-docker-introduction/docker-containers-images-registries 
+
+Fonte:
+https://docs.microsoft.com/en-us/dotnet/architecture/microservices/multi-container-microservice-net-applications/
+
+Docker
+https://github.com/docker/awesome-compose
+https://www.youtube.com/watch?v=GBl9CR8tlXk
+https://www.youtube.com/watch?v=sUZxIWDUicA
+https://www.youtube.com/watch?v=wUUmRbXiIOo

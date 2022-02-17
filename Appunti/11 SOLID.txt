@@ -1,0 +1,78 @@
+S.O.L.I.D. design patterns favoriscono la scalabilità e il refactoring
+
+S.
+Single Responsability Principle
+una classe dovrebbe occuparsi di un singolo limitato problema
+O.
+Open Close Principle
+una classe dovrebbe essere aperta all'estensione e chiusa alla modifica
+L.
+Liskov inversion principle devo poter sostituire in un programma già scritto agli oggetti di una certa classe, oggetti di classi derivate senza compromettere il funzionamento
+I. 
+interface segregation principle : meglio utilizzare brevi interfaccie multiple che grandi interfacce 
+D.
+Dependency Inversion Principle: Una classe dovrebbe dipendere dalle astrazioni, non da classi concrete.
+
+La tipologia di programmazione SOLID si riferisce ai "primi cinque principi" 
+dello sviluppo del software orientato agli oggetti descritti da Robert C. Martin 
+in diverse pubblicazioni dei primi anni 2000.
+fonte: 
+http://staff.cs.utu.fi/staff/jouni.smed/doos_06/material/DesignPrinciplesAndPatterns.pdf
+
+Tali principi vengono detti SOLID principles (letteralmente "principi solidi"). 
+
+-Single responsibility[SRP](ogni classe dovrebbe avere una ed una sola responsabilità, interamente incapsulata al suo interno),
+In sostanza questo principio richiede di implementare in una classe solo metodi relativi alla responsabilità prevista, se necessario si dovrà estendere  andando a derivare (creare sotto-classi) per implementare le responsabilità aggiuntive.
+
+-Open-closed[OCP](Una classe (o processo) dovrebbe essere aperta alle estensioni, ma non dovrebbe ammettere modifiche),
+Questo principio si applica quando vogliamo aggiungere una nuova funzionalità ad una classe già esistente modificando metodi già testati, potrei aggiungere errori o malfunzionamenti verso coloro che già usano la classe.
+Per gestire le modifiche basterà estendere la classe di partenza creando delle interfacce, oppure creando una nuova classe derivata. Questo principio si serve per preservare il patrimonio aziendale ottenuto da testing precedenti.
+
+-Liskov substitution[LSP](Gli oggetti creati dovrebbero poter essere sostituiti con dei loro oggetti di classe derivate, senza modificare il comportamento del programma che li utilizza),
+In base alle esigenze del programmatore/utente potrebbe risultare necessario effettuare la sostituzione di alcune istanze di un oggetto,
+per questo si rispetta la sostituzione di Liskov.
+Ad esempio se il mio programma usa dei rettangoli concreti e poi deve essere modificato per funzionare anche coi quadrati, non rispettando il  Liskov substitution principle, evidenziamo una contraddizione.
+
+-Interface segregation[ISP](Sarebbe preferibile utilizzare più interfacce specifiche per ogni classe, invece che una completa per tutti i membri)
+Questo principio ci dice che sarebbe buona norma utilizzare delle interfacce specifiche per implementare i metodi di una classe, 
+quindi andando a creare una interfaccia specifiche che saranno poi associate ai soli membri necessari.
+Come sappiamo, quando si implementa una interfaccia, la classe deve rispettare il contratto 
+dei metodi definiti nell'interfaccia stessa.
+(es IRettangolo è sufficiente a chi desidera area e perimetro, una eventuale IQuadrato per chi deve gestire tramite il solo lato)
+ 
+ 
+-Dependency inversion[DIP](Una classe dovrebbe dipendere dalle astrazioni, non da implementazioni concrete),
+Questo principio va ad invertire le normali dipendenze, andando a far dipendere una classe da entità astratte(come ad esempio un interfaccia),invece che da implementazioni vere e proprie per rendere più flessibile la loro manutenzione e gestione.
+
+
+fonte : https://devnews.it/blog/posts/606080877bc86bef50008a2d/spiegazione-principi-solid-programamzione-oggetti
+
+https://frankdagostino.it/gang-of-four-design-patterns/
+Erich Gamma, Richard Helm, Ralph Johnson e John Vlissides.
+https://www.laramind.com/blog/principi-solid-tutto-cio-che-ti-serve-sapere/
+http://losviluppatore.it/solid-design-principles/
+
+possibili approfondimenti di metodo relazionale ed operativo
+https://www.rhubbit.it/agile-manifesto-le-basi-da-cui-partire/
+
+
+
+REFACTORING:
+
+tecnica strutturata per fare modifiche che non cambiano il comportamento dall'esterno
+precisazione: è la modifica minimale che realizza le richieste.
+
+1- aggiungere progressivamente cose 'innestando' il uno scenario preesistente dei nuovi elementi
+tenendo presente dal principio Interface segregation: 
+Es1 semplicistico :
+la classe Veicolo che implementa l'interfaccia completa IVeicolo, implementa comunque anche le interfacce parziali : IAbitacolo (destinata al pilota) , IVeicoloSuGomma, destinata al gommista e IVeicoloConMotore, destinata al meccanico...
+Posso implementare l'interfaccia complessiva (IVeicolo) in un secondo tempo innestando solo quanto previsto
+
+Es2 :abbiamo generato un progetto dal template di VSCode (oppure ho trovato un progetto già fatto in azienda)
+vado a modoficare o importare nuovi modelli mantenendo il tutto funzionante.
+
+2- estensione: 
+Es partendo da una classe Todo che riporta solo il nome della persona, vado a sostituirla con una classe completa del profilo e uso todo.profilo.name al posto del vecchio todo.persona che avevo prima
+
+
+

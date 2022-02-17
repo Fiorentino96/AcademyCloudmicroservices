@@ -1,0 +1,39 @@
+E' un file system Virtualizzato
+
+Aggiunge al repositpory pattern la possibilità di gestire:
+Versioni parallele: branch
+Revisioni : versioning
+Automatizzare le procedure connesse: es su commit posso far partire una operazione di Build
+Albero Locale e Albero remoto e sincronizzazione
+
+Operazioni chiave
+PULL: (porta albero remoto in locale): ottenere l'ultima versione dei file sul branch in cui sono posizionato
+Commit: Scrive nell'albero locale la versione corrente
+merge: riconciliare le modifiche da più fonti
+Merge su git
+https://www.youtube.com/watch?v=zLz5HDfLWPQ
+
+Push: porta l'albero locale sull'albero remoto
+
+MIO PC
+
+F0 (data ora, changesetid)
+|commit
+F1
+\
+ F1B1 (se qui faccio PUSH, vedi figura sotto)
+|   \
+F2   F2B1 
+|      << merge
+(commit implicito per merge)
+F3
+   
+
+GITHUB(Albero remoto)
+F0 (data ora, changesetid)
+|commit
+F1
+\
+ F1B1
+
+

@@ -1,0 +1,44 @@
+La lavagna di Kanban è una lavagna virtuale allo scopo di gestire il ciclo di lavoro ed aumentare la produttività.
+Questa metodologia è stata sperimentata la prima volta da toyota
+In particolare si riscontrano problemi riguardo alle scorte associate alla produzione prevista ed una possibile gestione errata della forza lavoro.
+Si individua un concetto chiave che è quello di WIP (work in progress: il numero di task che posso eseguire simultaneamente)
+WIP: si fa riferimento ai soggetti che prendono in carica i diversi lavori.
+Vantaggi: Le persone che lavorano ad uno stesso progetto possono portare le loro conoscenze a nuovi gruppi.
+
+Task: card, item
+i task si muovono in UNA SOLA DIREZIONE da todo a done.
+La lavagna è formata da tre colonne : to do, in progress e done, ed opzionalmente è presente una colonna di testing/verifica/collaudo tra quelle di progress e done.
+To do (Back Log): Le idee di lavoro da svolgere durante l'iterazione. Queste idee prima di partire nella lavagna vengono suddivise, semplificate discusse fino a diventare veri task (card)
+In progress: Le CARD che sono ben definite e sulle quali possiamo già partire a implementarle nel modo concordato. Inoltre  sono già definite le persone alla quale sono affidate queste attività.
+(Testing): fase di verifica.
+Done: Le card eseguite. Qualora ci fosse un errore in questa fase bisogna marcare la card come FAILED o UNRELEASED e tornare al backlog con le card corrette.
+Prima di iniziare unun nuovo backlog sulla lavagna di Kanban effettuare il riepilogo della lavagna del giorno prima ed assicurarsi che tutto sia stato portato a DONE e in PROGRESS ci siano attività effettivamente attive.
+
+NB: Si può stabilire una Priority lane (stabilire un ordine di priorità)
+
+Estimates: voglio sempre inserire sulla card, oltre a attività, assegnatari anche la stima del tempo rimanente ore previste per oggi/ore mancanti 
+
+Anti pattern: 
+     Eccedere sul wip: porta alla dipendenza (per il team o l'azienda) dalle conoscenze e abilità di una sola persona
+     Collo di bottiglia
+    
+         
+     Proliferare delle card in Progress (Mantenere l'iterazione al massimo di un paio di giorni e comunque minore di una settimana).
+        
+     Abusare della priority lane.
+
+     Regole rigide e formalismo eccessivo.
+
+todo------------------------------- in progress (2:D,T) ---------------------------(testing)----------------done
+                                                                                                            Tutti verificare che tutti abbiano terminato le intallazioni e configurazioni
+                                                                                                            
+                                                                                                            D completare l'ultimo argomento affrontato in chiusura
+
+
+                                                                                    
+
+                                                                                                            T,rivedere l'installazione per l'N volta
+                                                                                                            T,giro di presentazione
+
+
+

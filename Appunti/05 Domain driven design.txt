@@ -1,0 +1,4 @@
+Dominio : tutto il Know how del cliente (terminologia, flusso produttivo specifico, procedure, evetuali problematiche che il cliente propone)
+terminologia: nella nostra soluzione del problema dobbiamo adottare il linguagio del cliente, nelle nostre riunioni interne dobbiamo utilizzare la terminologia del cliente( del dominio)
+Domain driven design definizione : sviluppo di software personalizzato in base al dominio del cliente, dare una soluzione adatta alle esigenze del cliente(risparmio / guadagno ) che riflette proprio la sua problematica .
+

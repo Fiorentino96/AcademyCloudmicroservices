@@ -1,0 +1,4 @@
+{
+    "appService.deploySubpath": "publish",
+    "appService.defaultWebAppToDeploy": "/subscriptions/263c521a-0e1b-4523-98af-258fecf2c096/resourceGroups/appsvc_windows_centralus/providers/Microsoft.Web/sites/DanieleTodoWebApi"
+}

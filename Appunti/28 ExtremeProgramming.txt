@@ -1,0 +1,33 @@
+EXTREME PROGRAMMING
+L'extreme programming (XP) è la versione più radicale dello sviluppo agile di software e viene perciò detto "estremo".Questa metodologia è stata inventata a metà degli anni 90 dagli sviluppatori Kent Beck, Ward Cunningham e Ron Jeffries.
+In linea generale l'extreme programming è orientato alle esigenze del cliente e rende più efficiente il processo iterativo in tutti i suoi aspetti tramite coordinazione
+cooperazione e collaborazione.Come anche altri metodi agili, parte da processi iterativi e facilità l'esecuzione dei progetti risparmiando 
+tempo e risorse poiché si controlla, si discute e si pubblica costantemente, con cicli brevi. Questi fattori inoltre consentono di individuare e risolvere tempestivamente errori e bug.
+
+L'extreme programming si basa su 5 pilastri , che sono:
+	-Comunicazione
+		 La comunicazione è molto importante sia tra i membri del team che tra sviluppatori e clienti ed inoltre uno scambio continuo deve permettere di affrontare direttamente i problemi. 
+		 Solo quando tutti i soggetti coinvolti si confrontano continuamente è possibile scoprire tempestivamente le criticità. Inoltre, la comunicazione fa sì che tutti lavorino con lo stesso grado di conoscenze 
+		 e si sentano impegnati nel progetto. Una buona conversazione di persona è da preferire allo scambio di messaggi scritti.
+	-Semplicità
+		Nell'XP si cerca sempre di trovare la soluzione più semplice, un approccio che implica molti vantaggi. Quando si ci concentra solo sui fattori necessari, 
+		non ci si sofferma su aspetti superflui , in quest'ottica rientra anche lo sviluppo solo delle funzionalità necessarie al momento, invece di iniziare già 
+		a lavorare per eventuali requisiti futuri. In questo modo il team accelera lo sviluppo. Inoltre, un prodotto agile è molto più semplice da gestire, 
+		sia nelle fasi successive di sviluppo che nella manutenzione.
+	-Feedback
+		Anche questo valore è strettamente legato alla grande importanza della comunicazione diretta(il cliente deve poter esprimere le sue critiche il più spesso possibile). 
+		Nell'extreme programming, anche i messaggi del sistema (log) vengono trattati come feedback. Per poter mettere in atto una cultura del feedback come la si intende nell'XP,
+ 		è importante procedere gradualmente: il team lavora con cicli brevi, testa continuamente il codice e sottopone anche al cliente i progressi dello sviluppo a intervalli brevi
+		ciò consente di apportare tempestivamente modifiche e di risolvere gli errori.
+	-Responsabilità
+		Nell'extreme programming, per coraggio si intende la disponibilità a dire la verità, anche quando è spiacevole. Se ci sono errori nel prodotto, devono essere comunicati, 
+		anche quando se ne ha la responsabilità. In un team che lavora in base ai valori dell'XP, non c'è spazio per le scuse. Nessun componente del team dovrebbe cercare 
+		di minimizzare il proprio coinvolgimento in un errore, in quanto è un atteggiamento non costruttivo per il raggiungimento degli obiettivi.
+	-Rispetto
+		Affinché il team lavori in armonia e possa giungere a prestazioni eccellenti, è importante il rispetto reciproco. Un valore che implica anche, ad esempio, 
+		che il lavoro di un componente del team non deve essere sabotato dalle modifiche apportate da un altro sviluppatore.
+
+
+
+
+fonte : https://www.ionos.it/digitalguide/siti-web/programmazione-del-sito-web/extreme-programmin

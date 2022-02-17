@@ -1,0 +1,45 @@
+Webapi
+Le WEB API (Web Application Programming Interface) rappresentano delle procedure generalmente raggruppate in set di strumenti specifici, 
+il cui scopo primario è quello di eseguire determinati compiti (come ad esempio il POST,GET,PUT,DELETE) per la gestione di risorse,
+Di fatto le WEB API semplificano il lavoro ai programmatori, garantiscono un valore aggiunto alle realtà che le forniscono e offrono 
+indiscutibili vantaggi anche agli utenti (che rappresentano gli utilizzatori finali) che andranno ad utilizzare le risorse connesse
+alla WebApi.
+
+
+Un esempio di webApi può essere la gestione delle card e i relativi assegnatari all'interno della Lavagna di Kanban i cui passi procedurali sono: 
+-Creazione dello scheletro del progetto :
+         Con l'utilizzo dei comandi:
+          dotnet new webapi -o TodoWebApi;
+          cd TodoWebApi;
+          dotnet add package Microsoft.EntityFrameworkCore.InMemory;
+          Abbiamo creato una base del progetto denominato TodoWebApi all'interno di Visual Studio Code e aggiunto un nuget che ci servirà nei prossimi passi.
+          
+-Refactoryng dei modelli:
+         I modelli rappresentano l'insieme delle classi associate alle risorse che la WebApi andrà a gestire , i nostri modelli sono rappresentati dalle classi:
+         -Profile;
+         -States;
+         -Todo;
+         -un database context(TodoWebApiContext nel nostro caso) che si occupa di coordinare l'entity framweork dei modelli;
+         Tramite il refactorying abbiamo potuto utilizzare come modelli le classi del progetto hello. 
+
+-Scaffolding dei controller
+         Tramite i comandi :
+	-dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design;
+	-dotnet add package Microsoft.EntityFrameworkCore.Design; 
+	-dotnet add package Microsoft.EntityFrameworkCore.SqlServer; 
+        abbiamo installato un nuget(un pacchetto per il riutilizzo di codice proveniente da altri progetti o sviluppatori) che è necessario per lo scaffold,
+	per eseguire lo scaffold però sarà necessario installare anche il codegenerator(tramite il comando dotnet tool install -g dotnet-aspnet-codegenerator) 	
+	che andrà a creare i controller richiesti, una volta effettuati questi passaggi potremmo effettuare le scaffold tramite il comando : 
+        -dotnet aspnet-codegenerator controller -name TodoItemsController -async -api -m TodoItem -dc TodoContext -outDir Controllers,
+        dove al posto di "TodoItemsController" va inserito il nome del controller desiderato , al posto di "TodoItem" il modello di cui effettuare lo scaffold,
+        al posto di "TodoContext" il database context di riferimento e al posto di "Controllers" la directory presso cui salvare il risultato dello scaffold.
+
+
+-Test con patman
+        Giunti alla fine del punto precedente , basterà avviare la propria WebApi e scaricare un qualsiasi software(ad esempio Patman) tramite l'URI per effettuare i metodi di gestione 
+        sulla risorsa desiderata come ad esempio :  
+        - Post > effettua l'aggiunta di una istanza della risorsa desiderata,
+        - Get > visualizza tutte le istanze della risorsa desiderata(aggiungendo un parametro di selezione [/parameter] si può anche visualizzare una singola istanza);
+        - Put > modifica di una istanza tramite la selezione per parametro ,
+        - Delete > eliminazione di una istanza tramite la selezione per parametro. 
+        

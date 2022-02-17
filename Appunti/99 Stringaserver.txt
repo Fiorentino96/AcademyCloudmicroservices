@@ -1,0 +1,9 @@
+Stage 
+-db= TodoWebapiContext (tutti)
+-mvc = "ConnectionStrings": {
+"TodoWebApiContext": "Server=tcp:xxx.database.windows.net,1433;Initial Catalog=DatabaseMVC;Persist Security Info=False;User ID=tutti;Password=Mvcprova12;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
+}
+-Api = TodoWebapiContext
+
+Guida per aggiungere IP del sito al firewall: 
+https://docs.microsoft.com/en-us/azure/mysql/howto-connect-webapp

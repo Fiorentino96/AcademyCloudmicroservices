@@ -1,0 +1,91 @@
+DATO:
+Anagrafica (stuct,DTO)
+
+Nome: Daniele
+età: 35
+Residenza: Bologna
+Bio: 
+
+FORMATI:
+
+CSV: comma separated values
+i dati sono tabellari OK
+human readable OK
+ricercabile OK
+METODI: upload e download ftp: file transfer protocol
+
+Nome,età,Residenza
+Daniele,35,Bologna (invio)
+Nome2,xx,Città2 (invio)
+Nome3,yx,Città3 (invio)
+Nome4,yy,"via , o piazza x, Città4" (invio)
+
+234,Ciao,44
+
+problema, 
+non conosco il nome del campo,  
+il tipo del campo non è validabile a priori
+devo usare un delimitatore del testo per skippare i caratteri speciali al suo interno
+
+
+XML: extensible markup language
+i dati sono tabellari OK
+human readable OK
+ricercabile OK
+tipo del campo con DTD data type  definition OK
+caratteri speciali OK
+
+<Anagrafica>
+    <Nome>Daniele</Nome>
+    <età>35</età>
+    <Residenza>Bologna</Residenza>
+    <Bio></Bio> 
+</Anagrafica>
+<Anagrafica>
+    <Nome></Nome>
+    <età></età>
+    <Residenza></Residenza>
+    <Bio></Bio> 
+</Anagrafica>
+<Anagrafica attr1="..." attr2="..." />  <!--  tutto quanto è necessario è già espresso nel tag di apertura che funge anche da chiusura vedi: />    -->
+
+problema(non grave): volume trasmesso richiede compressione
+
+HTML Hypertext markup language: markup che consente di fare rendering delle pagine di ipertesto
+è stato creato prima in ordine di tempo 
+vantaggi: consente ai browser di ricevere le pagine che l'utente vuole visualizzare
+<html>
+<head> contiene info non visualizzate</head>
+<body> contiene altro markup relativo alle info visualizzate nel browser</body>
+</html>
+
+javascript è un linguaggio di programmazione destinato inizialmente ai browser per aiutarli a rendere 'meglio' le pagine da viisualizzare e renderle più interattive
+
+Json è il formato delle variabili in javascript, è molto espressivo e consente di serializzare una grande varietà di tipi ta cui
+//oggetti
+{
+    //stringhe
+    "nome Campo":valore,
+    nomeCampo1:valore1,
+    numero: 23.6,
+    vettori:[12.5,34,1,0.4],
+    vettore1:["str1","str2"],
+    //boolean
+    isHappy: true
+}
+vettore: una serie di valori , tutti dello stesso tipo, di cui conosciamo il numero, e con ordine indicato.
+[{....},{},{}]
+
+
+esempio array i stringhe: l'elemento base dell'array è il puntatore (ref) a stringa, la stringa stessa è un array di caratteri tipografici
+_
+|-->                  "ciao pippo"
+_
+|-->                  "minnie"
+_
+|-->                  "topolino"
+
+THE WINNER IS .......
+
+
+JSON

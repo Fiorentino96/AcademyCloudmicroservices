@@ -1,0 +1,50 @@
+Sono tre i modelli di cloud computing su cui possono contare le imprese protagoniste nel mondo dell’Industria.
+
+1. IaaS (Infrastructure as a Service)
+Trattasi della soluzione più in uso ed è basata sull’impiego di un hardware virtualizzato. Quest’ultimo si compone di uno spazio virtuale sul server, di larghezza della banda, di bilanciatori di carico, di connessioni di rete e di indirizzi IP. L’estrazione dell’insieme di risorse di natura hardware viene effettuata da una miriade di server, dislocati presso svariati Data Center
+Tirando le somme, con il modello IaaS, si affitta da un provider di servizi cloud l’intera infrastruttura, composta da macchine virtuali, server, reti, sistemi operativi e risorse di archiviazione. Si paga in base al consumo.
+
+2. PaaS (Platform as a Service)
+Questo secondo modello permette agli sviluppatori di gestire una piattaforma dedicata con cui possono lavorare alla realizzazione di web app, oggigiorno sempre più innovative, e alla messa a punto di servizi internet. Le loro creazioni finali sono disponibili in formato cloud. Una volta che gli utenti hanno effettuato l’accesso alla piattaforma di riferimento, possono utilizzare queste risorse attraverso il loro browser.
+In sostanza, il modello PaaS semplifica la vita degli sviluppatori che possono lavorare alle loro risorse in tempi più immediati, perché non si perde tempo nella configurazione o nella gestione dell’infrastruttura dei server, dei database e della rete di archiviazione, indispensabili per lo sviluppo.
+
+3. SaaS (Software as a Service)
+Il terzo ed ultimo modello è un servizio cloud con cui gli end-user hanno la possibilità di effettuare l’accesso alle applicazioni mediante internet. Sostanzialmente, più che di un vero e proprio abbonamento, si tratta di un servizio noleggio a tutti gli effetti.
+È un singolo software che viene utilizzato dalle imprese per agevolare i loro compiti e mansione, senza doverlo istallare. 
+
+
+
+
+
+
+
+In premise (Presso il proprio domicilio) 
+La possibilità di unire con la mia infrastruttura i vari servizi di cloud, che consentirebbero all’azienda una serie di VANTAGGI. 
+
+I VANTAGGI
+•	Avalibility: La disponibilità continua al servizio (esempio: il soggetto continua a trovare sempre l’automobile nel proprio garage). In generale è un concetto che si collega alle zone geografiche in cui utilizziamo le risorse. Infatti la CDN (il content delivery network ) è una rete studiata proprio per distribuire i diversi contenuti nelle diverse zone geografiche, consentendo di ricevere una risorsa che sia più vicina a chi lo richiede. 
+•	Relialibility (Affidabilità): La probabilità che il mio sistema o il mio componente non si guasti all'interno di un determinato lasso di tempo affidabile.
+•	Scalability: La capacità di un sistema di poter aumentare o diminuire in scala, in base alle funzioni che l’azienda necessità.
+•	Flexibility: La Capacità di un sistema che permette di adattarsi alle condizioni interne ed esterne  
+
+
+MACCHINA VIRTUALE 
+
+è un software che virtualizza uno o più sistemi operativi, sistemi guest , ovvero è il sistemo ospitato, sfruttando le caratteristiche del Host, che è il sistema ospitante (windows, linux). In quanto, ci sono più sistemi guest e un solo sistema host. 
+Il programma viene lanciato e fornisce all’interno della finestra un vero e proprio computer che può condividere file. Si può decidere anche di installare il proprio software preferito (windows, linux ecc).
+Una macchine virtuale è dunque un software che consente di virtualizzare un dispositivo che di concreto è un sistema operativo che gira come vogliamo. Il sistema GUEST è a propria scelta.
+
+
+Hardware virtualization avviene o tramite bare-matal oppure host-os hypervisor.
+
+•	Bare-Metal: la macchina non parte con un sistema host (esempio Windows) ma direttamente con un software che consente di installare n sistemi operativi in una macchina. Chiaramente è una virtualizzazione di tipo Hardware.
+
+•	Host- os hypervisor: il compito e quello di ridimensionare e monitorare le varie macchine guest 
+
+
+Virtualization of servers: processo che consente di suddividere un server fisico in più server virtuali per mezzo di un'applicazione software. Ogni server virtuale può eseguire i propri sistemi operativi in modo indipendente.
+
+
+Virtualization of disks (storage): la macchina virtuale non ha accesso ad un vero e proprio disco fisico ma solo ad una porzione di disco tramite un driver del disco, come se fosse un disco completo.
+
+Virtualization of desktop: è una tecnologia che fa uso di macchine virtuali per fornire desktop virtuali agli utenti. Quindi ospita i desktop virtuali su una struttura server centralizzata e li distribuisce all'utente su richiesta. 

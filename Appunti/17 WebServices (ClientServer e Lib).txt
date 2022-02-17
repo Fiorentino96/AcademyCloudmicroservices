@@ -1,0 +1,71 @@
+RELAZIONE CLIENT server
+
+esempio: io guido un'automobile: io sono il client, l'automobile, che ha un funzionamento complesso 'esibisce' solo la propria interfaccia (esempio, i controlli, il volante i pedali, etc) e funge da SERVER.
+
+Relazione tra
+
+1- tra un sw client e un componente (sw) server sulla stessa macchina:
+libreria, dll (dynamic link library)
+
+se un sw è alla versione 1.4.235 significa che  1(ver).4(rev).325(build)
+
+
+il client parte...
+il client possiede un riferimento alla libreria e sa dove trovare il file dll
+il client richiede una istanza del componente contenuto in una libreria esterna: deve trovare la dll oppure darà errore.
+il client si aspetta di usare una certa versione della dll, se il componente è cambiato nelle sue interfaccie, il client darà errore.
+
+compilare un sw consiste nella traduzione del codice scritto in c# (o qualsiasi altro linguaggio di programmazione) in codice binario che contiene istruzioni eseguibili (oggi: dal framework di riferimento) -> al processore
+
+2- più sw client accedono tramite tecnologie vaie (es: COM DCOM COM+) ad un componente server remoto, nella stessa riferimento (layer di trasporto: netbios, socket,)
+
+3- Un client (programma, browser, client di posta) accede tramite internet (layer (TCP/IP) protocollo; http,ssh, pop3, imap ) ad un server dall'altra parte dell'universo.
+il client accede alla risorsa tramite l'indirizzo del servizio : prot, uri, ? nome risorsa
+devo conoscere la versione della risorsa per continuare a fruirla nello stesso modo, altrimenti riceverò errore
+Un esempio di questo scenario è l'uso di RDP, remote desktop connection vedi tutorial macchina windows.
+
+
+SOA : service oriented architecture, è un manifesto con le linee guida su come scrivere un web service
+vedi  : http://www.soa-manifesto.org/default_italian.html
+
+4- SERVIZI WEB (web service)
+
+fonti utili:
+todo https://www.oreilly.com/library/view/java-web-services/9781449373856/ch01s04.html
+
+differenze:
+todo https://dotnet.guide/developer/java/web-services-history-introduction-soap-vs-rest.html
+
+
+FEED RSS: che restituisce un elenco di entità di solito sono articoli (post) di un sito CMS 
+CMS= content management system, cioè uno specifico sw lato server che realizza un sito genrico in cui io inserisco i contenuti
+esempi di CMS di successo: WordPress, Wiki, Drupal, OSCommerce etc
+
+SOAP : 2 tipi di chiamate 
+    WSDL : l'interfaccia in formato XML
+    chiamata alla risorsa: uso un certo indirizzo 'sperando' che le specifiche siano invariate, o riadattandomi ($ costi di implementazione) alla nuova specifica : la firma del metodo : i parametri da inviare, struttura dei dati che riceverò
+
+RESTFUL API: uri della risorsa , APPLICO I VERBI http: POST, GET, PUT, DELETE, non faccio affidamento sullo 'stato' del server. restituisce sia in formato json che xml
+URI: Uniform resource identifier: l'identificatore della risorsa sotto forma di url
+todo URL: 
+
+
+il versioning è getito direttamente nella URI della risorsa
+
+ESEMPIO
+
+https://dominiox.ext/ver1.34/percorsodellarisorsa/nomerisorsa/XBT34
+
+https://dominiox.ext/ver1.35/percorsodellarisorsa/nomerisorsa/XBT34
+-ver 1.34 deprecata: da un momento all'altro te la tolgo
+-riadattare ($ costi di implementazione) alla nuova specifica 
+https://dominiox.ext/ver1.36/percorsodellarisorsa/nomerisorsa/XBT34
+
+fonte REST api:
+todo https://medium.com/future-vision/the-principles-of-rest-6b00deac91b3
+
+
+
+microservizi (restful api):
+pattern Single Responsability: un servizio minimale di solito con una sola risorsa, e un solo compito
+posso usare microservizi in una RESTFULAPI che fa da FACADE

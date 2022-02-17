@@ -1,0 +1,49 @@
+
+Stack di sviluppo
+
+front end developer:
+
+javascript : React Redux, Angular
+imaging e grafica
+css 
+c#
+
+windows forms (=finestre) 
+
+back end dev:
+framework 
+java: java
+.net core: tutti i linguaggi
+c++
+
+database admin o dev
+
+sistemista di rete: sa connettere e gestire tutti gli apparati nelle reti e sottoreti aziendali
+
+sistemista 
+
+Full Stack Dev : db dev, frontend dev e backand dev
+
+STACK di implementazione
+
+
+                                                                        frontend
+----------------------------------                              ----------------------------------
+WEBSite consente di gestire la lavagna                                         client (POSTMAN)
+----------------------------------                              ----------------------------------
+
+front end pubblico
+PUBLIC         LOAD BALANCER
+--------------------------------------------------------------------
+-- un TOT di WEBSERVER (kestrel,IIS,APACHE,NGnx-------
+
+frontend privato (o backend)
+private LOAD BALANCER
+----------------------------------
+----API-----SOAP--------------------------------------
+
+
+
+--------------------------              --------------------------
+        DBSERVER 1           <-replica->        DBSERVER 2
+----DB1----DB2----DB3-----               ----DB1----DB2----DB3----        

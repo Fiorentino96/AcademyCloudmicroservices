@@ -1,0 +1,24 @@
+dotnet tool install --global dotnet-ef
+dotnet tool update --global dotnet-ef
+dotnet add package Microsoft.EntityFrameworkCore.Design 
+dotnet ef -h
+
+
+# migrazione aggiunta nel codice: 
+dotnet ef  migrations add Init
+
+# rimuovere la migrazione
+dotnet ef  migrations remove
+
+# genera solo script senza modifiche (nell'output) come fare a generare in file
+dotnet ef migrations script <opzionale da> <opzionale a>
+
+# esegue la migrazione a db
+dotnet ef database update
+
+
+
+
+fonti:
+https://www.entityframeworktutorial.net/code-first/foreignkey-dataannotations-attribute-in-code-first.aspx
+https://www.tektutorialshub.com/entity-framework-core/ef-core-dbcontext/

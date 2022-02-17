@@ -1,0 +1,72 @@
+Un account di archiviazione Azure contiene tutti i dati di Archiviazione: BLOB, condivisioni file, code, tabelle e dischi.
+L'account di archiviazione fornisce uno spazio di nomi univoco per i dati ed accessibile da qualsiasi parte del mondo 
+tramite HTTP o HTTPS. I dati nell'account di archiviazione sono persistenti e altamente disponibili (High Availability), sicuri e scalabili in modo massiccio.
+Azure offre diversi tipi di account di archiviazione. Ogni tipo supporta caratteristiche diverse e ha un proprio modello di prezzo. 
+Considerare queste differenze prima di creare un account di archiviazione bisogna determinare il tipo di account più adatto alle 
+nostre applicazioni d'uso.
+
+Ogni oggetto che si archivia ha un indirizzo che include il nome dell'account univoco. 
+La combinazione del nome dell'account e del tipo di Archiviazione costituisce gli endpoint per l'account di archiviazione.
+Esempio: Nome dell'account + Servizio di archiviazione BLOB ---> Endpoint https://<storage-account>.blob.core.windows.net
+
+L'archiviazione BLOB è ottimizzata per l'archiviazione di grandi quantità di dati non strutturati. 
+I dati non strutturati sono dati che non rispettano un modello di dati o una definizione specifica, ad esempio dati di testo o binari.
+L'archiviazione BLOB è progettata per:
+    Pubblicazione di immagini o documenti direttamente in un browser.
+    Archiviazione di file per l'accesso distribuito.
+    Streaming di video e audio.
+    Scrittura nei file di log.
+    Archiviazione dei dati per il backup e il ripristino, il ripristino di emergenza e l'archiviazione.
+    Archiviazione dei dati per l'analisi da parte di un servizio locale o ospitato in Azure.
+
+La blob storage offre tre diversi tipi di risorse: 
+-	Account di archiviazione
+-	Un contenitore nello storage account 
+-	Un blob nel contenitore 
+
+Un contenitore organizza un set di BLOB, simile a una directory in un file system. Un account di archiviazione può includere un numero illimitato di contenitori e un contenitore può archiviare un numero illimitato di BLOB.
+Archiviazione di Azure supporta tre tipi di BLOB:
+
+-	I block BLOB memorizzano testo e dati binari. I BLOB in blocchi sono costituiti da blocchi di dati che possono essere gestiti individualmente
+-	Gli append BLOB sono costituiti da blocchi come i BLOB in blocchi, ma sono ottimizzati per le operazioni di aggiunta. I BLOB di aggiunta sono ideali per scenari come la registrazione di dati da macchine virtuali.
+-	I BLOB di pagine archiviano file ad accesso casuale di dimensioni fino a 8 TiB. I BLOB di pagine archiviano i file del disco rigido virtuale (VHD) e fungono da dischi per le macchine virtuali di Azure. 
+Esistono diverse soluzioni per migrare dati esistenti a un blob storage 
+
+    (fonte: https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blobs-introduction).
+
+
+Azure Data Lake Archiviazione Gen2 offre un file system gerarchico oltre i vantaggi dell'archiviazione BLOB, tra cui:
+
+Spazio di archiviazione a livelli di basso costo
+High Availability
+Coerenza forte
+Funzionalità di ripristino di emergenza
+
+Fonte: https://docs.microsoft.com/it-it/azure/storage/common/storage-account-overview
+
+
+Disco Virtuale: 
+
+    Un disco virtuale può essere considerato come un disco fisico in un server locale, ma virtualizzato. 
+    Con i dischi virtuali è sufficiente specificare dimensioni e tipo di disco ed effettuare la configurazione (provisioning) del disco. 
+    Una volta effettuato il provisioning, Azure gestisce il resto.
+
+    I tipi di dischi disponibili sono Ultra, SSD Premium, SSD Standard e HDD Standard.
+
+    Inoltre abbiamo tre principali funzioni per i dischi: Il disco dedicato ai dati (data disk), il disco per il sistema operativo (OS disk) e un disco temporaneo (temporary disk)
+
+    Inoltre, un disco virtuale (almeno OS disk) è necessario alla creazione di una Macchina Virtuale (VM). 
+     
+    Infatti, è possibile usare uno Snapshot (una copia completa di sola lettura di un disco rigido virtuale (VHD)) come punto di partenza per risolvere i problemi delle macchine virtuali. È possibile creare uno snapshot dei dischi rigidi virtuali del sistema operativo o del disco dati.
+   
+    
+    Vantaggi: 
+
+    - Estremamente durevoli e sempre disponibili (3 replicas of the data and 99.999% availability)
+    - Semplici da creare e ridimensionare a seconda delle esigenza
+    - Facile integrazione con altri gruppi di macchine virtuali 
+    - Controllo granulare degli accessi 
+    - Azure Support
+    - Sicurezza 
+
+    fonte: https://docs.microsoft.com/en-us/azure/virtual-machines/managed-disks-overview

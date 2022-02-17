@@ -1,0 +1,9 @@
+
+Quick Start Windows VM 
+
+https://docs.microsoft.com/en-us/azure/virtual-machines/windows/quick-create-portal
+
+https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/virtual-machine-recs
+
+keyword: rempote desktop connection
+

@@ -1,0 +1,52 @@
+primo esempio di risorsa su Azure:
+
+Word press
+
+applicazione web che realizza un sito e una sezione di blogging
+funziona su stack LAMP
+
+Linux so
+Apache web server può ricevere richieste http e risponde a tali richieste
+My SQL motore di database
+Php linguaggio di programmazione
+
+
+Marketplace, elenca a seconda della mia ricerca le diverse
+declinazioni per la soluzione: Saas, Paas etc,
+vendor 
+risorsa specifica
+
+Subscription, che mi permette di assegnare le risorse che creo ad un account di fatturazione (come verificare il credito)
+
+Gruppo risorse: contenitore (nominale) che mi permette di raggruppare le mie risorse in base a una logica es progetto, e anche di stabilire i livelli di accesso in un solo punto per altri utenti. 
+
+Area geografica: a seconda delle esigenze di carico e availability, posso decidere dove instanziare la mia risorsa
+
+SKU: Le SKU (Stock-Keeping-Unit) sono codici alfa-numerici identificativi di determinate offerte, comprendenti le caratteristiche dell'offerta. Specificatamente nel contesto Azure, identificano delle categorie di offerte a cui sottoscriversi, cambiando volume di informazioni e velocità di elaborazione ( Ram e Cores ). 
+fonti: https://azure.microsoft.com/it-it/global-infrastructure/services/?cdn=disable&products=virtual-machines
+        https://docs.microsoft.com/it-it/azure/virtual-machines/sizes-previous-gen
+
+ACU: Le ACU ( Azure compute unit ) offrono un modo per confrontare le prestazioni di calcolo (CPU) degli SKU di Azure. 
+In questo modo, sarà più semplice identificare lo SKU da utilizzare per le proprie esigenze computazionali e di calcolo. 
+Le ACU sono attualmente standardizzate in virtual machine di piccole dimensioni (denominate Standard_A1) che comprendono 
+anche un software di confronto tra diversi tipi di SKU.
+fonte: https://docs.microsoft.com/it-it/azure/virtual-machines/acu
+
+Le ACU usano le tecnologia "Intel Turbo" e "AMD Boost" per aumentare la frequenza della CPU e offrire un miglioramento 
+delle prestazioni.  L'entità del miglioramento delle prestazioni può variare in base alle dimensioni della macchina virtuale,
+al carico di lavoro e agli altri carichi di lavoro in esecuzione sullo stesso host.
+
+Tag: l'utilizzo dei tag aiuta a raggruppare tra loro risorse e gruppi di risorse per una loro facile ricerca e organizzazione. Si parla di parametrizzazione dei tag. Un tag infatti è composto da tagName e tagValue.
+Il tagName è la chiave o "parametro" a cui viene assegnato un "valore", che è il tagValue.
+Grazie all'utilizzo dei tag si possono fare query per filtrare le risorse a seconda delle necessità
+Limitazioni: 
+        non tutti i tipi di risorse supportano i tag; 
+        ogni risorsa, gruppo di risorse e sottoscrizione può avere un massimo di 50 coppie nome/valore di tag; 
+        il nome del tag è limitato a 512 caratteri e il valore del tag è limitato a 256 caratteri; 
+        i tag non possono essere applicati a risorse classiche come i servizi cloud; 
+        i nomi dei tag non possono contenere determinati caratteri.
+
+
+fonti:  https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/tag-resources?tabs=json
+        https://docs.microsoft.com/it-it/azure/devops/boards/queries/add-tags-to-work-items?view=azure-devops
+

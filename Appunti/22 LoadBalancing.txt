@@ -1,0 +1,152 @@
+Load Balancing interno ed esterno:
+
+  Il bilanciamento del carico si riferisce alla distribuzione uniforme del carico (traffico di rete in ingresso) in un gruppo di server o risorse back-end. 
+  
+  Un servizio di bilanciamento del carico pubblico (o esterno) può fornire connessioni in uscita per le macchine virtuali all'interno della rete virtuale. Queste connessioni vengono completate traducendo gli indirizzi IP privati in indirizzi IP pubblici. I servizi di bilanciamento del carico pubblici vengono usati per bilanciare il carico del traffico Internet verso le macchine virtuali.
+
+  Viene usato un servizio di bilanciamento del carico privato (o interno) in cui gli IP privati sono necessari solo sul frontend. I servizi di bilanciamento del carico interni vengono usati per bilanciare il carico del traffico all'interno di una rete virtuale. È possibile accedere a un frontend del servizio di bilanciamento del carico da una rete locale in uno scenario ibrido.
+
+  Per questo motivo Azure Standard Load Balancer viene utilizzato per:
+
+    - Bilanciare il carico del traffico interno ed esterno verso le macchine virtuali di Azure.
+
+    - Aumentare la disponibilità distribuendo le risorse all'internoe tra le aree.
+
+    . Configurare la connettività in uscita per le macchine virtuali di Azure.
+
+Fonte: https://docs.microsoft.com/it-it/azure/load-balancer/load-balancer-overview
+
+
+AUTOSCALING DI ISTANZE:
+
+    L’autoscaling è una metodologia per il controllo delle istanze , ne possiamo distinguere due tipologie: verticale e orizzontale. In entrambi i casi l’orchestratore controlla 
+    periodicamente dei parametri generici disponibili a livello infrastrutturale che indicano utilizzo delle risorse e istanze assegnate (ad esempio l’utilizzo di CPU di una macchina virtuale) 
+    e al verificarsi di alcune situazioni ritenute critiche (ad esempio il superamento di una determinata soglia o l'accesso ad aree di memoria riservate) vengono eseguite alcune azioni di manutenzione.
+
+    Questa metodologia ha dei vantaggi e svantaggi:
+    Vantaggi>
+                -Il principale vantaggio dell’autoscaling è sicuramente la sua facile implementazione e configurazione, che va fatta esclusivamente 
+                nell’infrastruttura contenente le istanze ed è completamente trasparente al servizio. Per configurare l’autoscaling è sufficiente definire 
+                i parametri da monitorare, le azioni da intraprendere sulle istanze e le soglie superate le quali si attiva l'autoscaling,
+                -Generalità(considerata come vantaggio),poichè la configurazione è sicuramente più semplice, così come la sua l’implementazione ed inoltre
+                richiede poco calcolo computazionale;
+    Svantaggi>
+                -L’impossibilità di controllare parametri più indicativi , non esiste nell'autoscaling un meccanismo che "marchia" le istanze , 
+                questa limitazione impedisce all’infrastruttura di capire in modo accurato lo stato e le risorse necessarie al servizio, 
+                che devono essere quindi dedotte dai parametri generici.
+                -l’impossibilità, da parte dell’infrastruttura che gestisce le istanze, di informare il servizio circa la non disponibilità di una o più risorse necessarie 
+                e di notificare la presenza di alcuni malfunzionamenti (ad esempio latenza elevata tra due punti, ecc.) , questo impedisce al servizio di adattarsi alle 
+                criticità riscontrate dall’infrastruttura.
+
+Fonte: https://vitolavecchia.altervista.org/che-cose-significato-e-utilizzo-pratico-autoscaling/
+
+
+Il concetto di scalabilità acquista un senso ben preciso ovvero la possibilità di aumentare le risorse virtuali a disposizione in ogni momento, per poter gestire in maniera ottimale il flusso di traffico. 
+Grazie alla scalabilità, un’azienda che acquista un servizio in Cloud può scalare le risorse a seconda delle proprie esigenze. 
+Sia che si tratti di una crescita (upgrade) del carico di lavoro che di un calo (downgrade) con conseguente necessità di abbassare la soglia delle risorse.
+Bisogna ricordare che ne esistono due tipologie differenti:
+
+-Scalabilità orizzontale
+-Scalabilità verticale
+   
+Scalabilità orizzontale:
+    
+    Quando si parla di scalabilità orizzontale (horizontal scaling) si vuole raffigurare la modifica della propria infrastruttura, 
+    con l’aggiunta di nuove macchine (o in questo caso di nuovi Cloud VPS). Questo permette di alleggerire i nodi esistenti, 
+    andando a distribuire il carico su un numero più alto di nodi.
+    Su ognuna di queste macchine aggiunte, che vanno a completare l’infrastruttura a disposizione, 
+    è possibile poi effettuare lo scaling delle risorse.
+
+Scalabilità verticale:
+
+    La scalabilità verticale (vertical scaling) si ha quando si vanno ad aggiungere, o a togliere, delle risorse hardware. 
+    Pensiamo per esempio alla CPU, la RAM, la Banda, lo Spazio disco ecc. La scalabilità verticale viene presa in considerazione 
+    dalle aziende (sia quelle grandi che le piccole e medie imprese) che necessitano, in alcuni periodi, di un maggiore (o minore)
+    quantitativo di risorse a disposizione.
+
+    Possiamo dire che scalare in verticale è un processo molto più veloce rispetto all’opzione orizzontale che, come detto, 
+    richiede delle specifiche competenze. Scalando le risorse in verticale, invece, sarà più semplice usufruire del giusto quantitativo 
+    di risorse per gestire il traffico web in un determinato periodo.
+
+    Autoscaling: possibilità di scalare le risorse sia in verticale che in orizzontale, così da poter usufruire di un certo quantitativo 
+    di risorse in alcuni periodi dell’anno (per fronteggiare eventuali picchi di traffico). 
+    In tal caso, il cliente paga solo le risorse effettivamente utilizzate.
+
+
+
+Relativo ad Azure:
+
+    Ridimensionare un cluster in modo appropriato è fondamentale per garantire le prestazioni di Esplora dati di Azure. 
+    La scelta di dimensioni statiche per un cluster può portare al suo sottoutilizzo o sovrautilizzo e nessuna delle due condizioni è ideale. 
+    Poiché la domanda in un cluster non può essere stimata con accuratezza assoluta, è meglio ridimensionare un cluster, aggiungendo e 
+    rimuovendo capacità e risorse della CPU con la modifica della domanda.
+
+    Sono disponibili due flussi di lavoro per il ridimensionamento Esplora dati di Azure cluster:
+
+    Scalabilità orizzontale, detta anche aumento e riduzione del numero di risorse.
+    Scalabilità verticale,detta anche aumento e riduzione delle dimensioni. 
+
+    Usando la scalabilità orizzontale, è possibile ridimensionare automaticamente il numero di istanze in base a regole e 
+    pianificazioni predefinite. Per specificare le impostazioni di scalabilità automatica per il cluster:
+
+    Nel portale di Azure passare alla risorsa Esplora dati di Azure cluster. 
+    In -Impostazioni selezionare -Scalabilità orizzontale. Nella finestra -Scalabilità orizzontale selezionare il metodo di 
+    scalabilità automatica desiderato: 
+    -Scalabilità manuale
+    -Scalabilità automatica ottimizzata 
+    -Scalabilità automatica personalizzata.
+
+    Nel portale di Azure passare alla risorsa Esplora dati di Azure cluster. In Impostazioni selezionare Scalabilità verticale.
+
+    Nella finestra Scalabilità verticale verrà visualizzato un elenco degli SKU disponibili per il cluster. 
+
+    Per modificare lo SKU, selezionare un nuovo SKU e fare clic su Seleziona.
+    È stata configurata la scalabilità verticale per il cluster Esplora dati di Azure rete.
+
+Fonte Primaria: https://blog.keliweb.it/2019/06/cloud-scalabilita-orizzontale-e-verticale/
+Fonte secondaria: https://docs.microsoft.com/it-it/azure/data-explorer/manage-cluster-vertical-scaling
+
+
+
+Health Check e monitoraggio delle istanze:
+https://docs.microsoft.com/it-it/azure/app-service/monitor-instances-health-check
+
+per implementare nella propria applicazione una risposta fruibile dalla dashboard di azure:
+https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/monitor-app-health
+
+
+
+Health Check e monitoraggio delle istanze (Database SqlServer):
+
+    Un Health Check è un controllo approfondito dello stato di salute di un database server o di un database, per assicurarsi che sia stata effettuata una corretta configurazione e che il sistema sia stabile ed affidabile.
+
+    Un Health Check regolare garantisce di avere sotto controllo la configurazione e lo stato di salute dell'istanza di SQL Server e dei database aziendali. Database efficienti riescono a garantire le performances richieste per l'esecuzione corretta degli applicativi aziendali.
+
+    Considerando la crescente importanze dei programmi di ogni tipo in azienda è facile comprendere come questo tipo di controllo sia fondamentale, anche se da solo non è sufficiente. 
+
+    Inoltre, una configurazione corretta permette di verificare che le licenze di SQL Server siano appropriate al sistema in uso, evitando eventuali sanzioni oppure, più spesso, risparmiando denaro, dato che consente di scegliere le licenze più convenienti.
+
+    Per prima cosa, va effettuata una distinzione tra i principali tipi di Health Check disponibili per SQL Server:
+        - Server Health Check
+        - Database Health Check
+    
+    Il primo tipo di controllo si focalizza sui singoli database contenuti nell'istanza. Questo Health Check è utile in quanto in SQL Server sono possibili numerose impostazioni a livello di database che con un controllo dell'istanza non vengono verificate.
+
+    Un esempio di queste impostazioni può essere lo stato degli indici del database o alcune query che posso risultare particolarmente pesanti su quello specifico database.
+
+    IL secondo tipo Corrisponde al controllo dell'istanza di SQL Server, in cui si va a dettagliare lo stato di salute e la configurazione della medesima. 
+
+    La procedura di un Health Check di SQL Server prevende quattro passaggi principali:
+
+        1.	Analisi approfondita dell’infrastruttura utilizzata dal sistema DBMS. Questo permette di individuare eventuali problemi a livello hardware, impostazioni mancanti a livello di sistema operativo, deficit a livello applicativo, configurazione del database.
+
+        2.	Assessment delle reali necessità di risorse legate al vostro business. In modo si possono definire correttamente le risorse hardware e software necessarie in relazione al volume delle transazioni del tuo sistema informativo.
+
+        3.	Verifica dei requisiti indispensabili per garantire la continuità e la sicurezza del business in caso di eventi inaspettati, quali disastri o esecuzioni involontarie di codice ed altre anomalie, intrusioni, causa di perdite di dati.
+
+        4.	Report esaustivo che descrive in modo comprensibile al personale IT l’elenco degli interventi necessari in ordine di importanza per raggiungere una performance più elevata, massimizzare la disponibilità e la sicurezza. 
+
+        Il sito riportato nella fonte suggerisce dai 2 ai 4 health check annuali. 
+
+Fonte: https://www.datamaze.it/risorse/health-check
+

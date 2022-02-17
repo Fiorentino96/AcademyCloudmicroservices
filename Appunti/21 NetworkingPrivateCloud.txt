@@ -1,0 +1,85 @@
+
+### Rete Informatica
+
+Una rete informatica, è costituita da un insieme di dispositivi hardware e software collegati l’un l’altro che, attraverso appositi canali di comunicazione, permettono di scambiarsi risorse, dati o informazioni. A seconda della posizione geografica avremo differenti reti informatiche, si parlerà infatti di LAN (Local Area Network), MAN (Metropolitan Area Network), o WAN (Wide Area Network). I seguenti dispositivi rivestono un ruolo importante nell’implementazione della rete informatica: NIC (Network Interface Card): serve a collegare un dispositivo alla rete, è un hardware e può essere sia interno che esterno. 
+
+SWITCH: serve a direzionare i dati veicolandone il traffico in modo bidirezionale tra più dispositivi collegati tra loro. 
+
+ROUTER: serve a gestire i pacchetti di dati in arrivo o in uscita da uno o più nodi della rete informatica.  
+
+HUB: è un dispositivo che collega più utenti tra loro, facendo in modo che ogni pacchetto di dati proveniente da un computer venga ricevuto dall’hub su una porta e trasmesso a tutte le altre. Ognuno degli utenti che si collega ad uno stesso hub, si dice che appartiene allo stesso “segmento”.  
+
+Sottorete: è una parte di una singola rete IP (Internet Protocol). La differenza tra una rete e una sottorete sta nel tipo di configurazione di rete che si dà al proprio computer. La subnetting è la divisione di una singola rete in gruppi di computer che hanno in comune, in ciascun indirizzo IP un determinato prefisso di routing. Si organizza dunque la rete in modo efficiente, dividendola in intervalli. Il processo di subnetting porta alla separazione dell'indirizzo IP in una parte che indica la rete e una parte che indica l'host. Questo viene eseguito tramite un AND binario tra l'indirizzo IP e la maschera di sottorete. Il risultato di tale operazione è l'identificatore di rete. In sostanza l’indirizzo IP non viene visualizzato nella sua interezza, ma una parte, viene mascherata da una serie di 1, lasciando visibile solamente l’ottetto che costituisce l’identificativo.  IPv4 sta per Internet Protocol Version 4. Si tratta di un metodo con cui i dati saranno inviati da un dispositivo informatico ad un altro attraverso Internet. È formato da 4 ottetti, separati da un punto. È possibile generare con questo protocollo circa 4 miliardi di indirizzi IP, è per questo che, non essendo tale quantità sufficiente al giorno d’oggi, è stata introdotta una versione del protocollo denominata IPV6. L'IPv4 utilizza uno schema di indirizzi a 32 bit. Questa versione di IP è utilizzata come base di Internet e stabilisce tutte le regole e i regolamenti per le reti informatiche che funzionano secondo il principio dello scambio di pacchetti. Il fine di questo protocollo è quello di stabilire connessioni tra dispositivi informatici, server e dispositivi mobili basati su indirizzi IP. IPv6 sta per “Internet Protocol Version 6”, ed è una versione molto più estesa dell’IPv4 e dispone di un numero di indirizzi molto grande IP 128 bit. Questo permetterebbe dunque una comunicazione end-to-end a tutti i dispositivi, rendendo superfluo l’uso di IP privati, e consentendo anche alle aziende di gestire 
+comunicazioni bidirezionali senza dover impostare delle regole specifiche nel router. In più, l’IPv6 potrà supportare il continuo progresso dell’Internet of Things (IoT) e la diffusione di intelligenza artificiale anche a dispositivi di uso pubblico o comune, in modo tale da favorire la digitalizzazione dei servizi e aumentarne
+autonomia ed efficienza. A differenza dell’IPV4 è un codice alfanumerico, la combinazione tra cifre e lettere può produrre un numero maggiore di indirizzi IP, rispetto al precedente protocollo, questi possono raggiungere la cifra di circa 340 miliardi
+
+fonti: https://www.quora.com/What-are-the-functions-of-NIC-hub-router-and-switch 
+		https://www.zerounoweb.it/techtarget/searchdatacenter/configurazione-di-rete-e-significato-dello-switch-tecnologia-storia-e-vantaggi/
+		https://www.ibm.com/it-it/cloud/learn/networking-a-complete-guide 
+		https://www.speedcheck.org/it/wiki/ipv4/ 
+		https://www.telemar.it/it/notizie/protocollo-ipv6-cos-e-a-cosa-serve-e-perche-e-il-nostro-futuro
+
+
+### Networking 
+Sistema di collegamento in rete di più elaboratori e utenti, comprendente le piattaforme, i sistemi operativi, i protocolli e le architetture di rete. è la creazione di una rete di contatti dipendente dai protocolli
+
+Differenze chiave tra LAN, MAN e WAN
+
+L'area geografica coperta da LAN è piccola, mentre, MAN copre relativamente grande e WAN copre il più grande di tutti. La LAN è limitata a scuole, ospedali o edifici, mentre, MAN connette piccole città o Città e, d'altra parte, la WAN copre un Paese o un gruppo di Paesi.
+
+LAN: Local Area Network (rete locale) dove i pacchetti vengono gestiti da hub e switch. La massima distanza di trasferimento pacchetti via cavo ethernet è di 100 metri, mentre la connessione wireless 2.4 GHz arriva fino a 91 metri in aria aperta e 45 metri nei luoghi chiusi. Di conseguenza, si rende necessario l'utilizzo di switch per l'amplificazione dei segnali. La velocità di trasmissione dei pacchetti è più alta rispetto a MAN e WAN, pari fino a 100 Mb/s.  
+MAN: Metropolitan Area Network, è una rete che si estende fino a poche decine di kilometri di ampiezza. Un es. è Fastweb con l'utilizzo di cabine.  
+WAN: Wide Area Network, collega nodi anche a grandi distanze tra loro. Tale rete implica l'utilizzo di ISP (Internet Service Provider) per le richieste ai Server. Introduce delle latenze maggiori nelle comunicazioni. Prevede un sistema di gestione traffico e di Indirizzi IP. La velocità di trasmissione dei pacchetti è più bassa, al di sotto dei 10 Mb/s.
+
+Mentre una rete LAN ammette un solo percorso per la comunicazione di pacchetti tra un Client e un Server, una rete WAN prevede più possibilità di percorrimento rappresentando una infrastruttura più complessa.
+
+
+fonte: https://www.html.it/pag/71625/protocolli-di-rete-e-networking/
+			https://www.rigacci.org/docs/biblio/online/inet/extra/LANWAN.HTM
+
+
+### Protocolli 
+
+Quando due entità intendono scambiare informazioni occorre un mezzo per veicolarle ma anche un linguaggio comune che sia intellegibile per entrambi. Ovviamente le apparecchiature elettroniche non fanno eccezione. Potete immaginare i protocolli di comunicazione come la collezione di regole perché ciò avvenga
+
+Oppure, la definizione formale a priori delle modalità o regole di interazione che due o più apparecchiature elettroniche collegate tra loro devono rispettare per operare particolari funzionalità di elaborazione necessarie all'espletamento di un certo servizio di rete.
+
+Protocolli di rete , TCP / IP ed UDP / IP.  
+Il protocollo di rete TCP / IP include una serie di protocolli al suo interno su tre livelli:  
+- Livello applicativo al quale fanno parte HTTP, DNS, DHCP e FTP.  
+- Livello di Trasporto: TCP, UDP.  
+- Livello Internet: IP (Internet Protocol).
+
+Sul Livello applicativo, il DHCP serve per l'allocazione dinamica degli indirizzi IP. Può avvenire sia sul Server sia sul router di casa. Un computer può funzionare anche da DHCP. 
+
+Per quanto riguarda il DNS, acronimo di Domain Name System, opera la conversione da nome ad indirizzo IP in quella che è chiamata "risoluzione DNS". La conversione da Indirizzo IP a nome è la "risoluzione inversa".  
+
+Sul Livello di Trasporto abbiamo il TCP che riguarda il trasferimento di pacchetti con ritrasmissione dell'effetiva consegna del messaggio. Viceversa, il protocollo UDP si occupa anch'esso del trasferimento, senza avere la possiblità di ritrasmissione circa la corretta consegna del messaggio.
+
+Sul Livello IP (Internet Protocol) abbiamo il protocollo IP per la comunicazione tra due host relativamente a qualsiasi contenuto dei pacchetti.
+
+
+fonte: https://www.html.it/pag/71625/protocolli-di-rete-e-networking/
+			https://www.2d2web.com/cos-e-il-dhcp/
+			https://it.wikipedia.org/wiki/Domain_Name_System
+
+### Private Cloud
+
+Il private cloud rappresenta un modello di deployment su cloud on demand in cui i servizi e l'infrastruttura di cloud computing sono in hosting in un ambiente privato (Es. una rete aziendale ). 
+Il private cloud è un modello di deployment su cloud in cui le risorse di elaborazione sono dedicate e proprietarie e una singola organizzazione ospita e gestisce il sistema. Il public cloud è invece un modello in cui i servizi cloud sono di proprietà di un provider che li gestisce e ospita anche altri tenant. Le aziende possono scegliere una soluzione che abbina un private cloud a un public cloud in un ambiente di hybrid cloud.
+
+fonte: https://www.vmware.com/it/topics/glossary/content/private-cloud.html
+
+### Rete Virtuale Azure
+
+La rete virtuale consente a molti tipi di risorse di Azure, ad esempio macchine virtuali di Azure (VM), di comunicare in modo sicuro tra loro, internet e reti locali.
+
+fonte: https://docs.microsoft.com/it-it/azure/virtual-network/virtual-networks-overview
+
+## Routing Virtuale su  Azure 
+
+Il modo in cui Azure dirige il traffico di informazioni tra Azure, la rete locale e le risorse Internet. 
+Azure crea automaticamente percorsi di sistema e assegna i percorsi a ciascuna subnet (sottorete) in una rete virtuale, in modo da avere un percorso specifico per ogni Risorsa. 
+Non puoi creare percorsi di sistema, né rimuovere percorsi di sistema, ma puoi sovrascrivere alcuni percorsi di sistema con percorsi personalizzati.
+
+fonte: https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-udr-overview

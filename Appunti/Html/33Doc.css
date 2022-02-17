@@ -1,0 +1,26 @@
+p {
+    color:green;
+}
+
+body {
+    color: gray;
+}
+
+#immagineDaWeb
+{
+    width:1000px;
+}
+
+.riquadroGiallo
+{
+    background-color: red;
+    border-style: solid;
+    border-width: 2px;
+    border-color: blue;
+}
+
+.riquadroInEvidenza
+ {
+    background-color: blue;
+    border-style: dotted;
+}

@@ -1,0 +1,147 @@
+tutorial HTML
+https://www.w3schools.com/html/default.asp
+reference su DOM
+https://www.w3schools.com/jsref/default.asp
+tutorial
+https://www.w3schools.com/js/default.asp
+
+
+
+
+DOM Document Object Model 
+
+Il Document Object Model (DOM) è un’interfaccia di programmazione per documenti HTML e XML. Il documento rappresenta la pagina da modificare in modo chiaro e universalmente leggibile, così che i si possa modificare la struttura, lo stile e il contenuto del documento in maniera semplice. È inoltre la base per una vasta gamma di interfacce di programmazione delle applicazioni.
+Una pagina Web è un documento. Questo documento può essere visualizzato nella finestra del browser o in HTML. Ma è lo stesso documento in entrambi i casi. Il Document Object Model (DOM) rappresenta quel documento in modo che possa essere modificato.
+Il DOM, sostanzialmente, è un modo per accedere e aggiornare dinamicamente il contenuto, la struttura e lo stile dei documenti, che può essere modificata con un linguaggio di scripting come JavaScript.
+
+Con il DOM le pagine sono modellate usando gli oggetti e il modello comprende non solo la struttura di un documento ma anche il suo comportamento e gli oggetti da cui esso è composto. In altre parole, i nodi non rappresentano una struttura di dati, ma oggetti che hanno funzioni ed identità. 
+In pratica il DOM identifica:
+-le interfacce e gli oggetti usati per rappresentare e manipolare un documento;
+-la semantica di queste interfacce e oggetti, includendo sia il comportamento che gli attributi;
+-le relazioni e le collaborazioni tra queste interfacce e gli oggetti.
+
+FUNZIONE:
+
+La funzione principale del DOM è quella di offrire a un programma JavaScript la capacità di rilevare eventi su ogni singolo componente di una pagina (dal click su un pulsante alla scrittura in uno specifico campo di un modulo) e di modificarne le rispettive proprietà. 
+Un altro aspetto importante è il fatto che, anche se viene sfruttato prevalentemente in ambito Ajax, JavaScript non è certo l’unico linguaggio con cui è possibile lavorarci. Per esempio anche PHP, Ruby, Perl, Python contengono Api complete per accedere al Dom e ai metodi ad esso associati.
+
+AJAX:
+acronimo di Asynchronous JavaScript and XML, è una tecnica di sviluppo software per la realizzazione di applicazioni web interattive 
+(Rich Internet Application), basandosi su uno scambio di dati in background fra web browser e server, consentendo così l'aggiornamento dinamico di una pagina web senza esplicito ricaricamento da parte dell'utente.
+È una tecnica asincrona nel senso che i dati extra sono richiesti al server e caricati in background senza interferire con il comportamento della pagina esistente. Normalmente le funzioni richiamate sono scritte con il linguaggio JavaScript. Tuttavia, e a dispetto del nome, l'uso di JavaScript e di XML non è obbligatorio, come non è detto che le richieste di caricamento debbano essere necessariamente asincrone.
+
+Get element by id:
+
+Il metodo document.getElementById('Id'), in cui "document" sta ad indicare la classe a cui si riferisce il metodo "getElementById()", restituisce un elemento con l'Id specificato come parametro. Il metodo getElementById() restituisce null se l'elemento non esiste. Il metodo getElementById() è uno dei metodi più comuni nel DOM HTML. Viene utilizzato quasi ogni volta che si desidera leggere o modificare un elemento HTML.
+Qualsiasi ID dovrebbe essere univoco, ma se esistono due o più elementi con lo stesso ID, getElementById() restituisce il primo.
+
+Inner element v Inner text 
+
+La proprietà innerText restituisce solo il testo, senza spaziatura e tag dell'elemento interno.
+La proprietà innerHTML restituisce il testo, inclusi tutti i tag di spaziatura e di elemento interno. 
+innerText fornisce: "This element has extra spacing and contains a span element."
+innerHTML fornisce: "   This element has extra spacing     and contains <span>a span element</span>."
+
+getAttr:
+è un metodo che ritorna il value di un attributo di un elemento.
+Il nome dell'attributo è di tipo string.
+Ritorna una stringa.
+Se l'attributo non esiste, ritorna il value null oppure una stringa vuota.
+
+setAttr:
+è un metodo che aggiunge ad un elemento uno specifico attributo e il relativo value. 
+Se quell'attributo esiste già, viene cambiato solo il value.
+Sia il nome dell'attributo che il value sono di tipo string.
+
+getElementsByTagName:
+è un metodo che ritorna un elenco di elementi con il tag name specificato dalla richiesta.
+è un metoddo di sola lettura.
+
+
+Minify:
+ Il processo di minification (o Minimizzando) è un concetto semplice. Quando scrivi codice in JavaScript o in qualsiasi altra lingua, ci sono molte funzioni che sono necessarie solo per rendere il codice più facile da comprendere per gli umani: i computer non si preoccupano di ciò che chiamate le variabili, o quanto spazio ci sia tra parentesi, per esempio.
+
+Minimizzando il codice, è possibile ridurre drasticamente la dimensione del file. Un file più piccolo sarà quindi più veloce da scaricare per gli utenti. Se stai scrivendo solo una o due righe di JavaScript, probabilmente non ci sarà un miglioramento evidente. Tuttavia, se stai scrivendo un sacco di codice, o utilizzando librerie di grandi dimensioni come jQuery, aumenti evidenti delle prestazioni e dimensioni dei file drasticamente ridotte sono facilmente ottenibili!
+
+
+CSS: cascading style sheet
+
+
+3 punti in cui inserire il mio stile:
+1-nell'elemento:
+<elem style="qui le direttive css di questo elemento" />
+2-nell'head 
+<html>
+    <head>
+        <style>
+        // qui le direttive css disponibili all'intero documento es:
+        p{
+            width:300px;
+            color:green;
+        }
+        </style>
+    </head>
+    <body>
+        <p style="width:100px;">
+        un paragrafo soggetto alla direttiva inline
+        </p>
+
+        <p>
+        altro paragrafo soggetto alle direttive in head
+        </p>
+    </body>
+</html>
+
+3- in un file.css separato:
+es 
+
+p{
+    background-color: yellow;
+}
+todo completare da w3schools
+https://www.w3schools.com/tags/tag_link.asp
+
+vince il punto più vicino all'elemento.
+
+SELETTORI css:
+1- selettore elemento
+uso come selettore il nome tag a cui è destinato lo stile
+p{
+    color:green;
+}
+
+body{
+    color: gray;
+}
+2- selettore id
+uso come selettore cancelletto # e l'id di un elemento presente nel documento
+#immagineDaWeb
+{
+    width:300px;
+}
+
+3- selettore per classe: uso come selettore punto . + nome classe indicato nell'attributo dell'elemento
+cioè:  tutti gli elementi che presentano un attributo class con il nome specificato dopo il punto nel file css, riceveranno lo stile indicato
+
+.riquadroGiallo
+{
+    back-ground-color: yellow;
+    border-style: solid;
+    border-width: 2px;
+    border-color: gray;
+}
+
+.riquadroInEvidenza
+ {
+    background-color: blue;
+    border-style: dotted;
+}
+per assegnare una classe agli elementi uso l'attributo class, un elemento può appartenere a più classi separate da spazio es:
+
+<p class="riquadroGiallo nomeclasse1 nomeclasse2">
+Testo del paragrafo con bordo solido perchè border-style: solid; e sfondo giallo....
+</p>
+
+<p class="riquadroInEvidenza nomeclasse1 nomeclasse2">
+Testo del paragrafo con bordo a puntini perchè border-style: dotted; e sfondo blue
+</p>

@@ -1,0 +1,182 @@
+2022/01/26
+
+todo------------------------------- in progress (max wip 5) ---------------------------(testing)----------------done
+                                                                                                                FAILED (Ch) Terminare le installazioni                                                                                                                                                                                                                                                                                                                                                    
+                                                                                                                (L,AdM) Merge su git                                                                                                                   
+                                                                                                                (Co,M,F) Appunti Azure RBAC: argomento                                                                                    
+                                                                                                                (R,Ch,M,Cl,AP) S.O.L.I.D. ripasso al terzo concetto 
+                                                                                                                (D 15m) Esempi concetto Ereditarietà
+                                                                                                                (D)Installare SDK per Corina
+                                                                                                                (T)json
+                                                                                                                (T 10min) Contatti
+                                                                                                                (D,T 40 min) XML ed HTML    
+                                                                                                                (T, 40 min) scodare le todo ed eliminare
+                                                                                                                (R, M,) upload e download ftp file transfer protocol
+
+                                                                                                                (Claudio, Andrea P) Singleton
+                                                                                                                ( Chiara, Corina) Factory service
+                                                                                                                (Adm, L, Monica) XML -> HTML
+                                                                                                                (T, 20) compilare un file 00 Contatti.xml con le anagrafiche espresse tramite attributi 
+                                                                                                                (Dan, 20min) creazione macchine virtuali linux
+                                                                                                                (T, 15+10) storage accuounts (dischi virtuali)
+                                                                                                                + completare il  file
+
+                                                                                                                T, 2ore dotnet new webapi
+                                                                                                                T, instanziare un Profile ed assegnarlo a Person nel program.cs quando creiamo gli item1,itemn(card)
+
+                                                                                                                T sistema operativo Linux
+                                                                                                                T Uso della shell: comandi fondamentali , file system , 
+                                                                                                                T Processi: comandi elencare , stoppare kill etc
+
+                                                                                                                T, Utenti, gruppi (def), permessi(def) : significato e comandi creazione 
+
+                                                                                                                T, Controlloe e prova macchina Linux
+                                                                                                                T, Creare MV Windows e prove
+
+                                                                                                                T, Connessione Desktop Remoto                               
+                                                                                                                creazione macchine virtuali windows
+                                                                                                                accesso con riga di comando, power shell
+                                                                                                                web api esempio
+                                                                                                                pattern architetturali
+                                                                                                                Pattern cloud Native
+                                                                                                                Architetture SOA
+                                                                                                                Scelta dell’architettura adatta al proprio progett
+                                                                                                                Design patterns
+                                                                                                                I microservizi
+
+2022-02-03
+todo------------------------------- in progress (max wip 5) ---------------------------(testing)----------------done                                                                                                                
+                                                                                                                (T)Principi REST VS SOAP
+
+
+
+                                                                                                                web api con 
+                                                                                                                test con POSTMAN
+                                                                                                                file di riepilogo
+                                                                                                                inmemory database 
+
+                                                                                                                T recuperare TUTTE le keyword pendenti dai vostri appunti
+
+
+                                                                                                                file:
+                                                                                                                networking e protocolli di rete
+                                                                                                                Networking virtuale su Azure
+                                                                                                                Virtual Private Cloud
+                                                                                                                Routing virtuale su Azure
+
+                                                                                                                heavy Virtualiztion
+
+                                                                                                                file:
+                                                                                                                Load Balancing interno ed esterno
+                                                                                                                Autoscaling di istanze
+                                                                                                                Healt Check e monitoraggio delle istanze
+                                                                                                                Autoscaling orizzontale e verticale
+
+
+                                                                                                                D repository pattern per i dati
+                                                                                                                D EF core 
+
+                                                                                                                D Database migration
+                                                                                                                D Not Deployed e /o json file
+
+                                                                                                                D spiega ed esempi su DATABASE Relazionali
+
+
+                                                                                                                uso dell'estensione Azure di VSCode per installazione nel cloud come appservice
+
+
+2022-02-07
+todo------------------------------- in progress (max wip 5) ---------------------------(testing)----------------done   
+                                                                                                                (D)DevOps 
+                                                                                                                (T)Agile manifesto
+                                    
+                                                                                                                (T)Extreme programming 
+                                                                                                                Ruoli in azienda
+                                                                                                                Neologismi sulle professioni.
+                                                                                                                ripasso generale
+                                                                                                                docker containers introduzione
+                                                                                                                cosa significa volume
+                                                                                                                cosa è una immagine 
+                                                                                                                cosa è un container
+                                                                                                                immagini e container locali e 
+                                                                                                                repo di immagini
+                                                                                                                far partire una immagine in locale,
+                                                                                                                vantaggi  della containerizzazione
+
+
+
+                                                                                                                distribuire una immagine in un repo 
+                                                                                                                distribuire una immagine nel cloud
+                                                                                                                autoformazione per container wp                                    
+2022-02-09
+todo------------------------------- in progress (max wip ?) ---------------------------(testing)----------------done   
+
+                                                                                                                T Docker 
+                                    
+ 
+                                                                                                                event based programming : esempi
+                                                                                                                message queue : 
+                                                                                                                coda di messaggi, 
+                                                                                                                service bus, 
+                                                                                                                queue endpoint,
+                                                                                                                diversi strati (layers) come es:  (Api per orchestrare le code)Mass transit over Rabbit MQ
+
+                                                                                                                Win Forms con VSCode (a mano) o con Visual Studio 2022 Community Edition
+
+                                                                                                                Case study
+
+                                                                                                                html 5 js e css
+                                                                                                                governance
+
+                                                                                                                D NOT DEPLOYED tutorial virtual network 
+                                                                                                                R,A, tutorial load balancer                                                                                                                
+
+                                                                                                                Database relazionali
+2022-02-14
+todo------------------------------- in progress (max wip ?) ---------------------------(testing)----------------done   
+
+
+                                                                                                                (T)Database No SQL: mongo DB
+                                                                                                                EF come mettere attributi per FK tra person(naming convention Profile) e Todo
+                                                                                                                mvc cosa è e come creare un sito  
+                                                                                                                creazione Database SQL
+                                                                                                                Aggiornamento Firewall (10 min)
+                                                                                                                verifica (5 minuti)
+                                                                                                                creazione nuovo controller (20 min)
+                                                                                                               migrazione database (script.sql) (10 min)
+                                                                                                                Stage 
+                                                                                                                -db= TodoWebapiContext (tutti)
+                                                                                                                -mvc = "ConnectionStrings": {
+                                                                                                                    "TodoWebApiContext": "Server=tcp:mvcprova.database.windows.net,1433;Initial Catalog=DatabaseMVC;Persist Security Info=False;User ID=tutti;Password=Mvcprova12;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
+                                                                                                                  }
+                                                                                                                -Api = TodoWebapiContext
+ 
+                                                                                                                  Deployment di stage Api: (C, M, CH. F)
+                                                                                                                  aggiunta cartella api controllers (10 min)
+                                                                                                                  cartella di scaffolding api (10 min)
+                                                                                                                  verifica tramite POSTMAN (2 minutes)
+                                                                                                                  verifica comandi Post/ Get/delete
+                                                                                                                  FAIL Pacchettizzazione (40 min)
+                                                                                                                  Not Deployed D, 15 min client side tendine di stati, profili index, creazione
+                                                                                                                  unattended setup and teardown 
+                                                                                                                  creazione del srv SQLServer  su Azure   
+                                                                                                                  scripting creazione DB su azure
+                                                                                                                  ?scripting regole firewall 
+                                                                                                                  scripting lancio database update per creare al volo struttura relazionale
+                                                                                                                  scripting di delete + publish + deploy.
+
+                                                                                                                  NOT DEPLOYED (C,?, tempo?) publish ambiente dev Corina
+
+Tutorial DevOps labs su repo git 40 min
+
+                                                                                                                    T(45 min)  tutorial
+                            
+2 ore container e deploy container                                                                                                                  
+                                                                                                                    pubblish (singoli) (30 min)(L, R,A)
+                                                                                                                    10 minuti D tendina stati e (NOT DEPLOYED) profili
+                              
+(T,30 min) bootstrap (x min)
+
+(D,30min) TDD unit testing e functional testing
+
+COMPOSE per kubern8

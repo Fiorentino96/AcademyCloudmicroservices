@@ -1,0 +1,21 @@
+Creare web API.
+Application Programming Interface : procedure raggruppate in set di strumenti specifici che hanno lo scopo di eseguire determinati compiti all'interno dei programmi.
+Routine (o librerie): set di strumenti specifici che contengono procedure standard che possono essere utilizzati da uno sviluppatore per abbreviare il proprio lavoro.
+Procedure eseguite: 
+
+1. Aprire nuovo Terminale per crare un nuovo progetto webapi (dotnet new webapi):
+2.Aggiungere un pacchetto Nuget : 
+	dotnet add package Microsoft.EntityFrameworkCore.InMemory 
+
+Classe modello: insieme di classi che rappresentano i dati gestiti dall'App (TodoItemclasse).
+
+Scaffolder: consente di creare un controller API che utilizza un modello di dati Entity Framework Core per accedere ai dati. L'Entity Framework richiede una database context class per integrare un database.
+Controller: classe che gestisce le richieste HTTP dal client.
+
+Metodi HTTP:
+1. GET (richiesta dati già presenti sulla WebApi)
+2. PUT (modificha di un elemento specifico all'interno della WebApi)
+3. POST (inserimento di dati sulla WebApi. Devono essere coerenti con i modelli da noi forniti)
+4. DELETE (Cancellazione di un elemento specifico)
+
+L'utilizzo di Postman permette di eseguire le operazioni riportate.

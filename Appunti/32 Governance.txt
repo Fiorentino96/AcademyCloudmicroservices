@@ -1,0 +1,96 @@
+https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/govern/guides/
+
+https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/govern/methodology
+
+https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/naming-and-tagging
+
+https://docs.microsoft.com/it-it/azure/cloud-adoption-framework/govern/guides/standard/cost-management-improvement
+
+https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/govern/security-baseline/metrics-tolerance
+
+
+
+
+La governance del cloud è un processo iterativo. Per le organizzazioni con criteri esistenti che regolano gli ambienti IT locali, la governance del cloud dovrebbe integrare tali criteri. Il livello di integrazione delle policy aziendali tra locale e cloud varia a seconda della maturità della governance del cloud e della natura del patrimonio digitale nel cloud. Man mano che la struttura del cloud cambia nel tempo, cambiano anche i processi e le politiche di governance del cloud.
+
+Le politiche aziendali guidano la governance del cloud. La guida alla governance si concentra su aspetti specifici della politica aziendale:
+-Rischi aziendali: identificare e comprendere i rischi aziendali.
+-Politica e conformità: conversione dei rischi in dichiarazioni di politica che supportano qualsiasi requisito di conformità.
+
+Bisogna garantire il rispetto delle politiche dichiarate, lo si fa grazie a cinque discipline di governance del cloud. 
+Queste discipline supportano le politiche aziendali. Ogni disciplina protegge l'azienda da potenziali insidie:
+-Disciplina di gestione dei costi
+-Disciplina di sicurezza di base
+-Disciplina della coerenza delle risorse
+-Disciplina d'identità
+-Disciplina dell'accelerazione della distribuzione.
+
+In sostanza, le politiche aziendali fungono da sistema di allerta precoce per rilevare potenziali problemi. 
+Le discipline aiutano l'azienda a gestire i rischi e creare guardrail.
+
+Man mano che il tuo piano di adozione del cloud viene implementato, emergeranno rischi tangibili dagli approcci proposti con cui i team vogliono adottare il cloud. Man mano che questi rischi emergono nelle conversazioni sulla pianificazione dei rilasci, utilizzare la griglia seguente per identificare rapidamente alcune best practice per l'adozione di un piano preventivo del rischio ed evitare quindi che i rischi diventino minacce reali.
+In qualsiasi momento, le seguenti best practice possono essere applicate alla base della governance iniziale per affrontare i rischi o le necessità.
+
+Rischi/Necessità:
+
+-Dati sensibili nel cloud	
+-Applicazioni mission-critical nel cloud	
+-Gestione dei costi del cloud	
+-Multicloud	
+-Gestione dell'identità complessa/legacy	
+-Più livelli di governance.
+
+Si può stabilire un approccio agile alla governance del cloud che crescerà per soddisfare le esigenze di qualsiasi scenario di governance del cloud.
+
+Panoramica delle Best Practice:  questa panoramica definisce un prodotto minimo praticabile (MVP) per la governance basato sulle best practice. In pratica è la versione di un prodotto con caratteristiche sufficienti per essere utilizzabile dai primi clienti, i quali possono fornire dei feedback per lo sviluppo del prodotto stesso.
+
+Queste best practice fungono da base per un'organizzazione per aggiungere in modo rapido e coerente guardrail di governance alle sottoscrizioni.
+Ogni applicazione deve essere distribuita nell'area appropriata della gerarchia del gruppo di gestione, della sottoscrizione e del gruppo di risorse. 
+Durante la pianificazione della distribuzione, il team di governance del cloud creerà i nodi necessari nella gerarchia per potenziare i team di adozione del cloud.
+
+1. Un gruppo di gestione per ogni tipo di ambiente (come produzione, sviluppo e test).
+2. Due abbonamenti, uno per i carichi di lavoro di produzione e l'altro per i carichi di lavoro non di produzione.
+3. Una nomenclatura coerente dovrebbe essere applicata a ciascun livello di questa gerarchia di raggruppamento.
+4. I gruppi di risorse dovrebbero essere distribuiti in un modo che tenga conto del ciclo di vita dei contenuti: tutto ciò che viene   
+   sviluppato insieme,viene gestito insieme e va smaltito insieme. 
+5. La selezione della regione è estremamente importante e deve essere considerata in modo che la rete, il monitoraggio, l'audit possano  
+   essere in atto per il failover/failback, nonché la conferma che gli SKU necessari sono disponibili nelle regioni preferite.
+   Azure comprende molte regioni in tutto il mondo. Ogni area di Azure ha caratteristiche specifiche che rendono estremamente importante la scelta dell'area da usare. Questi includono servizi disponibili, capacità, vincoli e sovranità. Quando le aziende operano in più aree geografiche, il che può essere essenziale per la resilienza, ciò introduce una potenziale complessità nelle seguenti forme:
+       -Distribuzione degli asset o delle risosrse
+       -Profili di accesso degli utenti
+       -Requisiti di conformità
+       -Resilienza regionale.
+   La selezione regionale è molto importante per la tua strategia generale di adozione del cloud,pertanto è opportuno prendere le giuste 
+   considerazioni per la scelta.
+   Fonte: https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/migrate/azure-best-practices/multiple-region
+
+Una serie di politiche globali e ruoli RBAC fornirà un livello base di applicazione della governance. Per soddisfare i requisiti delle policy del team di governance del cloud, l'implementazione dell'MVP di governance richiede il completamento di alcune attività:
+-Identificare le definizioni dei criteri di Azure necessarie per applicare i requisiti aziendali. Ciò potrebbe includere l'utilizzo di   
+ definizioni integrate e la creazione di nuove definizioni personalizzate. 
+-Crea una definizione del progetto utilizzando questi criteri integrati e personalizzati e le assegnazioni di ruolo richieste dall'MVP di  
+ governance.
+-Applicare le politiche e la configurazione a livello globale assegnando la definizione del progetto a tutte le sottoscrizioni.
+
+Azure fornisce diversi criteri predefiniti e definizioni di ruolo che è possibile assegnare a qualsiasi gruppo di gestione, sottoscrizione o gruppo di risorse.
+Molti requisiti di governance comuni possono essere gestiti utilizzando definizioni integrate. Tuttavia, è probabile che avremo bisogno anche di creare definizioni di criteri personalizzati per gestire i nostri requisiti specifici.
+
+Le definizioni dei criteri personalizzati vengono salvate in un gruppo di gestione o in una sottoscrizione e vengono ereditate tramite la gerarchia del gruppo di gestione. Se il percorso di salvataggio di una definizione di politica è un gruppo di gestione, tale definizione di politica è disponibile per l'assegnazione a qualsiasi gruppo di gestione figlio o sottoscrizioni di quel gruppo.
+Poiché le politiche richieste per supportare l'MVP di governance devono essere applicate a tutte le sottoscrizioni correnti, i seguenti requisiti aziendali verranno implementati utilizzando una combinazione di definizioni integrate e definizioni personalizzate.
+
+Nell'MVP vengono stabilite pratiche e strumenti della disciplina Deployment Acceleration per applicare rapidamente la politica aziendale. 
+In particolare, l'MVP utilizza i progetti di Azure, i criteri di Azure e i gruppi di gestione di Azure per applicare alcuni criteri aziendali di base. 
+Tali criteri aziendali vengono applicati usando i modelli di Resource Manager e i criteri di Azure per stabilire una piccola base di riferimento per l'identità e la sicurezza.
+
+Govern antipatterns:
+
+Quando si adotta il cloud, non è sempre chiaro dove finisce la propria responsabilità e inizia la responsabilità del provider di cloud per quanto riguarda i diversi modelli di servizio. Le competenze e le conoscenze del cloud sono necessarie per creare processi e pratiche attorno a elementi di lavoro che utilizzano modelli di servizio.
+
+Le aziende spesso percepiscono la sicurezza come un dato di fatto nel cloud. Sebbene questo presupposto sia generalmente corretto, la maggior parte degli ambienti deve anche aderire ai requisiti del framework di conformità, che possono differire dai requisiti di sicurezza. 
+Azure fornisce la sicurezza di base e il portale di Azure può fornire una sicurezza più avanzata tramite Microsoft Defender for Cloud. 
+Ma l'applicazione di uno standard di conformità e sicurezza non è un'esperienza pronta all'uso quando si crea un abbonamento.
+
+ESEMPIO:
+Un'azienda sviluppa una nuova applicazione nel cloud. Sceglie un'architettura basata su molti servizi Platform as a Service (PaaS), oltre ad alcuni componenti IaaS per scopi di debug. Dopo aver rilasciato l'applicazione alla produzione, l'azienda si rende conto che uno dei suoi jump server è stato compromesso e stava estraendo dati a un indirizzo IP sconosciuto. L'azienda scopre che il problema è l'indirizzo IP pubblico del jump server e una password facile da indovinare. L'azienda avrebbe potuto evitare questa situazione se si fosse concentrata maggiormente sulla sicurezza del cloud.
+
+L'introduzione di un framework di conformità e governance personalizzato che non è basato sugli standard del settore può aumentare notevolmente i tempi di adozione del cloud, poiché può essere difficile tradurre il framework personalizzato in impostazioni cloud. Questo scenario può aumentare lo sforzo necessari per tradurre misure e requisiti personalizzati in controlli di sicurezza implementabili. La maggior parte delle aziende deve rispettare serie simili di requisiti di sicurezza e conformità. Di conseguenza, la maggior parte dei framework di conformità e sicurezza personalizzati differiscono solo leggermente dagli attuali framework di conformità. Le aziende con requisiti di sicurezza aggiuntivi possono prendere in considerazione la creazione di nuovi framework.
+

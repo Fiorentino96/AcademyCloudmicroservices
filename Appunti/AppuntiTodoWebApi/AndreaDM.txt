@@ -1,0 +1,15 @@
+
+****WebAPI TodoWebAPI****
+
+
+Partendo dal primo progetto di prova WebAPI WeatherForcast, durante la scorsa lezione siamo arrivati a creare un WebAPI funzionante comprendente le card della nostra lavagna di Kanban. Come abbiamo fatto? Per prima cosa abbiamo preso lo scheletro/ la conformazione di WeatherForecast e l'abbiamo riproposta nella nostra nuova WebAPI TodoWebAPI. Una volta cambiati tutti i riferimenti all' API precedente, come namespaces e nomi delle classi, ci serviva dei modelli di definizione per le nostre cards Todo. Fortunatamente, avevamo già creato questi modelli per il programma hello.cs, comprendente il nome della card, la data di creazione, la persona assegnata ed il monte orario stimato per la sua esecuzione. Una volta caricati questi modelli sul nostro nuovo progetto (TodoWebAPI), ci siamo serviti di una comodissima tecnica di scrittura dei controllers. Un controller è un tipo di classe molto particolare, adoperata per la gestione di chiamate http in arrivo e la loro successiva risposta (fonte: https://www.tutorialsteacher.com/webapi/web-api-controller). Un modo per non doverli scrivere interamente a mano, si chiama Scaffholding (impalcatura, in italiano). Consiste nella scrittura automatica dei controllers da parte di Visual Studio partendo dai modelli da noi inseriti. 
+Una volta terminata la scrittura dei controllers, il nostro programma era pronto ad essere lanciato. Svolta la compilazione da VS, la WebAPI apriva autonomaemtne una scheda nel browser, facendo una chiamata interna al nostro pc (https//:localhost/7207). Effettivamente, dopo l'aggiunta di "/api/todo" nell'URL per identificare la nostra WebApi, venivano mostrati i nomi e la descrizione delle cards da noi creati in precedenza.
+In ogni modo, una WebAPI non sarebbe particolarmente utile se non potessimo svolgere su di essa almeno 4 funzioni fondamentali: 
+- POST: Inserimento di dati sulla WebAPI, coerenti con i modelli da noi forniti 
+- GET: La richiesta dei dati già presenti sulla nostra WebAPI
+- PUT: La modifica di un elemento specifico all'interno della WebAPI
+- DELETE: La cancellazione di un elemento specifico
+
+Queste operazioni sono state svolte attraverso il programma Postman. Una interfaccia intuitiva per svolgere le azioni sopra elencate. Basta semplicemnte immettere l'URL della nostra API e selezionare una delle azioni da noi richieste. Una Volta inseriti i nuovi dati nel formato desiderato (nel nostro caso JSON) e premuto il tasto "Send" siamo arrivati al risultato desiderato. 
+
+DbContext: Un Dbcontext rappresenta un ponte tra le proprie entità ed il Database. Un istanza Dbcontext rappresenta un'interazione con il database e può essere usata per la richiesta ed il salvataggio di instanze delle mie entità. 

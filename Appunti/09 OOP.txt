@@ -1,0 +1,173 @@
+Definizioni 
+
+La naming convention è una convenzione per dare il nome alle entità del nosto programma:
+1- usare una lingua unica per i nomi delle entità: es italiano, inglese
+2- usare un nome breve semplice e autoesplicativo
+3- usando nomi composti, cioè un nome fatto con più parole, per aumentare la leggibilità utilizzo il CamelCasing es: ImportoFattura, InvoicesSum, ItemsList cioè la prima lettera di ciascuna parola nel nome composto è maiuscola
+
+
+Namespace è un contenitore all'interno del quale possiamo mettere le dichiarazioni di classi e tipi. Un namespace può contenere anche un altro namespace. 
+NAMESPACE
+le classi sono contenute in un namespace
+anche i namespace possono essere innestati tra loro,
+come nel seguente esempio:
+
+namespace1
+{
+    classe1 <-------  namespace1.classe1
+    classe2
+    classe3
+    namespace 2
+     interface 0 
+     classeA
+     classeB <-------  namespace1.namespace2.classeB
+     classe1 <-------  namespace1.namespace2.classe1
+}
+
+Modificatori di accesso: public, private e protected. Precedono una dichiarazione di classe o di tipo. 
+MODIFICATORI DI ACCESSO
+
+le variabili all'interno della classe possono essere 
+private: (non visibili all'esterno) 
+pubblic: (visibili da chi mi istanzia)
+protected: visibili dalla classe e da tutte le sue derivate
+
+altri modificatori
+static: accessibili con il nomeClasse senza instanziare
+
+Una classe, in generale, è un'astrazione che ha il fine di gestire un certo perimetro applicativo. è composta principalmente da variabili (campi o fields), proprietà e metodi. 
+classe contiene:
+
+1) Membri possono avere i seguenti modificatori di accesso
+  -pubblici 
+  -privati => incapsulazione vuol dire rendere modificabile la variabile solo all'interno della classe. 
+  -protetti: verso l'esterno è privato, verso le classe e le classi derivate è visibile
+  
+2) Costruttore= serve a inizializzare le variabili. Grazie ad esso posso evitare di esporre una proprietà che imposta le variabili.
+
+3) Distruttore= dealloca memoria (es. chiusura server)
+
+4) Proprietà = può essere get(se leggo la variabile) o set (se imposto la variabile) e mascherano una campo privato che custodisce il valore
+
+4)Metodi:
+  - di istanza: chiamati su una variabile di quella classe
+  - statici: chiamati solo col nome della classe
+
+5) Overload: metodo che compare con lo stesso nome ma in varie versioni
+   che differiscono per firma
+
+Firma di un metodo: 
+  - tipo (il tipo che ritornerà)
+  - nome
+  - elenco parametri
+
+Le proprietà sono con lo stesso funzionamento delle variabili ma permettono di attribuire dei modificatori di accesso differenti per la lettura e la scrittura. 
+
+Un metodo (o funzione o procedura) è un insieme di operazioni che vogliamo svolgere sempre assieme e quindi noi le vogliamo riutilizzare. Un metodo all'interno della classe può accedere alle variabili pubbliche e private. I metodi possono avere un valore di ritorno. Se lo hanno, avrà un certo tipo che dovrà essere indicato prima di dichiarare la funzione. Se un metodo non ha valore di ritorno, il tipo di questo metodo è "void". 
+
+DTO (Data Transfer Object) è un tipo di classe e omette dei metodi (se li ha non è la sua vera finalità). 
+
+I tipi scalari sono quelli che possono assumere un solo valore che avrà un'occupazione di memoria nota a priori (esempi: numeri interi, reali, decimali ). 
+I tipi oggetto hanno un'occupazione di memoria NON nota a priori. 
+Le classi sono dei nuovi tipi che sto generando per gestire la mia applicazione. 
+
+I membri di una classe non sono altro che le sue variabili, le sue proprietà e i suoi metodi. Tutti i membri di una classe devono avere un tipo (un dato è di tipo intero). 
+
+Un oggetto è una istanza di una classe. In memoria è stato riservato uno spazio adatto a contenere tutti i membri di una classe. Inoltre, tramite il nome dell'oggetto abbiamo accesso a questa area di memoria. 
+
+
+Interfaccia - interface: 
+
+    L'interfaccia è l'insieme dei membri pubblici di una classe.
+    
+    interface IUfficioAnagrafico
+        int NumeroResidenti
+        void AggiungiResidente(Residente r)
+        void RimuoviResidente(Residente r)
+
+
+    Implementare una interfaccia significa rispettare il contratto imposto da tale interfaccia
+    esempio la seguente NON implementa l'interfaccia sopra
+    
+    class UfficioAnagrafico:IUfficioAnagrafico
+        int NumeroResidenti
+        void AddResidente()
+        void DeleteResidente()
+
+    class UfficioAnagrafico:IUfficioAnagrafico
+        int NumeroResidenti
+        void AggiungiResidente(Residente r)
+        void RimuoviResidente(Residente r)
+
+
+
+    Con interfaccia, nell'informatica, si indica il punto di incontro o collegamento, spesso standardizzato, tra sistemi diversi e/o le modalità per permettere la loro interazione sotto forma di scambio di informazioni;
+
+    Come interfaccia, designiamo, nell'informatica, la connessione fisica e funzionale stabilita tra due dispositivi o sistemi che funzionano indipendentemente l'uno dall'altro.
+
+
+Interfaccia utente: 
+
+    L’interfaccia utente (anche conosciuta come UI, dall'inglese User Interface) è un'interfaccia uomo-macchina, ovvero ciò che si frappone tra una macchina e un utente, consentendone l'interazione reciproca: in generale può riferirsi ad una macchina di qualsiasi natura, tuttavia l'accezione più nota è in ambito informatico con l'interazione utente/computer.
+
+In ambito informatico, sistemi operativi e applicazioni, sono tipicamente utilizzati i seguenti tipi di interfaccia utente:
+
+Interfaccia grafica (GUI): 
+
+    L'interfaccia grafica è un tipo di interfaccia utente che consente l'interazione uomo-macchina in modo visuale 
+    utilizzando rappresentazioni grafiche (es. widget) piuttosto che utilizzando i comandi tipici di un'interfaccia a riga di comando.
+    Con l'espressione «interfaccia grafica» si indica l'interfaccia di un qualunque programma: dal sistema operativo, al software applicativo.
+    L'interfaccia grafica consente all'utente di interagire con il computer manipolando graficamente degli oggetti in maniera molto user-friendly, al contrario di quanto avviene sulla cosiddetta riga di comando in cui l'esecuzione del programma viene guidata da istruzioni o comandi impartiti dall'utente tramite tastiera.
+    Se con l'interfaccia grafica è possibile fornire al software una grafica accattivante e una rinnovata semplicità d'uso, 
+    anche l'interfaccia a riga di comando ha i suoi vantaggi. Infatti, si tende ad utilizzare maggiormente quest'ultima dove la 
+    semplicità d'uso deve lasciare il passo ad esigenze di maggiore controllo sull'esecuzione del programma,alle istruzioni inserite ed alle informazioni restituite dal programma: ad es. strumenti di sviluppo e di analisi del codice.
+
+    Esempio: Desktop, widget
+
+    fonte:(https://it.wikipedia.org/wiki/Interfaccia_grafica)
+
+Interfaccia a riga di comando (CLI): 
+
+    In informatica un'interfaccia a riga di comando (dall'inglese command line interface, in acronimo CLI) o anche console, 
+    a volte detta semplicemente riga di comando o prompt dei comandi, è un tipo di interfaccia utente caratterizzata da 
+    un'interazione testuale tra utente ed elaboratore (vedi shell): l'utente impartisce comandi testuali in input mediante 
+    tastiera alfanumerica e riceve risposte testuali in output dall'elaboratore mediante display o stampante alfanumerici. 
+    Nei sistemi operativi moderni usati nei personal computer, al posto della CLI, in buona parte, c'è l'interfaccia grafica 
+    con caratteristiche tipicamente user friendly.
+
+    Esempio: Prompt di Comando
+
+    fonte: (https://it.wikipedia.org/wiki/Interfaccia_a_riga_di_comando) 
+
+
+Ereditarietà
+Consente di riusare tutti i membri della classe di base e nella classe derivata (java: sottoclasse) di scriverne di nuovi
+si indica con la seguente notazione
+
+//si legge classe1 DERIVA classe di base 
+classe1 : classeDiBase
+
+//si legge classe2 IMPLEMENTA Interfaccia
+classe2 : Interfaccia
+
+classe che gestisce i rettangoli
+classe che gestisce un tipo particolare di rettangolo: quadrato
+
+
+IRettangolo
+Base
+Altezza 
+Area 
+Perimetro 
+
+Rettangolo:(implementa;è)IRettangolo 
+Base
+Altezza 
+Area 
+Perimetro 
+
+Quadrato:(deriva da;è)Rettangolo
+Lato
+SBAGLIATO Perimeter (X non rispetta il contratto della interfaccia IRettangolo)
+override Perimetro: qui avrò la possibilità di indicare un algoritmo diverso o più ottimizzato per eseguire lo stesso compito
+

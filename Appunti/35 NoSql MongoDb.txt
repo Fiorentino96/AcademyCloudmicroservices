@@ -1,0 +1,46 @@
+links:
+https://www.mongodb.com/
+
+https://aws.amazon.com/it/nosql/
+
+Robo 3T:
+Visualizzatore di database mongodb 
+
+Un Db NoSql è un insieme di Collection, invece di tabelle, che contengono oggetti, invece di righe, e questi oggetti sono salvati in una stringa unica che è binaria, può essere rappresentata in json, non richiede uno 'schema' (nel senso di struttura)  fisso, ma accetta qualsiasi istanza di qualsiasi classe.
+
+Es 
+
+DB relazionale :
+
+Id  Titolo Descrizione
+----------------------
+
+n   bla     blablablabla   
+
+per aggiungere una colonna in più solo in questa riga devo modificare la struttura di tutta la tabella e anche deciudere come valorizzare tale colonna per i dati già presenti
+
+Db No SQL:
+
+[
+    {
+        id:1,
+        Titolo: bla,
+        Decrizione: blablabla
+
+    },
+    {
+        Identificativo : 'XC34T'
+        Nome: PostNuovo
+        InnerText : 'un testo di grossissime dimensioni'
+    }
+]
+
+repliche: ha una struttura a nodi altamente disponibile e scalabile (orizzontalmente in maniera nativa).
+Master node e slave nodes
+
+database documentale: posso inserire documenti sia binari che di testo con qualsiasi struttura nella mia collection.
+
+Supportano divere casistiche:
+HashTable : valore chiave
+Grafo: nodi con n collegamenti tra loro
+Documenti: una struttura non fissa ma cmq interrogabile.

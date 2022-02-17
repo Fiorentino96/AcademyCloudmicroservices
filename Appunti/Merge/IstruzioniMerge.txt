@@ -1,0 +1,12 @@
+
+In Git, un conflitto o conflict può presentarsi quando due o più cambiamenti concorrenti sono stati applicati sulla stessa linea di codice, o quando una persona sta lavorando su un file che è stato eliminato.
+
+I conflitti tra due cambiamenti sullo stesso codice, avvengono quando si esegue un merge di due branch. In questo caso bisogna scegliere manualmente quale dei due cambiamenti, vogliamo tenere nel codice.
+
+Quando allo stesso branch vengono apportate due modifiche distinte nello stesso punto, emerge un conflitto di merge. Visual Studio Code rileverà il conflitto e proporrà soluzioni alternative: Accept Current Changes (Inoltrare le proprie modifiche), Accept Incoming Changes (Accettare le modifiche in arrivo), Accept Both Changes (Manterrà entrambi i cambiamenti)
+
+Nel caso in cui fosse già stato fatto il commit senza aver eseguito il pull, la soluzione più efficace consiste in:  andare su GitHub, visualizzare i due diversi Pull, visualizzando l'errore di merge, andare su command line instruction e copiare le istruzioni sul terminale di Visual Studio. Completata questa operazione ritorneremo al caso precendente (scelta tra le 3 opzioni). 
+
+Non appena si nota di non aver fatto il pull e quindi si presenta un conflitto di merge, per sicurezza conviene salvare le modifiche apportate separatemente in una cartella denominata "FileStash" (Assicurandosi che sia fuori dalla cartella Radice del Repository: quella che contiene ".git") e riclonare completamente la repository. Una volta clonata, riintrodurre i file modificati ( preferibilmente con l'aiuto di un programma esterno, come BeyondCompare). 
+
+fonte: https://www.youtube.com/watch?v=zLz5HDfLWPQ

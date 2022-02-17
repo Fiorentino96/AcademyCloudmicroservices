@@ -1,0 +1,17 @@
+1- gli script servono a instanziare un ambiente di stage
+1.1 se voglio instanziare il mio ambiente di dev devo modificare almeno le 2 risorse pubbliche
+2- ci sono due risorse pubbliche i cui nomi non possono entrare in conflitto con un ambiente di stage preesistente
+    $serverName = "srvtodowebapistage"
+    $appName = "appTodoWebApiMvc"
+3- preparare il proprio ip da mettere sia come start che come end
+4- preparare il tenant id subscription verificando il possibile errore della Connect-AzAccount   
+5- Aprire il powershell di Windows come admin e digitare:
+    Set-ExecutionPolicy -ExecutionPolicy AllSigned -Scope LocalMachine
+    Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser 
+6- verificare che vengano accettati i comandi Az:
+    Install-Module -Name Az -AllowClobber    
+
+lanciare dalla cartella mvc nel terminale
+.\AzScripts\01RgSrvDb.ps1
+.\Azscipts\02UpdDbPub.ps1
+

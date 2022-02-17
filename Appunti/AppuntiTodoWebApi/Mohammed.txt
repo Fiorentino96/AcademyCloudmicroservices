@@ -1,0 +1,36 @@
+Api Una delle modalità più diffuse per la commercializzazione di prodotti software è il
+SaaS (Software as a Service) che consente una completa fruibilità via web e
+l’installazione in ambiente cloud.
+La fruibilità via web è resa possibile dalle Web API (Application Programming
+Interface) ovvero interfacce esposte sul web che permettono di scambiare dati tra un
+qualsiasi client e un’applicazione remota.
+
+Il formato predefinito dei dati scambiati è JSON, ma è possibile esplicitare il formato
+desiderato (JSON o XML) indicandolo nell’URL.
+
+
+Tipologia di comandiattraverso il programma Postman
+Le tipologie di chiamate che si possono effettuare sono identificate dal metodo HTTP
+utilizzato:
+
+GET 
+Lettura di una risorsa con i valori della PK nell’URL.
+
+PUT 
+Aggiornamento di una risorsa esistente identificata dai
+valori della PK nell’URL, e dai valori modificati nell’URL
+oppure nel contenuto.
+
+POST 
+Inserimento di una nuova risorsa con la serializzazione
+della risorsa nel contenuto.
+
+DELETE
+ Eliminazione di una risorsa esistente identificata dai valori
+
+
+Quando si effettuano chiamate a funzionalità predefinite del servizio di Web API (GET,
+PUT, POST e DELETE) è possibile specificare il livello di profondità dei figli che si
+desidera coinvolgere impostando nella richiesta un header con nome child-level.
+Se non specificato, il valore predefinito è 0 per GET con criteri di ricerca e 9999 in
+tutti gli altri casi.

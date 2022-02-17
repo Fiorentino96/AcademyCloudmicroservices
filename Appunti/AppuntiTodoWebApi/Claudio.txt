@@ -1,0 +1,148 @@
+Le WEB API (o Application Programming Interface) rappresentano delle procedure generalmente raggruppate in set di strumenti specifici, 
+il cui scopo primario è quello di eseguire determinati compiti all’interno dei programmi. Per agevolare la scrittura del codice, alcune 
+procedure “standard” di solito vengono raggruppate in un set di strumenti specifici per l’espletamento di un determinato compito 
+all’interno di un certo programma: sono le cosiddette librerie (o routine) che corrispondo a una serie di “chiamate” a parti di un 
+programma che uno sviluppatore può utilizzare per abbreviare il proprio lavoro. 
+Permettono,quindi, ai programmatori di accedere a informazioni-funzioni inaccessibili di software o servizi web 
+per manipolarle e crearne un nuovo utilizzo, possono quindi essere considerate come delle interfacce per sviluppatori.
+Il significato di Api è dunque quello di semplificare la possibilità di dialogo tra un’applicazione e un’altra evitando 
+ridondanze e inutili replicazioni di codice.
+
+Si inizia aprendo un terminale:
+-Si crea un nuovo progetto web api ( dotnet new webapi)
+-Si aggiunge un pacchetto Nuget necessario per le successive fasi (dotnet add package Microsoft.EntityFrameworkCore.InMemory)
+-Si considera attendibile il certificato di sviluppo HTTPS (dotnet dev-certs https).
+
+Aggiungi una classe modello:
+Un modello è un insieme di classi che rappresentano i dati gestiti dall'app. Il modello per questa app è una singola TodoItemclasse.
+-Aggiungi una cartella denominata Modelli .
+-Aggiungi un file TodoItem.cs alla cartella Models con il codice:
+   
+ namespace TodoApi.Models
+   {
+    public class TodoItem
+    {
+        public long Id { get; set; }
+        public string? Name { get; set; }
+        public bool IsComplete { get; set; }
+    }
+   }
+
+La Id proprietà funziona come chiave univoca in un database relazionale.
+Le classi modello possono andare ovunque nel progetto, ma la cartella Modelli è usata per convenzione.
+
+Aggiungi un contesto di database
+Il contesto del database è la classe principale che coordina la funzionalità di Entity Framework per un modello di dati.
+Questa classe viene creata derivando dalla classe Microsoft.EntityFrameworkCore.DbContext .
+-Aggiungi un file TodoContext.cs alla cartella Modelli:
+
+using Microsoft.EntityFrameworkCore;
+using System.Diagnostics.CodeAnalysis;
+
+namespace TodoApi.Models
+{
+    public class TodoContext : DbContext
+    {
+        public TodoContext(DbContextOptions<TodoContext> options)
+            : base(options)
+        {
+        }
+
+        public DbSet<TodoItem> TodoItems { get; set; } = null!;
+    }
+}
+
+Registra il contesto del database
+In ASP.NET Core, i servizi come il contesto DB devono essere registrati con il contenitore DI (dependency injection) . 
+Il contenitore fornisce il servizio ai controller.
+-Aggiungi i pacchetti NuGet necessari per lo scaffolding.
+-Installare il generatore dello scaffolding ( dotnet-aspnet-codegenerator).
+-Scaffolding  TodoItemsController.
+
+In ASP.NET Core, i servizi come il contesto DB devono essere registrati con il contenitore DI (dependency injection) . 
+Il contenitore fornisce il servizio ai controller.
+Aggiornare Program.cs con il codice seguente:
+
+using Microsoft.EntityFrameworkCore;
+using TodoApi.Models;
+
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+
+builder.Services.AddControllers();
+builder.Services.AddDbContext<TodoContext>(opt =>
+    opt.UseInMemoryDatabase("TodoList"));
+//builder.Services.AddSwaggerGen(c =>
+//{
+//    c.SwaggerDoc("v1", new() { Title = "TodoApi", Version = "v1" });
+//});
+
+var app = builder.Build();
+
+// Configure the HTTP request pipeline.
+if (builder.Environment.IsDevelopment())
+{
+    app.UseDeveloperExceptionPage();
+    //app.UseSwagger();
+    //app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "TodoApi v1"));
+}
+
+app.UseHttpsRedirection();
+
+app.UseAuthorization();
+
+app.MapControllers();
+
+app.Run();
+
+Questo comando:
+-Rimuove le chiamate Swagger.
+-Rimuove le direttive inutilizzate. 
+-Aggiunge il contesto del database al contenitore DI.
+-Specifica che il contesto del database utilizzerà un database in memoria.
+
+
+
+Lo scaffolding è una procedura che automatizza la creazione di oggetti ed interfacce a partire da alcune semplici 
+specifiche dettate dal programmatore. Eseguire i comandi:
+dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design 
+dotnet add package Microsoft.EntityFrameworkCore.Design 
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer 
+dotnet tool install -g dotnet-aspnet-codegenerator 
+dotnet aspnet-codegenerator controller -name TodoItemsController -async -api -m TodoItem -dc TodoContext -outDir Controllers
+
+Il codice generato contrassegna la classe con l' [ApiController]attributo. 
+Questo attributo indica che il controller risponde alle richieste dell'API Web. 
+
+Utilizza DI per inserire il contesto del database ( TodoContext) nel controller. 
+Il contesto del database viene utilizzato in ciascuno dei metodi CRUD nel controller.
+
+Aggiorna la dichiarazione di ritorno in PostTodoItemper utilizzare l' operatore nameof:
+
+[HttpPost]
+public async Task<ActionResult<TodoItem>> PostTodoItem(TodoItem todoItem)
+{
+    _context.TodoItems.Add(todoItem);
+    await _context.SaveChangesAsync();
+
+    //return CreatedAtAction("GetTodoItem", new { id = todoItem.Id }, todoItem);
+    return CreatedAtAction(nameof(GetTodoItem), new { id = todoItem.Id }, todoItem);
+}
+
+Il codice precedente è un metodo HTTP POST, come indicato dall'attributo [HttpPost]. 
+Il metodo ottiene il valore dell'elemento da fare dal corpo della richiesta HTTP.
+
+Il metodo CreatedAtAction :
+
+Restituisce un codice di stato HTTP 201 in caso di esito positivo. 
+HTTP 201 è la risposta standard per un metodo HTTP POST che crea una nuova risorsa sul server.
+Aggiunge un'intestazione "Posizione" alla risposta. L'intestazione  Location specifica dell' URI dell'elemento appena creato. 
+Fa riferimento GetTodoItem all'azione per creare l'URI Location dell'intestazione. 
+La parola chiave nameof viene utilizzata per evitare l'hardcoding del nome dell'azione nella chiamata CreatedAtAction.
+
+Per testare la nostra Api utilizziamo un'applicazione che consente di costruire, testare e documentare API più velocemente. 
+Ad esempio Postman con cui è possibile effettuare delle chiamate API senza dover mettere mano al codice dell’applicazione.
+Le richieste possono essere effettuate sia verso un server locale che verso un server online impostando tutti i dati di una tipica 
+chiamata API, dagli headers al body.

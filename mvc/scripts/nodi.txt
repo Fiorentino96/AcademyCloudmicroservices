@@ -1,0 +1,8 @@
+fiore:  https://fioremvcpublish.azurewebsites.net
+daniele: https://danieletodowebapi.azurewebsites.net 
+Andrea: https://appkanbanandrea.azurewebsites.net
+Luca: https://nuovakanbanluca.azurewebsites.net
+Chiara: https://webappchiara.azurewebsites.net/
+Rocco: https://approcco.azurewebsites.net
+Claudio:https://claudio.azurewebsites.net/
+Mohammed:https://miwbapp.azurewebsites.net

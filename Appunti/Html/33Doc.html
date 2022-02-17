@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Questo titolo non è visibile nella pagina ma è un meta, ed è visibile nella tab del browser</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Free Web tutorials">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="John Doe">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+        /*
+       selettore di elemento 
+       */
+        p {
+            width: 300px;
+            color: green;
+        }
+    </style>
+    <link rel="stylesheet" href="./33Doc.css">
+
+</head>
+
+<body>
+
+    <h1>Questo è un heading (intestazione) di tipo 1</h1>
+
+    <h2>Questo è un heading (intestazione) di tipo 2</h2>
+
+    <img id="immagineDaWeb" src="https://aulab.it/img/blog/javascript.jpeg" style="width:150px;" />
+
+    <p class="riquadroGiallo"> questo paragrafo riceve lo stile dalla classe</p>
+
+    <p> questo è il numero di todo: {Dato presente lato server}</p>
+
+    <p style="width:100px;">
+        un paragrafo soggetto alla direttiva inline
+    </p>
+
+    <p>
+        altro paragrafo soggetto alle direttive in head
+    </p>
+
+    <p class="riquadroGiallo nomeclasse1 nomeclasse2">
+        Testo del paragrafo con bordo solido perchè border-style: solid; e sfondo giallo....
+    </p>
+
+    <p class="riquadroInEvidenza nomeclasse1 nomeclasse2">
+        Testo del paragrafo con bordo a puntini perchè border-style: dotted; e sfondo blue
+    </p>
+    
+    <script type="text/javascript">
+        var i = document.getElementById('immagineDaWeb');
+        i.setAttribute('style',null);
+    </script>
+
+</body>
+
+</html>

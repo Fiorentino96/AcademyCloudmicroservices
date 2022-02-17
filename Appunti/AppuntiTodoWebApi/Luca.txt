@@ -1,0 +1,57 @@
+Un'API (Application Programming Interface) Web è un'interfaccia di programmazione dell'applicazione per un server Web o un browser Web. Le API permettono ai tuoi prodotti o servizi di comunicare con altri prodotti o servizi senza che sia necessario sapere come vengono implementati, semplificando così lo sviluppo delle app e consentendo un netto risparmio di tempo e denaro. Durante la creazione di nuovi strumenti e prodotti o la gestione di quelli esistenti, le API offrono flessibilità, semplificano la progettazione, l'amministrazione e l'utilizzo, e garantiscono opportunità di innovazione. Le API, semplificando l'integrazione di nuovi componenti applicativi in un'architettura esistente, promuovono la collaborazione tra azienda e team IT. Per restare competitive e rispondere ai costanti mutamenti dei mercati digitali, in cui nuovi concorrenti possono rivoluzionare un intero settore con una nuova app, le aziende devono adattarsi rapidamente e supportare lo sviluppo e il deployment di servizi innovativi. Lo sviluppo di applicazioni cloud native, basato sul collegamento di un'architettura applicativa di microservizi attraverso le API, consente di accelerare la velocità di sviluppo. 
+Comandi creazione WebAPI: 
+dotnet new webapi -o TodoApi
+cd TodoApi
+dotnet add package Microsoft.EntityFrameworkCore.InMemory    (aggiunta pacchetto NuGet)
+code -r ../TodoApi
+
+Dopo la creazione della WebAPI, si crea un modello che è un set di classi che rappresentano i dati gestiti dall'app. 
+namespace TodoWebApi.Models
+{
+    public class Profile
+    {
+          public int Id{get;set;}
+        public string? Name { get; set; }
+        public string? Surname { get; set; }
+        public string? Town { get; set; }
+        public string? Email { get; set; }
+    }
+
+}
+https://www.redhat.com/it/topics/api/what-are-application-programming-interfaces
+Lo Scaffolder consente di creare un controller (un controller è una classe che gestisce le richieste HTTP dal client) API che utilizza un modello di dati Entity Framework Core per accedere ai dati. Il controller API con scaffold contiene azioni REST che eseguono operazioni CRUD (Create, Read, Update e Delete) su entità da un contesto di database o modello di dati selezionato. L’Entity Framework richiede una database context class per interagire con un database. Se il progetto non contiene questa classe, bisogna crearla. 
+Il contesto di database è la classe principale che coordina le funzionalità di Entity Framework per un modello di dati. Questa classe viene creata mediante derivazione dalla classe Microsoft.EntityFrameworkCore.DbContext.
+Comandi creazione DB context: 
+
+using Microsoft.EntityFrameworkCore;
+using System.Diagnostics.CodeAnalysis;
+using TodoWebApi.Models;
+namespace TodoApi.Models
+{
+    public class TodoWebApiContext : DbContext
+    {
+        public TodoWebApiContext(DbContextOptions<TodoWebApiContext> options)
+            : base(options)
+        {
+        }
+        public DbSet<Todo> Todo { get; set; } = null!;
+        public DbSet<Profile> Person { get; set; } = null!;
+    }
+}
+
+Adesso, si potrà creare lo scaffolding usando i comadni seguenti: 
+dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design 
+dotnet add package Microsoft.EntityFrameworkCore.Design 
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer 
+dotnet tool install -g dotnet-aspnet-codegenerator --version 6.0.0-preview.7.21413.1
+dotnet aspnet-codegenerator controller -name TodoItemsController -async -api -m TodoItem -dc TodoContext -outDir Controllers
+
+https://docs.devexpress.com/AspNetCore/401035/devextreme-based-controls/concepts/scaffolding 
+I quattro metodi HTTP principali (GET, PUT, POST e DELETE) possono essere mappati alle operazioni CRUD (che, invece, si riferiscono ai database) come indicato di seguito:
+•	GET recupera la rappresentazione della risorsa in corrispondenza dell'URI specificato. GET non deve avere effetti collaterali sul server.
+•	PUT aggiorna una risorsa in corrispondenza dell'URI specificato. PUT può essere usato anche per creare una nuova risorsa in un URI specificato, se il server consente ai client di specificare nuovi URI. 
+•	POST crea una nuova risorsa. Il server assegna l'URI per il nuovo oggetto e restituisce questo URI come parte del messaggio di risposta.
+•	DELETE Elimina una risorsa in corrispondenza dell'URI specificato.
+
+Postman è uno strumento che permette di eseguire richieste HTTP ad un server di backend. Quando lavoriamo con un altro sviluppatore backend ci permette di condividere le API, ma la sua vera forza è quella di farci sapere tutto di una richiesta HTTP.
+Possiamo creare la richiesta specificando tutti i parametri possibili, e conoscere ogni informazione della request e della response: headers, body, risponse ecc.

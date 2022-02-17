@@ -1,0 +1,173 @@
+Linux:
+è un software "libero" ("freesoftware", in inglese), ovvero viene distribuito con una licenza che ne permette non solo l'utilizzo da parte di chiunque ed in qualsiasi circostanza ma anche la modifica, la copia e l'analisi.
+
+Di solito una distribuzione comprende per ogni Major release, una versione LTS (òlong term support)
+es ubuntu     18   .      04         LTS 
+      |		   |           |           |
+	distro   major(ver)  minor(rev)  indica un supporto di almeno 4 anni
+
+
+se un sw è alla versione 1.4.235 significa che  1(ver).4(rev).325(build)
+
+
+
+"Linux" è il nome che identifica il componente essenziale del sistema operativo (il "kernel"), e per estensione con lo stesso nome si identificano tutti i sistemi operativi costruiti su di esso e cui sono aggiunti applicativi più o meno specifici per un determinato contesto, ambienti grafici più semplici oppure più performanti, ed una serie di componenti. Tali sfumature sono dette "distribuzioni" (o, in gergo, distro), e ne esistono a centinaia.
+Ogni distribuzione si differenzia dall'altra per le scelte sul software installato di default, per le configurazioni iniziali, per essere maggiormente orientate alla facilità di utilizzo o all'ottimizzazione delle risorse del computer.
+
+La Shell è l'interfaccia a riga di comando del sistema operativo. La Shell è case sensitive. 
+I moderni sistemi operativi fanno completamente affidamento sulle GUI (Graphical User Interface) moderne per ogni sorta di interazione tra utente e computer.
+
+Comandi fondamentali:
+	pwd restituisce il percorso della directory corrente
+	cd modifica la directory in cui lavorare, se dopo cd non si mette niente porta alla home directory
+		cd Documenti
+	cd .. torna indietro di un passo nella directory
+	mkdir crea una nuova directory
+		mkdir "NuovaCartellaImmagini"
+	ls elenca i file contenuti nella directory corrente
+	mv sposta i file
+		mv foto1 foto2 foto2 ~/Foto/NuovaCartellaImmagini
+	rm elimina i file o intere directory
+		rm foto1
+		rm -r NuovaCartellaImmagini
+	sudo per ottenere i poteri di amministratore
+	find per cercare un file
+		find ~ -name fatture2021.pdf
+	grep per cercare dati all'interno del file
+		grep "Mario Rossi" fattura.txt  -->  Mario Rossi ha pagato 103€ il 01/01/2021
+	cat stampare il contenuto di un file in una console,
+	echo permette di visualizzare una stringa nella console, 
+	echo 'Text' >> filename permette di redigere una stringa in un file specifico,
+	less permette di visualizzare il contenuto di un file,
+	ps permette di visualizzare i processi attivi con il corrispettivo identificatore,
+	kill per chiudere forzatamente un processo,
+	man fornisce una documentazione in linea su un comando,
+	
+fonti: https://ubuntu.com/tutorials/command-line-for-beginners#1-overview
+       https://www.tecmint.com/13-basic-cat-command-examples-in-linux/
+	   https://www.mat.unical.it/spataro/teaching/InformaticaChimica/Comandi%20linux.pdf
+	   https://www.digitalocean.com/community/tutorials/basic-linux-navigation-and-file-management
+
+
+Utenti (Linux):
+
+Un sistema Linux prevede in genere la presenza di un Root, un utente con privilegi di amministratore sul proprio dispositivo, e di una 
+serie di utenti con poteri e privilegi inferiori; soprattutto nei sistemi collaborativi, è possibile che il numero di utenti definiti 
+sia anche molto alto creando qualche problema di gestione; per prendere le necesarie contromisure sarà quindi necessario conoscere innanzitutto l'informazione relativa e chi sono gli utenti che hanno la possibilità di operare sul sistema.
+Per creare un utente si utilizza il comado: sudo useradd nomeutente ---> dove sudo lo si usa in quanto solo il superuser può creare nuovi utenti.
+Al momento della creazione verrà richiesta la creazione di una password con comando: sudo passwd nomeutente password;
+
+Per vedere un elenco completo di tutti gli utenti del tuo sistema operativo Linux devi digitare: cat /etc/passwd
+L'elenco che viene mostrato, tuttavia, include anche gli utenti "non umani" creati cioè dal sistema per assolvere a determinati compiti.
+
+Per vedere solo gli utenti "umani" è possibile utilizzare due sintassi. La prima è questa:cat /etc/passwd | grep 500*
+Questo comando stampa un elenco di utenti con User ID uguale o superiore a 500 (gli ID inferiori 500 sono, solitamente, utilizzati 
+dal sistema). 
+In alternativa è possibile stampare una lista dei soli utenti muniti di una home directory 
+(che normalmente, appunto, sono gli utenti "umani" del sistema): cat /etc/passwd | grep /home | cut -d: -f1
+
+Fonti: (https://www.mrw.it/linux/dove-posso-vedere-elenco-tutti-utenti_8594.html)
+
+
+Gruppi (Linux):
+In Linux, un gruppo è una raccolta di utenti. Lo scopo principale dei gruppi è definire un insieme di privilegi come 
+l'autorizzazione di lettura, scrittura o esecuzione per una determinata risorsa che può essere condivisa tra gli utenti all'interno 
+del gruppo. Gli utenti possono essere aggiunti a un gruppo esistente.
+Comando aggiunta al gruppo: sudo useradd -g nomegruppo nomeutente (da ggiungere).
+
+Esistono due tipi di gruppi a cui un utente può appartenere:
+
+   -Gruppo primario o di accesso : è il gruppo assegnato ai file creati dall'utente. Di solito, il nome del gruppo primario è uguale 
+    al nome dell'utente. Ogni utente deve appartenere esattamente a un gruppo primario.
+
+   -Gruppo secondario o supplementare : utilizzato per concedere determinati privilegi a un insieme di utenti. 
+    Un utente può essere membro di zero o più gruppi secondari.
+
+Esistono diversi modi per scoprire i gruppi a cui appartiene un utente.
+
+Il gruppo dell'utente primario è archiviato nel file /etc/passwd e i gruppi supplementari, se presenti, sono elencati 
+nel file /etc/group.
+
+Un modo per trovare i gruppi dell'utente è elencare il contenuto di quei file usando cat, less o grep. 
+Un'altra opzione più semplice è utilizzare un comando il cui scopo è fornire informazioni sugli utenti e sui gruppi del sistema,ovvero 
+groups, che elenca tutti i gruppi di cui un utente è membro. Se eseguito senza un argomento, il comando stamperà un elenco di 
+tutti i gruppi a cui l'utente attualmente connesso appartiene.
+Per ottenere un elenco di tutti i gruppi a cui appartiene un utente specifico, indicare il nome utente al comando groups come argomento:
+groups nomeutente (il primo gruppo è il gruppo primario).
+
+Il comando id stampa informazioni sull'utente specificato e sui suoi gruppi. 
+Se il nome utente viene omesso, mostra le informazioni per l'utente corrente.
+
+Ad esempio, per ottenere informazioni sull'utente noviello, digitare: id noviello
+Il comando mostrerà il nome utente ( uid ), il gruppo primario dell'utente ( gid ) e i gruppi secondari dell'utente ( groups)
+Esempio di output:
+uid=1001(noviello) gid=1001(noviello) groups=1001(noviello),27(sudo)
+Per elencare tutti i membri di un gruppo, utilizzare il comando getent group seguito dal nome del gruppo.
+
+Per visualizzare tutti i gruppi presenti sul sistema è sufficiente aprire il file /etc/group. 
+Ogni riga in questo file rappresenta le informazioni per un gruppo. comando: less /etc/group
+
+Fonti: https://noviello.it/come-vedere-i-gruppi-su-linux/
+
+Permessi: 
+I permessi non sono altro che le autorizzazioni necessarie affinché un utente possa accedere ai file ed alle cartelle del sistema. 
+In altre parole: ciascun utente può accedere o meno ad un determinato file o cartella a seconda che l'amministratore di sistema 
+gli abbia conferito o meno la necessaria autorizzazione.
+
+I permessi possono consentire ad un utente (o gruppo di utenti) di accedere ad un file o una cartella in lettura (r), scrittura (w) 
+o esecuzione(x). Vediamo nel dettaglio cosa significa:
+     -lettura (r come read) - l'utente (o il gruppo cui appartiene) puoi leggere il contenuto; nel caso delle directory l'utente 
+      potrà vedere i file e le sotto-cartelle in quest'ultima contenute;
+     -scrittura (w come write) - l'utente (o il gruppo cui appartiene) può modificare il contenuto di un file; nel caso delle directory 
+      permette di modificarne il contenuto aggiungendo o rimuovendo elementi al suo interno;
+     -esecuzione (x come execute) - l'utente (o il gruppo cui appartiene) può eseguire un file eseguibile; nel caso delle directory 
+      consente di accedere al loro contenuto.
+
+chmod è il comando che modifica i permessi (lettura, scrittura, esecuzione).
+Il comando in oggetto ha una duplice sintassi:
+Consente di assegnare diversi permessi al proprietario, al gruppo ed agli altri utenti. La sintassi è la seguente:
+
+chmod a=rwx nomefile
+
+nel nostro esempio abbiamo assegnato a tutti (a = all) tutti i permessi (rwx).
+A sinistra del simbolo uguale (=) abbiamo l'assegnatario del permessi, a destra i permessi assegnati.
+L'assegnatario viene identificato attraverso una lettera:
+
+a (tutti)
+u (utente proprietario)
+g (gruppo)
+o (altri utenti)
+I permessi, invece, sono identificati dalle tre lettere r, w e x che abbiamo già visto in precedenza.
+
+I permessi di Lettura, Scrittura ed Esecuzione oltre che alle lettere si possono associare a dei numeri: 4 (lettura), 2 (scrittura), 1 (esecuzione).
+
+Esempio:
+	creiamo un file e vogliamo assegnare i permessi di Lettura, Scrittura ed Esecuzione al proprietario e di Lettura ed Esecuzione al gruppo e a tutti gli altri, daremo il seguente comando:
+	chmod 755 file1
+	in cui: 
+	il 7 è riferito al Proprietario e si ottiene facendo la somma dei valori sopra citati (4+2+1)
+	il primo 5 è riferito al Gruppo e si ottiene facendo la somma dei valori sopra citati (4+1)
+	il secondo 5 è riferito a tutti gli altri e si ottiene facendo la somma dei valori sopra citati (4+1)
+
+
+Fonti: (https://www.mrw.it/linux/gestire-permessi-chmod-chown-chgrp_10211.html)
+
+
+
+
+SU AZURE:
+VM linux in Azure:
+https://docs.microsoft.com/en-us/azure/virtual-machines/linux/quick-create-portal
+
+install xrdp
+https://docs.microsoft.com/en-us/azure/virtual-machines/linux/use-remote-desktop
+
+using AzCLI
+https://docs.microsoft.com/en-us/azure/virtual-machines/linux/tutorial-manage-vm
+
+linux command line reference:
+https://ubuntu.com/tutorials/command-line-for-beginners#1-overview
+
+http://lca.dii.unisalento.it/download/comandi.html#Archiviazione
+
+

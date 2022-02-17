@@ -1,0 +1,81 @@
+[
+    {
+        "Name": "Daniele",
+        "Surname": "Ziccardi",
+        "Town": "Bologna",
+        "Email":"danceoften@gmail.com"        
+    },
+
+    {
+        "Name": "Mohammed",
+        "Surname": "Ismaiel",
+        "Town": "Milano",
+        "Email":"Mohammed.ismaiel@hotmail.com"        
+    },
+    
+    {
+        "Name": "Andrea",
+        "Surname": "De Matteis",
+        "Town": "Ancona",
+        "Email": "andrea.dematteis1996@gmail.com"
+    },
+
+    {
+        "Name": "Luca", 
+        "Surname": "Marafioti", 
+        "Town": "Genova", 
+        "Email": "luca.marafioti@fastwebnet.it"
+
+    },
+
+    {
+        "Name": "Fiorentino",
+        "Surname": "Federico",
+        "Town": "Pompei",
+        "Email":"fiorenzofederico96@gmail.com"        
+    },
+
+    {
+        "Name": "Andrea",
+        "Surname": "Palermo",
+        "Town": "Caserta",
+        "Email":"and.pal3@gmail.com"        
+    },
+
+
+    {
+        "Name": "Monica",
+        "Surname": "Caviglia",
+        "Town": "Savona",
+        "Email": "monica.caviglia@outlook.it"
+    },
+
+    {
+        "Name": "Corina",
+        "Surname": "Bubulici",
+        "Town": "Vigevano",
+        "Email":"verdescorina58@gmail.com"        
+    },
+
+    {
+        "Name": "Rocco",
+        "Surname": "Reo",
+        "Town": "San Marzano di San Giuseppe",
+        "Email":"roccoreo6@gmail.com"        
+    },
+
+    {
+        "Name": "Claudio",
+        "Surname": "Truglia",
+        "Town": "Palermiti",
+        "Email": "cla-io@hotmail.it"
+    },
+
+     {
+            "Name":"Chiara",
+            "Surname":"Petrocelli",
+            "Town":"Cesano Boscone",
+            "Email":"petrocelli.chiara@gmail.com"
+    }
+        
+]

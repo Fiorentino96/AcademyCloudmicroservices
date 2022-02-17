@@ -1,0 +1,33 @@
+ottica di PRODOTTO
+
+CONSUMATORE (prodotto per) b2c
+ Analisi del profilo del consumatore
+ Studio di settore, tematiche problematiche, competitor 
+
+Ciclo di vita del software, e si ripete per ogni iterazione.
+Tutti i passaggi di una iterazione caratteristica
+ 
+Al centro c'è: CLIENTE b2b
+ Richiesta del cliente ? estensione? new feature?
+ Verifiche dei bugfix
+ Rilascio delle nuove feature richieste
+ 
+Sviluppo 
+ Imaging e risorse multimediali
+ Analisi dei dati, del dominio del problema generale 
+ Progettazione del software: desing di tutti i processi coinvolti 
+ caratteristiche previste (Realizzazione)
+ Manutenzione e BugFixing 
+ Collaudo e Testing
+
+OPERAZIONI
+ Rilascio
+ Documentazione del sw
+ Commissioning 
+ Istallazione
+ 
+Ambienti:
+ DEVELOPMENT :sviluppo del software di solito su una singola workstation lavorando su un branch (branch per feature)
+ STAGE  fase di  verifiche e testing disponibile ai sviluppatori e il cliente per verificare il corretto funzionamento del  SW, deve contenere i dati di produzione attuali
+ PRODUZIONE La produzione proprio del SW- verifiche con successo- approvazione( team interno, cliente) ( final version - ready to use)
+

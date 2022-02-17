@@ -1,0 +1,236 @@
+- Creazione del progetto tramite riga di comando
+	dotnet new webapi -o TodoApi
+	cd TodoApi
+	dotnet add package Microsoft.EntityFrameworkCore.InMemory
+	code -r ../TodoApi
+
+- Considerare attendibile il certificato di sviluppo HTTPS eseguendo il comando seguente:
+	dotnet dev-certs https --trust
+
+- Aggiungere una classe modello, è un set di classi che rappresentano i dati gestiti dall'app.
+Classe Profile:	namespace TodoApi.Models
+		{
+    			public class Profile
+    			{
+        			public int Id{get;set;}
+        			public string? Name { get; set; }
+        			public string? Surname { get; set; }
+        			public string? Town { get; set; }
+        			public string? Email { get; set; }	
+    			}
+		}
+
+Classe Todo: 	namespace TodoApi.Models
+		{
+    			public class Todo
+    			{
+        			public int Id{get;set;}
+        			private string title=string.Empty;
+        			public string Title
+        			{
+            				get
+            				{
+                				return title;
+            				}
+            				set
+            				{
+                				title = value.ToUpper();
+            				}
+        			}
+        		public string? Description = null;
+        		public Profile? Person = null;
+        		public int EstimatedHours = 0;
+        		public States State { get; set; }  
+        		public DateTime CreatedAt {get;set;}	
+    			}
+		}
+
+Classe States:	namespace TodoWebApi.Models
+		{
+    			public enum States
+    			{
+        			Todo,
+        			Inprogress,
+        			Testing,
+        			Done
+    			}
+
+
+		}
+
+Le classi di modello possono andare in qualsiasi punto del progetto, ma la cartella Models viene utilizzata per convenzione.
+
+- Aggiungere un contesto di database: cioè la classe prrincipalee che coordina la funzionalità:
+
+		using Microsoft.EntityFrameworkCore;
+		using System.Diagnostics.CodeAnalysis;
+		using TodoWebApi.Models;
+
+		namespace TodoApi.Models
+		{
+    			public class TodoWebApiContext : DbContext
+    			{
+        			public TodoWebApiContext(DbContextOptions<TodoWebApiContext> options)
+            				: base(options)
+        			{
+        			}
+
+        			public DbSet<Todo> Todo { get; set; } = null!;
+        			public DbSet<Profile> Person { get; set; } = null!;
+    			}
+		}	
+
+- Scaffolding dei Controller:
+Eseguire i comandi seguenti dalla cartella del progetto, ovvero la cartella TodoWebApi:
+	dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design
+	dotnet add package Microsoft.EntityFrameworkCore.Design
+	dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+	dotnet tool install -g dotnet-aspnet-codegenerator --version 6.0.1
+	dotnet aspnet-codegenerator controller -name TodoItemsController -async -api -m TodoItem -dc TodoContext -outDir Controllers
+
+Il codice che viene generato contrassegna la classe con l'attributo [ApiController]. Questo attributo indica che il controller risponde alle richieste API Web. 
+
+- Metodi, inseriti nei controller (i seguenti sono riferiti al controller Profile):
+
+- GET: 
+
+[HttpGet]
+        public async Task<ActionResult<IEnumerable<Profile>>> GetPerson()
+        {
+            return await _context.Person.ToListAsync();
+        }
+
+        // GET: api/Profile/5
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Profile>> GetProfile(int id)
+        {
+            var profile = await _context.Person.FindAsync(id);
+
+            if (profile == null)
+            {
+                return NotFound();
+            }
+
+            return profile;
+        }
+
+
+- PUT: 
+
+[HttpPut("{id}")]
+        public async Task<IActionResult> PutProfile(int id, Profile profile)
+        {
+            if (id != profile.Id)
+            {
+                return BadRequest();
+            }
+
+            _context.Entry(profile).State = EntityState.Modified;
+
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!ProfileExists(id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return NoContent();
+	
+- POST: 
+
+[HttpPost]
+        public async Task<ActionResult<Profile>> PostProfile(Profile profile)
+        {
+            _context.Person.Add(profile);
+            await _context.SaveChangesAsync();
+
+            return CreatedAtAction(nameof(GetProfile), new { id = profile.Id }, profile);
+        }	
+
+- DELETE: 
+
+[HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteProfile(int id)
+        {
+            var profile = await _context.Person.FindAsync(id);
+            if (profile == null)
+            {
+                return NotFound();
+            }
+
+            _context.Person.Remove(profile);
+            await _context.SaveChangesAsync();
+
+            return NoContent();
+        }
+
+        private bool ProfileExists(int id)
+        {
+            return _context.Person.Any(e => e.Id == id);
+        }	
+
+- Installare http-repl per testare l'api web:
+	dotnet tool install -g Microsoft.dotnet-httprepl
+
+- Aprire una nuova finestra del terminale ed eseguire i seguenti comandi, con il numero di porta giusto:
+	httprepl https://localhost:7207/api/Todo
+	post -h Content-Type=application/json -c "{"Id":1,"Title":"Chiara"}"
+
+- Per testare l'intestazione del percorso:
+	connect https://localhost:7207/api/Todo/1
+	get
+
+- Per impostazione predefinita, HttpRepl non dispone di un editor di testo configurato per l'uso. Per testare i metodi dell'API Web che richiedono un corpo della richiesta HTTP, è necessario impostare un editor di testo predefinito. Lo strumento HttpRepl avvia l'editor di testo configurato al solo scopo di comporre il corpo della richiesta. Eseguire il comando seguente per impostare l'editor di testo preferito come predefinito:
+	pref set editor.command.default "<EXECUTABLE>"
+Nel comando precedente <EXECUTABLE> è il percorso completo del file eseguibile dell'editor di testo. Ad esempio, eseguire il comando seguente per impostare Visual Studio Code come editor di testo predefinito:
+	pref set editor.command.default "C:\Program Files\Microsoft VS Code\Code.exe"
+
+- Per avviare l'editor di testo predefinito con argomenti dell'interfaccia della riga di comando specifici, impostare la chiave editor.command.default.arguments. Si supponga, ad esempio, Visual Studio Code sia l'editor di testo predefinito e che si voglia sempre che HttpRepl a aperti Visual Studio Code in una nuova sessione con le estensioni disabilitate. Eseguire il comando seguente:
+	pref set editor.command.default.arguments "--disable-extensions --new-window"
+
+TESTARE le richieste HTTP GET:
+Eseguire il comando get in un endpoint che lo supporta:
+	https://localhost:7207> get
+Recuperare un record specifico passando un parametro al comando get:
+	get 2
+
+TESTARE le richieste HTTP POST:
+- Eseguire il comando post in un endpoint che lo supporta:
+	post -h Content-Type=application/json
+L'editor di testo predefinito apre un file con estensione tmp con un modello JSON che rappresenta il corpo della richiesta HTTP.
+- Modificare il modello JSON
+- Salvare il file con estensione tmp e chiudere l'editor di testo. Nella shell dei comandi viene visualizzato l'output seguente:
+
+HTTP/1.1 201 Created
+Content-Type: application/json; charset=utf-8
+Date: Thu, 27 Jun 2019 21:24:18 GMT
+Location: https://localhost:5001/people/4
+Server: Kestrel
+Transfer-Encoding: chunked
+
+{
+  "id": 4,
+  "name": "Scott Addie"
+}
+
+TESTARE le richieste HTTP PUT:
+- Facoltativo: eseguire il comando get per visualizzare i dati prima di modificarli
+- Eseguire il comando put in un endpoint che lo supporta:
+	https://localhost:7207> put 2 -h Content-Type=application/json
+Nel comando precedente l'intestazione della richiesta HTTP Content-Type è impostata per indicare un tipo di supporto del corpo della richiesta JSON. L'editor di testo predefinito apre un file con estensione tmp con un modello JSON che rappresenta il corpo della richiesta HTTP.
+
+TESTARE le richieste HTTP DELETE:
+- Facoltativo: get eseguire il comando get per visualizzare i dati prima di modificarli
+- Eseguire il comando delete in un endpoint che lo supporta:
+	https://localhost:7207> delete 2
+- Facoltativo: eseguire get un comando per visualizzare le modifiche.
+

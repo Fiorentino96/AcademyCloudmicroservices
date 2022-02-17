@@ -1,0 +1,33 @@
+Azure RBAC (controllo accessi basato sui ruoli): è il modo in cui è possibile accedere alle risorse cloud ed è una funzione fondamentale per qualsiasi organizzazione che utilizzi il cloud. Consente di gestire chi ha accesso alle risorse di Azure e cosa possono fare con tali rsorse e a quali aree possono accedere. Per esempio consente ad un utente di gestire le macchine virtuali di una sottoscrizione e ad un altro utente di gestire le reti virtuali.
+
+Il modo in cui Azure controlla l'accesso alle risorse è attraverso RBAC, che è costituito da 3 elementi:
+    Security principal: oggetto rappresentato da un utente/gruppo/identità che richiede acesso alle risorse di Azure
+
+    Ambito: insieme di risorse a cui si applica l'accesso, su cui è possibile specificare un ambito a 4 livelli: gruppo di gestione, sottoscrizione, gruppo di risorse e risorsa.
+
+    Definizione ruolo: raccolta di permessi, dove elenca le azioni che possono essere eseguite come lettura, scrittura ed eliminazione
+
+Fonte: https://docs.microsoft.com/en-us/azure/role-based-access-control/overview
+
+Best Practices
+Usando Azure RBAC, è possiile separare i compiti all'interno del team e concedere a ciascun utente solo la quantità di accesso di cui ha bisogno per svolgere il proprio lavoro. Anzichè concedere a tutti autorizzazioni illimitate nella sottoscrizione o nelle risorse di Azure, è possibile consentire solo determinate azioni in un determinato ambito.
+
+Fonte: https://docs.microsoft.com/en-us/azure/role-based-access-control/best-practices
+
+I ruoli di Azure si dividono in:
+    Azure roles: gestiscono in maniera granulare le risorse di Azure, quali ad esempio calcolo e archiviazione
+                I principali sono: 
+                                    Owner (Proprietario con accesso completo alle risorse), 
+                                    Contributor (Crea e gestisce le risorse), 
+                                    Reader (Visualizza le risorse)
+                                    User Access Administrator (gestisce l'accesso degli utenti alle risorse)
+
+
+    Azure Active directory: gestiscono le risorse di Azure Active directory in quanto consentono di creare e modificare gli utenti, assegnare ruoli di amministrazione e reimpostare le password degli utenti
+                I principali sono: 
+                                    Global Administrator (Gestisce l'accesso a tutte le funzionalità amministrative in Azure Active Directory)
+                                    User Administrator (crea e gestisce tutti gli aspetti degli utenti e dei gruppi)
+                                    Billing Administrator (Gestisce acquisti, iscrizioni e ticket di supporto)
+
+Fonte: https://docs.microsoft.com/en-us/azure/role-based-access-control/rbac-and-directory-admin-roles#azure-roles
+

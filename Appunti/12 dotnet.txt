@@ -1,0 +1,17 @@
+dotnet new --list posso vedere i boilerplate disponibili (scheletro predefinito di un progetto)
+
+dotnet new console -o "path/del/progetto" 
+-o è opzionale e lo uso de devo generare il progetto in un'altra cartella
+
+dotnet restore 
+se stiamo usando librerie di terze parti presenti nel repository di librerie nuget
+
+NuGet è un repository, contiene file già compilati(dll e dipendenze) e dunque in quanto binari non li mettiamo nel repo dei sorgenti perchè moltiplicheremmo lo spazio occupato, ad esempio se tutti i progetti usano un pacchetto riempio git inutilmente.
+non sono adatti a stare coi sorgenti: non sono in formato text.
+Ecco perchè esite un repo globale per questo scopo.
+
+todo
+per creare un progetto webapi
+dotnet new webapi
+vedi:
+https://docs.microsoft.com/it-it/aspnet/core/tutorials/first-web-api?view=aspnetcore-6.0&tabs=visual-studio-code

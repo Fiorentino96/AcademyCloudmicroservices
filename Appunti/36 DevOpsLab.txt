@@ -1,0 +1,71 @@
+prerequisiti:
+
+tutorial creazione db
+https://docs.microsoft.com/it-it/azure/azure-sql/database/single-database-create-quickstart?tabs=azure-powershell
+
+Connessione AzAccount- 
+Fonte: https://docs.microsoft.com/en-us/powershell/module/az.accounts/connect-azaccount?view=azps-7.2.0
+
+Come dare execution al terminale
+
+Aprire il powershell di Windows come admin e digitare :
+
+
+1)Set-ExecutionPolicy -ExecutionPolicy AllSigned -Scope LocalMachine
+
+2)Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+fonte : https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.2#managing-the-execution-policy-with-powershell
+
+Digitare T nella scelta che appare per entrambi i comandi
+
+reerence completo cmd Az cli
+https://docs.microsoft.com/it-it/cli/azure/group?view=azure-cli-latest
+
+reference ps
+https://docs.microsoft.com/en-us/powershell/module/az.resources/remove-azresourcegroup?view=azps-7.2.0#:~:text=%5B%5D-,Description,use%20the%20Remove%2DAzResource%20cmdlet.
+
+-> unattended setup and teardown : file Unattended.ps1
+
+input: 
+sottoscrizione
+gruppo risorse
+
+creazione del srv SQLServer  su Azure   
+input:
+nome srv
+credenziali sql: user e psw di svz
+output:
+uri del server
+id risorsa
+
+scripting creazione DB su azure
+input:
+credenziali sql
+- sql script
+- ps script
+
+?scripting regole firewall 
+
+scripting lancio database update per creare al volo struttura relazionale
+input :
+sw è pullato 
+output:
+db da verificare
+
+scripting di delete + publish + deploy.
+ps 
+? deploy
+
+https://www.azuredevopslabs.com/
+https://docs.microsoft.com/it-it/azure/devops/?view=azure-devops
+https://docs.microsoft.com/en-us/azure/devops/pipelines/publish-pipeline-artifact?view=azure-devops&tabs=classic
+https://azure.microsoft.com/en-in/overview/devops-tutorial/?cdn=disable#fundamentals
+https://azuredevopsdemogenerator.azurewebsites.net/
+https://docs.microsoft.com/en-us/azure/devops/pipelines/release/define-multistage-release-process?view=azure-devops
+
+
+in alternativa esempio funzionante con :
+dll, test funzionali e test unitari
+nella risorsa azure:
+DevOps Starter

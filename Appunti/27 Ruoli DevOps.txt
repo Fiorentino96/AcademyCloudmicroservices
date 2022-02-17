@@ -1,0 +1,16 @@
+I ruoli principali in un team Scrum sono quattro: lo Scrum Master, il Product Owner, i membri dello Scrum Team e gli Stakeholder.
+
+Lo Scrum Master:
+    viene spesso paragonato al tradizionale Project Manager, ma i due ruoli sono molto diversi. Lo Scrum Master si comporta da facilitatore, non ha particolare autorità formale sul team e non è responsabile dell’implementazione del progetto. Il suo obiettivo consiste nel rimuovere barriere e ostacoli alla realizzazione del progetto da parte del team a prescindere dalle interferenze del resto dell’organizzazione. Il Master agisce come “responsabile delle relazioni esterne” del team e si impegna di fronte all’organizzazione in termini di attività, tempi, costi e qualità. Parallelamente, si assicura che gli obiettivi di tutto il team siano sempre allineati e, grazie alla profonda conoscenza del metodo, controlla che i principi di Scrum vengano sempre applicati dal team.
+
+Il Product Owner:
+    si occupa di costruire e trasmettere la visione del progetto al team attraverso una relazione costante con gli Stakeholder, grazie ai quali raccoglie i requisiti e con i quali deve condividere lo stato di avanzamento dei lavori. Per portare a termine il suo compito, il Product Owner ha autorità formale sul team per orientarne le scelte e al contempo gode di credibilità anche all’esterno del team. Tra i suoi obiettivi vengono incluse metriche quantitative come il Return On Investment.
+
+Lo Scrum Team:
+    è responsabile collettivamente di tutte le attività che di norma vengono suddivise all’interno di Sprint, periodi temporali durante i quali viene completato un pacchetto di lavoro auto-consistente, ovvero pronto per essere utilizzato dall’utente senza attendere ulteriormente. Per questo motivo, lo Scrum Team è responsabile per la consegna del lavoro nei tempi e nei costi concordati. L’organizzazione del team viene gestita autonomamente dal team stesso e solo in caso di conflitti o problemi vengono coinvolti il Product Owner (per dirimere divergenze di opinione in ultima istanza) e lo Scrum Master (per rimuovere barriere e problemi). Ogni membro dello Scrum Team è tenuto a partecipare a tutti i diversi meeting di progetto – in gergo chiamate cerimonie (daily, planning, restrospective, review) – e ad assicurarsi che gli elementi che emergono vengano adeguatamente assegnati e risolti.
+
+Lo Stakeholder:
+    è incaricato di mantenere una relazione costruttiva con il Product Owner attraverso la condivisione trasparente di tutti i dettagli di progetto. Lo Stakeholder deve far emergere con continuità desideri e perplessità dell’organizzazione in modo che il Product Owner possa farsene carico, diventarne responsabile e trasferirle allo Scrum Team attraverso una corretta prioritizzazione.
+
+fonte: 
+https://www.digital4.biz/executive/digital-transformation/scrum-cosa-e-distinzione-dei-ruoli/

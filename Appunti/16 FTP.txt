@@ -1,0 +1,21 @@
+FTP 
+Il protocollo FTP(File Transfer Protocol)  è un protocollo usato per trasferire file tra macchine su Internet. 
+Si tratta di un protocollo basato sull'architettura client/server. È possibile infatti accedere ai file archiviati 
+su un server FTP utilizzando un client FTP (un browser, un software FTP o una CLI).
+
+Un server FTP può offrire alcune funzionalità che è possibile eseguire tramite un software di visualizzazione remota, 
+con l'esecuzione di una finestra divisa in due: sul lato sinistro, di solito, vengono visualizzati i file e le cartelle 
+del nostro computer,sul lato destro i file e le cartelle del server remoto, spesso questi software richiedono delle credenziali di 
+accesso che vengono rilasciati agli utilizzatori dai provider Server per evitare accessi indesiderati di terze parti.
+
+Queste funzionalità sono eseguibili con tutti i tipi di client e tra le più importanti ricordiamo il Download e l'Upload:
+-Upload>
+  Consiste nel trasferimento di uno o più tipi di file da locale a remoto , questa funzione si esegue con i seguenti passaggi:
+  1)selezionare, in locale, i file che si vuole caricare sul server remoto;
+  2)trascinare i file selezionati all'interno della porzione di finestra che contiene i file e le cartelle remote;
+  3)rilasciare i file per avviare l'upload.
+-Download>
+  Per effettuare il download , ovvero il trasferimento di uno o più file da remoto a locale , basterà eseguire i passi della
+  procedura di Upload al contrario.
+
+fonte:https://www.mrw.it/html/ftp-guida-completa_12775.html

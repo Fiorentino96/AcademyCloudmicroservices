@@ -1,0 +1,81 @@
+Creare un progetto di API Web
+
+    Prima di partire con l’implementazione vera e propria, il docente ci ha spiegato come è strutturata un API e come funziona internamente il sistema. Una Web API è costituita essenzialmente da risorse accessibili via Web tramite una o più rappresentazioni.
+
+    un client richiede l’esecuzione di un metodo HTTP, ad esempio GET, su una risorsa identificata da un URI. Il WEb SErvice, interpretando l’URI, individua il controller associato alla risorsa e, in base allo specifico metodo HTTP ed ai parametri specificati dal client, invoca il metodo corrispondente. Il risultato dell’esecuzione del metodo è una risorsa e/o un codice di stato HTTP. (ASP.NET Web API supporta in maniera predefinita la serializzazione in JSON e XML.)
+
+    - Creare un nuovo progetto API Web e aprirlo in Visual Studio Code.
+
+        dotnet new webapi -o TodoApi
+        cd TodoApi
+    
+    - Aggiungere un NuGet pacchetto necessario per la sezione successiva.
+
+        dotnet add package Microsoft.EntityFrameworkCore.InMemory --prerelease
+        code -r ../TodoApi
+
+
+Aggiungere una classe modello e un contesto di database.
+
+    Creiamo innanzitutto una cartella Models all’interno del progetto e definiamo in essa una classe Profile e Todo.
+    Una volta definita la nostra risorsa, creiamo il nostro contest database che coordina le funzionalità di Entity Framework per un modello di dati. Per questo aggiungiamo un file denominato TodoWebApiContext.
+
+    - Aggiungere una cartella denominata Models.
+    - Aggiungere un file Profile.cs alla Models cartella con il codice seguente
+
+namespace TodoApi.Models
+{
+    public class TodoItem
+    {
+        public int Id{get;set;}
+        public string? Name { get; set; }
+        public string? Surname { get; set; }
+        public string? Town { get; set; }
+        public string? Email { get; set; }
+    }
+
+}
+
+    - Aggiungere un file  TodoWebApiContext.cs alla Models cartella .
+
+
+Eseguire lo scaffolding di un controller.
+
+    Lo scaffolding si occupa della generazione automatica di codici per web app sviluppate con Visual Studio. Ciò che scaffolding fa a livello funzionale, è permetterci di aggiungere tramite un semplice procedura guidata, tutti i file di classe all'interno delle cartelle ProfileContoller e TodoController, attraverso Nuget (NuGet è un gestore di pacchetti progettati per consentire agli sviluppatori di condividere codici riutilizzabili.).
+
+    - Aggiungere i pacchetti NuGet necessari per lo scaffolding.
+
+        dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design 
+        dotnet add package Microsoft.EntityFrameworkCore.Design 
+        dotnet add package Microsoft.EntityFrameworkCore.SqlServer 
+
+    - Installare il motore di scaffolding ( dotnet-aspnet-codegenerator ).
+        
+        dotnet tool install -g dotnet-aspnet-codegenerator
+
+    - Effettuare lo scaffold di TodoItemsController .
+
+        dotnet aspnet-codegenerator controller
+
+
+Configurare il routing, i percorsi URL e i valori restituiti.
+
+    Quindi accediamo al nostro URL 
+    https://localhost:7207/api/profile
+    https://localhost:7207/api/todo 
+
+
+Chiamare l'API Web con Postman ed eseguire i vari metodi GET, PUT, POST e DELETE.
+
+    -GET
+    richiede una rappresentazione della risorsa specificata. Le richieste che utilizzano GETdovrebbero recuperare solo i dati.
+
+
+    -POST
+    invia un'entità alla risorsa specificata, causando spesso una modifica dello stato o effetti collaterali sul server.
+
+    -PUT
+    sostituisce tutte le rappresentazioni correnti della risorsa di destinazione con il payload della richiesta.
+
+    -DELETE
+    elimina la risorsa specificata.

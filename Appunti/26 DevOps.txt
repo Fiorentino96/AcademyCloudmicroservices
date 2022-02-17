@@ -1,0 +1,100 @@
+DevOps: 
+
+Il termine "DevOps" è una combinazione di "Development" (sviluppo) e "Operations" (operazioni), ma rappresenta un insieme di idee e procedure che va ben oltre il significato di questi due termini. DevOps include sicurezza, modalità di lavoro collaborative, analisi dei dati e molti altri aspetti. Ma che cos'è?
+Quali sono i vantaggi di DevOps per i team? DevOps permette a ruoli in precedenza isolati, tra cui sviluppo, operazioni IT, controllo della qualità e sicurezza, di coordinarsi e collaborare per fornire prodotti migliori e più affidabili. Grazie all'adozione di una cultura DevOps insieme alle procedure e agli strumenti DevOps, i team possono rispondere meglio alle esigenze dei clienti, migliorare l'attendibilità delle applicazioni create e raggiungere più rapidamente gli obiettivi aziendali. 
+DevOps descrive gli approcci da adottare per accelerare i processi che consentono a un'idea (come una nuova caratteristica software, una richiesta di miglioramento o un bug fix) di passare dallo sviluppo al deployment in un ambiente di produzione, dove può fornire valore all'utente. Tali approcci richiedono una comunicazione frequente tra i team operativi e di sviluppo. Inoltre, il lavoro all'interno di ciascun team deve essere incentrato su un rapporto di empatia fra colleghi. Sono necessari anche scalabilità e provisioning flessibile. Con DevOps è possibile ottenere più efficienza quando necessario, attraverso il self service e l'automazione.
+Gli sviluppatori, che solitamente creano codici in un ambiente di sviluppo standard, lavorano a stretto contatto con il personale IT operativo per velocizzare le fasi di creazione, collaudo e rilascio dei software, senza rinunciare all'affidabilità
+
+La cultura dei progetti software open source può fornire un modello per la costruzione di una cultura DevOps. La libera condivisione delle informazioni costituisce l'approccio standard alla collaborazione nelle community open source, poiché contribuisce a introdurre cambiamenti culturali come la promozione della trasparenza nel processo decisionale, l'invito alla sperimentazione eliminando il timore dell'errore o l'introduzione di un approccio meritocratico che promuove fiducia e collaborazione. Molte organizzazioni sono alla ricerca di servizi di consulenza per la trasformazione digitale per favorire questi tipi di iniziative (governance).
+
+Uno degli esiti principali dell'implementazione di DevOps è la pipeline di integrazione e deployment continui (CI/CD), che consente una maggiore frequenza di distribuzione delle app ai clienti e la convalida della qualità del software con interventi manuali ridotti al minimo.
+
+Nello specifico, il metodo CI/CD introduce l'automazione e il monitoraggio costanti nell'intero ciclo di vita delle applicazioni, dalle fasi di integrazione e test a quelle di distribuzione e deployment, consentendo di identificare e risolvere problemi e difetti in maniera tempestiva. Nel complesso, questi processi interconnessi vengono spesso definiti "pipeline CI/CD" e sono supportati dai team operativi e di sviluppo che collaborano secondo modalità agili.
+CI= Continuous Integration
+CD= Continuous Delivery
+Fonte: https://azure.microsoft.com/it-it/overview/what-is-devops/#devops-overview
+Fonte: https://www.redhat.com/it/topics/devops#container-e-devops 
+
+
+Metodo Agile
+
+Il metodo Agile (o Lightweight methodologies) nasce in ambito IT a metà degli anni ‘90 in contrapposizione (ed evoluzione) al cosiddetto metodo Heavyweight. Si tratta di un metodo innovativo basato sull’interazione continua con gli stakeholder, la cui soddisfazione è determinante per la buona riuscita del progetto e per lo sviluppo dell’organizzazione. 
+L’idea del Metodo Agile non si basa sull’approccio classico e lineare di progettazione, ma sulla possibilità di realizzare un progetto per fasi, chiamate “sprint” , ovvero l'inizio di un nuovo ciclo di iterazione durante il quale si definiscono le idee e la bozzatura della richiesta arrivata
+e si formano dei team/gruppi propedeutici ai vari passaggi da effettuare nell'iterazione, si stabiliscono i tempi 
+di esecuzione di qualsiasi tipo di iterazione(ad esempio refactory o  manutenzione)che in genere sono tendenti ai 4/5 giorni.
+Il cliente ,all'interno di una Sprint,può essere coinvolto in maniera centrale o marginale.Una Sprint inoltre può essere intesa come un intero ciclo produttivo o una iterazione.
+Ad ogni sprint corrisponde una nuova funzionalità e viene verificata la soddisfazione del cliente, al quale viene mostrato il lavoro svolto fino a quel punto. Un sistema iterativo (ed interattivo) che consente di apportare agilmente modifiche al progetto, di abbattere i costi di produzione e, soprattutto, di evitare effort inutili ed un eventuale fallimento del progetto.
+
+
+L'obiettivo della metodologia agile è la piena soddisfazione del cliente e non solo l'adempimento di un contratto. Inoltre, il corretto uso della metodologia può consentire di abbattere i costi e i tempi di sivuluppo del software migliorando la qualità del lavoro. 
+
+Fonte: https://www.xpand-it.com/blog/top-5-agile-methodologies/
+
+Manifesto Agile: i 12 principi 
+
+    La nostra massima priorità è soddisfare il cliente rilasciando software di valore, fin da subito e in maniera continua (obiettivo della metodologia).
+
+    Accogliamo i cambiamenti nei requisiti, anche a stadi avanzati dello sviluppo. I processi agili sfruttano il cambiamento a favore del vantaggio competitivo del cliente.
+
+    Consegnamo frequentemente software funzionante (Continuous Integration e COntinuous Deployment), con cadenza variabile da un paio di settimane a un paio di mesi, preferendo i periodi brevi.
+
+    Committenti e sviluppatori devono lavorare insieme quotidianamente per tutta la durata del progetto.
+
+    Fondiamo i progetti su individui motivati. Diamo loro l'ambiente e il supporto di cui hanno bisogno e confidiamo nella loro capacità di portare il lavoro a termine.
+
+    Una conversazione faccia a faccia è il modo più efficiente e più efficace per comunicare con il team ed all'interno del team.
+
+    Il software funzionante è il principale metro di misura di progresso.
+
+    I processi agili promuovono uno sviluppo sostenibile. Gli sponsor, gli sviluppatori e gli utenti dovrebbero essere in grado di mantenere indefinitamente un ritmo costante.
+
+    La continua attenzione all'eccellenza tecnica e alla buona progettazione esaltano l'agilità.
+
+    La semplicità - l'arte di massimizzare la quantità di lavoro non svolto - è essenziale.
+
+    Le architetture, i requisiti e la progettazione migliori emergono da team che si auto-organizzano.
+
+    A intervalli regolari il team riflette su come diventare più efficace, dopodiché regola e adatta il proprio comportamento di conseguenza.
+
+
+
+Scrum:
+In maniera molto sintetica Scrum è un framework di processo che prevede di dividere il progetto in blocchi rapidi di lavoro (Sprint) alla fine di ciascuno dei quali 
+creare un incremento del software. Esso indica come definire i dettagli del lavoro da fare nell'immediato futuro e prevede varie stand-up con caratteristiche precise 
+per creare occasioni di ispezione e controllo del lavoro svolto.
+
+Pertanto è un framework agile per la gestione del ciclo di sviluppo del software, iterativo ed incrementale, concepito per gestire progetti e prodotti software 
+o applicazioni di sviluppo. Scrum enfatizza tutti gli aspetti di gestione di progetto legati a contesti in cui è difficile pianificare in anticipo. Vengono utilizzati 
+meccanismi propri di un "processo di controllo empirico", in cui cicli di feedback che ne costituiscono le tecniche di management fondamentali risultano in opposizione 
+alla gestione basata sul concetto tradizionale di command-and-control. Il suo approccio alla pianificazione e gestione di progetti è quello di portare l'autorità 
+decisionale al livello di proprietà e certezze operative. L'empirismo afferma che la conoscenza deriva dall'esperienza e che le decisioni si basano su ciò che si 
+conosce. Scrum utilizza un metodo interattivo e un approccio incrementale per ottimizzare la prevedibilità e il controllo del rischio.
+Sono tre i pilastri che sostengono ogni implementazione del controllo empirico di processo:
+-Trasparenza
+Gli aspetti significativi del processo devono essere visibili ai responsabili del lavoro. La trasparenza richiede che quegli aspetti siano definiti da uno standard 
+comune in modo tale che gli osservatori condividano una comune comprensione di ciò che viene visto. 
+Ad esempio:
+Un linguaggio comune di riferimento al processo deve essere condiviso da tutti i partecipanti;
+Una definizione comune della parola "fatto" (in inglese "done") deve essere condivisa da chi esegue il lavoro e da chi deve accettarlo.
+
+-Ispezione
+Chi utilizza Scrum deve ispezionare frequentemente gli artefatti prodotti e i progressi realizzati verso il conseguimento degli obiettivi prestabiliti, 
+individuando in tal modo precocemente eventuali difformità rispetto a quanto si intende realizzare. Questo aspetto è facilitato dal fatto che la metodologia agile prevede task di durata breve. La frequenza delle ispezioni non deve essere tale da determinare 
+un'interruzione del lavoro in corso. Le ispezioni devono essere eseguite diligentemente e da ispettori qualificati.
+
+-Adattamento
+Se chi ispeziona verifica che uno o più aspetti del processo di produzione sono al di fuori dei limiti accettabili e che il prodotto finale non potrà essere accettato, 
+deve intervenire sul processo stesso o sul materiale prodotto dalla lavorazione. L'intervento deve essere portato a termine il più rapidamente possibile per ridurre 
+al minimo l'ulteriore scarto rispetto agli obiettivi prestabiliti. Scrum prescrive quattro occasioni formali per l'ispezione e l'adattamento:
+   -Sprint Planning Meeting
+   -Daily Scrum
+   -Sprint Review
+   -Sprint Retrospective.
+
+Il framework Scrum è costituito dai Team Scrum e dai ruoli, eventi, artefatti e regole ad essi associati. 
+Ogni parte del framework serve a uno specifico scopo ed è essenziale per il successo e l'utilizzo di Scrum. 
+Le regole di Scrum legano insieme gli eventi, i ruoli e gli artefatti governando le relazioni e le interazioni tra essi anche se le strategie specifiche per 
+l'utilizzo del framework Scrum variano e vengono descritte in molti testi specifici.
+
+Fonte: https://it.wikipedia.org/wiki/Scrum_(informatica)
+

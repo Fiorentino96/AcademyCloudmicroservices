@@ -1,0 +1,28 @@
+meet :
+Andrea: https://meet.google.com/dcf-oohv-xva
+Federico: https://meet.google.com/hwo-jwin-vhh
+Chiara: https://meet.google.com/eat-snhe-bmo
+Rocco: https://meet.google.com/eyd-kxos-ias
+Daniele : https://meet.google.com/dmd-ecrg-hfw
+Luca: https://meet.google.com/asq-fbyh-nrg
+
+Classic subscription administrator roles, Azure roles, and Azure AD roles: https://docs.microsoft.com/en-us/azure/role-based-access-control/rbac-and-directory-admin-roles
+
+Subscriptions, licenses, accounts, and tenants for Microsoft's cloud offerings: https://docs.microsoft.com/en-us/microsoft-365/enterprise/subscriptions-licenses-accounts-and-tenants-for-microsoft-cloud-offerings?view=o365-worldwide
+
+redeem azure pass: https://www.microsoftazurepass.com/Home/HowTo
+
+Docker Desktop su Chromium:
+https://dvillalobos.github.io/2020/How-to-install-and-run-Docker-on-a-Chromebook/
+
+
+Azure Platform Case Study
+
+https://microsoft.github.io/techcasestudies/
+https://customers.microsoft.com/en-us/home?sq=&ff=&p=0
+
+mongo DB database NO SQL, sul sito info per certificazione:
+https://www.mongodb.com/
+
+
+https://stackoverflow.com/questions/68405027/how-to-resolve-no-hosted-parallelism-has-been-purchased-or-granted-in-free-tie

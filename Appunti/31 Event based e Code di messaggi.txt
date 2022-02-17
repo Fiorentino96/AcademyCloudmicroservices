@@ -1,0 +1,22 @@
+event based programming:
+
+un modello di programmazione basato su un ciclo di verifica degli eventi (es CPU interrupt quano premo un tasto o clicco sullo schermo: verrà notoficata la finestra attiva), alla loro occorrenza viene eseguita una porzione di software "dedicata" (event handler che reca la stessa firma del delegate dichiarato dalla classe) alla gestione di tale situazione
+
+esempi:
+1- clicco su un tasto o su un elemento dell GIU (interattività con l'utente)
+se ci sono sottoscrittori dell'evento click, il componente "bottone" notifica ai sottocrittori, tramite la chiamata ad un delegate, che il tasto è stato premuto
+2- una elaborazione prevede una lunga attesa, essa fornisce la sottoscrizione ad un evento delegato alla visualizzazione di una progress bar.
+3- una elaborazione richiede risultati intermedi per continuare, essa "scatena" (fires) un evento per richiedere alla callback (metodo con la stessa forma del delegate previsto) il dato necessario a continuare l'elaborazione stessa.
+4- nel WMS, vedi:
+https://person.dibris.unige.it/magillo-paola/DISPENSE_IG/eventdri.html
+
+IN ambito più ampio un esempio di event driven programming è il 
+MESSAGE QUEUE PATTERN:
+
+coda di messaggi:
+la necessità di gestire uan moltidine di attività asincrone che insistono sulla stessa risorsa, consentendo di metter in "fila" le richieste, e di farle "scodare" da più consumer interessati (es: N frontend che richiedono una chiusura carrello -> invio del messaggio in un service bus -> coda di messaggi da gestire nell'endpoint -> consumers: magazzino, amministrazione, manager vendite, logistica, email conferma ordine, gateway di pagamento, giacienze per ordini a fornitori.
+
+publisher : chi inserisce il messaggio 
+service bus, il tubo in cui viaggia il messaggio: mette in relazione chi scrive il messaggio (PUB) con chi sottoscrive di volerlo ricevere (consumer, subscriber)
+
+diversi strati (layers) come es:  (Api per orchestrare le code)Mass transit over Rabbit MQ

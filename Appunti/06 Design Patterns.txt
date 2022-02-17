@@ -1,0 +1,152 @@
+Design di software: schematizzare e dare una forma alla soluzione 
+Pattern: uno schema già visto, modello riccorente 
+
+Design patterns è un libro pietra miliare nell'informatica.
+
+Alcuni pattern noti possono essere quelli di ordinamento, ricerca e scansione delle liste o array.-> vedi programmazione Procedurale o funzionale.
+
+Assembler(linguaggio vicino alla macchina: basso livello): il processore conosce un set di istruzioni ed io le utilizzo per istruirlo (programmarlo)
+il set di istruzioni si basa sulla specifica architettura:
+
+
+CPU/ 
+contiene Registri: 
+AX,BX,CX,DX,EX,.....
+IP: l'indirizzo dell'istruzione correntemente in uso
+processore vai dove indicato da IP(instruction pointer) e fallo
+AND OR NOT XOR
+
+
+
+RAM/   
+PERIFERICHE FILE(dischi)/  
+puntatori per sapere dove inizia il dato che sto trattando
+|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|c|i|a|o| |p|i|p|p|o|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|C|o|n|s|o|l|e|.|W|r|i|t|e|L|i|n|e|(|"|E|c|c..|_|_|_|_|_|_|_|_|_|_
+
+
+
+
+BUS/ tramite indirizzi mette il processore in contatto con il resto  
+
+
+SLOT per schede varie/
+
+
+Programmazione con un linguaggio(ad alto livello):
+lo sviluppatore scrive in un linguaggio simbolico ma più vicino alla mente umana.
+
+
+Modulare o procedurale:
+riusare in vari punti del programma tutto il codice che è presente nelle procedure e nelle funzioni 
+
+
+OOP: object oriented programming
+accorpare varie funzionalità per classe. quindi se ne ho bisogno:'instanzio' un oggetto di quella classe e lo uso
+
+DESIGN PATTERN:
+
+Adapter: mettere in relazione client/server due processi al fine di non dover specificare dipendenze tra i due oggetti
+Proxy: è un design pattern. Nella sua forma più generale, un proxy è una classe che funziona come interfaccia per qualcos'altro. Fornisce una rappresentazione di un oggetto di accesso difficile o che richiede un tempo importante per l'accesso o creazione. Il Proxy consente di posticipare l'accesso o creazione al momento in cui sia davvero richiesto.
+Facade: mette in comunicazioni sottosistemi complessi in un solo sistema semplice
+Orchestrator: organizza le operazioni necessarie in modo centralizzato, senza affidarsi alla comunicazione point-to-pointn tra le operazioni
+Repositary: L'aggiunta, la rimozione, l'aggiornamento e la selezione di elementi da questa raccolta avviene tramite una serie di metodi semplici, senza la necessità di occuparsi di problemi di database come connessioni, comandi, cursori o lettori.
+Flyweight: che permette di separare la parte variabile di una classe dalla parte che può essere riutilizzata.
+Helper: la classe helper viene utilizzata per fornire alcune funzionalità, che non sono l'obiettivo principale dell'applicazione o della classe in cui viene utilizzata.
+Singleton: una classe disegnata per prevedere una sola istanza per tutti i client: risolve problemi di availability, di memoria e di concorrenza.
+Factory service: il servizio che riceve una configuarzione e in cambio fornisce l'oggetto richiesto, consente di non occuparsi di fare la new(instanza) nel nostro processo, ma di chiedere l'oggetto al factory service.
+
+
+Singleton:
+Nella programmazione ad oggetti, il singleton è uno dei pattern fondamentali descritti dalla "Gang of Four" nel celebre 
+libro Design Patterns.
+Il singleton è un design pattern creazionale che ha lo scopo di garantire che di una determinata classe venga creata una e una sola istanza, e di fornire un punto di accesso globale a tale istanza.
+Spiegato in linguaggio umano tu richiedi un “qualcosa” al programma. Se il programma ha già ricevuto la richiesta ti restituisce quello 
+che ha generato alla prima richiesta se non ha mai avuto richieste di quel tipo genera una nuova istanza e te la restituisce. 
+Se rifai la stessa richiesta dopo il programma non rifarà piu’ il processo per creare l'istanza ma ti restituirà l’oggetto creato 
+alla prima richiesta.
+
+Esempio pratico:
+// .H 
+ 
+class CustomPrng   
+{ 
+private: 
+	static CustomPrng  * _ptr; 
+	CustomPrng(); 
+    // ... 
+ 
+public: 
+	static CustomPrng  * Get() 
+	{ 
+		if(!_ptr) _ptr = new CustomPrng  (); 
+		return _ptr; 
+	} 
+	 
+	static void UnGet() 
+	{ 
+    	delete _ptr; 
+	    _ptr = NULL; 
+	} 
+ 
+	// ... 
+}; 
+ 
+// .CPP 
+ 
+CustomPrng  * CustomPrng  ::_ptr = NULL; 
+
+
+Il costruttore è dicharato come privato, ergo non può essere istanziato dal codice esterno. La funzione statica Get() può tuttavia essere utilizzata in qualunque punto del programma per chiedere l’unica istanza possibile del generatore.
+
+Alla prima chiamata viene costruito, quindi se non viene effettuata alcuna chiamata non viene impegnata la risorsa 
+(cosa che avverrebbe se lo dichiarassi semplicemente come variabile globale).
+
+Questo costrutto impedisce di fatto che il codice esterno possa creare due istanze del generatore.
+
+Fonte: (https://it.quora.com/Che-cos%C3%A8-un-singleton-in-informatica)
+       [https://it.wikipedia.org/wiki/Singleton_(informatica)]
+
+
+
+Factory Service:
+Secondo la Gang of Four è un’interfaccia per creare oggetti, ma lascia alle sottoclassi la
+decisione del tipo di classe da istanziare.
+E' un pattern utilizzato nel momento in cui non siamo in grado di conoscere a priori il tipo esatto 
+dell'oggetto da creare oppure quando si vuole delegare ad altre entità il compito della creazione degli oggetti.
+
+Composizione del Pattern:
+Creator: ha il compito di dichiarare la Factory che si occuperà poi di restituire l'oggetto appropriato;
+ConcreteCreator: effettua l'override del metodo di Factory al fine di restituire l'implementazione adeguata dell'oggetto;
+Product:(configuazione) definisce l'interfaccia dell'oggetto che Factory deve ritornare;
+ConcreteProduct: implementa l'oggetto in base a Product;
+
+Quando può essere utilizzato:
+	Quando una classe non può conoscere in anticipo il tipo esatto degli oggetti da creare;
+	Quando la classe conosce il tipo esatto degli oggetti, ma ha bisogno di delegare ad un'entità esterna la loro creazione;
+	Quando la gestione del ciclo di vita degli oggetti gestiti deve essere centralizzata in modo da assicurare un comportamento coerente all'interno dell'applicazione.
+
+Limitazioni:
+	La prima limitazione è che il refactoring di una classe esistente causa il malfunzionamento dei client esistenti.
+	La seconda limitazione è dovuta al fatto che, poiché il pattern si basa sull'uso di costruttori privati, la classe non può essere estesa. Ogni sottoclasse dovrebbe invocare il costruttore ereditato, ma non può farlo perché quest'ultimo è privato.
+	La terza limitazione è dovuta al fatto che, se estendiamo una classe (ad esempio rendendo il costruttore 'protected'; rischioso ma possibile), le sottoclassi devono precedere la reimplementazione di tutti i metodi di factory con la stessa dichiarazione. La possibilità, fornita da alcuni linguaggi, di usare le classi reflection può, tuttavia, risolvere questo problema.
+
+Segue che:
+Il codice ha un livello di flessibilità e riusabilità più alto;
+Un uso inappropriato può portare alla generazione di troppe classi;
+
+fonte: https://www.ma-no.org/it/programmazione/java/design-pattern-factory-pattern
+
+
+Connector:
+
+Relazione tra entità nel codice
+https://gist.github.com/JordanRickman/672d11dc7f306a56ba75dcbaf0522bbe
+connettori nei diagrammi
+https://caminao.blog/how-to-implement-symbolic-representations/patterns/functional-patterns/connector-patterns/
+
+connector pattern, riguardo alla relazione tra servizi: interfaccia e metodo di inizializzazione (open, init, connect o quant'altro)
+https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.54.4271&rep=rep1&type=pdf
+https://www.dre.vanderbilt.edu/~schmidt/PDF/Connector.pdf
+
+spiega generale:
+https://flylib.com/books/en/4.10.1.114/1/
